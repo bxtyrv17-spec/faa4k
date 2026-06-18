@@ -209,32 +209,62 @@
       <div class="blog-grid">
 
         <div class="blog-card anim">
-          <div class="blog-img blog-img-1"></div>
+          <div class="blog-orb blog-orb-1"></div>
           <div class="blog-body">
             <span class="blog-date">15 мая 2025</span>
             <h3 class="blog-title">Как создать сильный бренд: 5 ключевых принципов</h3>
             <p class="blog-desc">Брендинг — это не просто логотип. Это целая система, которая делает ваш бизнес узнаваемым...</p>
-            <a href="#" class="blog-link" data-i18n="bl.read">Читать →</a>
+            <button class="blog-link" data-article="0">Читать →</button>
           </div>
         </div>
 
         <div class="blog-card anim d1">
-          <div class="blog-img blog-img-2"></div>
+          <div class="blog-orb blog-orb-2"></div>
           <div class="blog-body">
             <span class="blog-date">3 апреля 2025</span>
             <h3 class="blog-title">Типографика в брендинге: почему шрифт важнее, чем кажется</h3>
             <p class="blog-desc">Правильный выбор шрифта способен передать характер бренда лучше любого изображения...</p>
-            <a href="#" class="blog-link" data-i18n="bl.read">Читать →</a>
+            <button class="blog-link" data-article="1">Читать →</button>
           </div>
         </div>
 
         <div class="blog-card anim d2">
-          <div class="blog-img blog-img-3"></div>
+          <div class="blog-orb blog-orb-3"></div>
           <div class="blog-body">
             <span class="blog-date">18 февраля 2025</span>
             <h3 class="blog-title">Психология цвета: как выбрать палитру для бренда</h3>
             <p class="blog-desc">Цвет — один из самых мощных инструментов в дизайне. Он влияет на восприятие и решения...</p>
-            <a href="#" class="blog-link" data-i18n="bl.read">Читать →</a>
+            <button class="blog-link" data-article="2">Читать →</button>
+          </div>
+        </div>
+
+        <div class="blog-card anim">
+          <div class="blog-orb blog-orb-4"></div>
+          <div class="blog-body">
+            <span class="blog-date">10 января 2025</span>
+            <h3 class="blog-title">Минимализм в дизайне: когда меньше — это больше</h3>
+            <p class="blog-desc">Пустое пространство — это не пустота. Это воздух, который позволяет смыслу дышать...</p>
+            <button class="blog-link" data-article="3">Читать →</button>
+          </div>
+        </div>
+
+        <div class="blog-card anim d1">
+          <div class="blog-orb blog-orb-5"></div>
+          <div class="blog-body">
+            <span class="blog-date">5 декабря 2024</span>
+            <h3 class="blog-title">Сила логотипа: как символ становится историей бренда</h3>
+            <p class="blog-desc">Великие логотипы — это не просто картинки. Это сжатая философия компании в одной форме...</p>
+            <button class="blog-link" data-article="4">Читать →</button>
+          </div>
+        </div>
+
+        <div class="blog-card anim d2">
+          <div class="blog-orb blog-orb-6"></div>
+          <div class="blog-body">
+            <span class="blog-date">20 ноября 2024</span>
+            <h3 class="blog-title">Тренды графического дизайна 2025</h3>
+            <p class="blog-desc">Что будет определять визуальный язык брендов в 2025 году — разбираем ключевые направления...</p>
+            <button class="blog-link" data-article="5">Читать →</button>
           </div>
         </div>
 
@@ -261,6 +291,17 @@
       </div>
     </div>
   </section>
+
+  <!-- ═══ ARTICLE MODAL ═══ -->
+  <div class="article-modal" id="articleModal" role="dialog" aria-modal="true">
+    <div class="article-modal-backdrop" id="articleModalBackdrop"></div>
+    <div class="article-pane">
+      <button class="article-close" id="articleModalClose" aria-label="Закрыть">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div id="articleModalContent"></div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
