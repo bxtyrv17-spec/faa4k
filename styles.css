@@ -11,6 +11,7 @@
   --accent:  #C42D4E;
   --deep:    #080205;
   --font:    'Inter', system-ui, sans-serif;
+  --serif:   'Cormorant Garamond', Georgia, serif;
   --pad:     72px;
   --rad:     18px;
   --spring:  cubic-bezier(0.16, 1, 0.3, 1);
@@ -242,11 +243,13 @@ ul { list-style: none; }
   margin-bottom: 24px;
 }
 
+/* Serif display heading */
 .hero-heading {
+  font-family: var(--serif);
   font-size: clamp(3.2rem, 6.5vw, 7.2rem);
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1.0;
-  letter-spacing: -0.045em;
+  letter-spacing: -0.01em;
   color: var(--text);
   margin-bottom: 28px;
   transition: color 0.4s;
@@ -343,8 +346,9 @@ ul { list-style: none; }
 .stat-accent { background: var(--accent); border-color: transparent; }
 
 .stat-num {
-  font-size: 3rem; font-weight: 800;
-  letter-spacing: -0.04em; color: var(--text); line-height: 1;
+  font-family: var(--serif);
+  font-size: 3rem; font-weight: 600;
+  letter-spacing: -0.02em; color: var(--text); line-height: 1;
   transition: color 0.4s;
 }
 .stat-accent .stat-num { color: #fff; }
@@ -380,9 +384,10 @@ ul { list-style: none; }
 .eyebrow-inv .eyebrow-dot  { background: var(--accent); }
 
 .about-body {
+  font-family: var(--serif);
   font-size: clamp(1.9rem, 3.2vw, 3.4rem);
-  font-weight: 600; line-height: 1.18;
-  letter-spacing: -0.03em;
+  font-weight: 500; line-height: 1.28;
+  letter-spacing: -0.01em;
   color: var(--text); max-width: 860px;
   transition: color 0.4s;
 }
@@ -395,12 +400,6 @@ ul { list-style: none; }
 /* ══════════════════════════════════════════
    SECTIONS SHARED
 ══════════════════════════════════════════ */
-.sec-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-}
-
 .sec-pad {
   background: var(--bg);
   padding: 110px var(--pad);
@@ -410,8 +409,9 @@ ul { list-style: none; }
 .sec-head { margin-bottom: 56px; }
 
 .sec-title {
+  font-family: var(--serif);
   font-size: clamp(2.2rem, 3.5vw, 3.2rem);
-  font-weight: 800; letter-spacing: -0.04em;
+  font-weight: 600; letter-spacing: -0.01em;
   color: var(--text); margin-top: 14px;
   transition: color 0.4s;
 }
@@ -480,8 +480,9 @@ ul { list-style: none; }
 }
 
 .contact-h {
+  font-family: var(--serif);
   font-size: clamp(2.4rem, 5.5vw, 5.2rem);
-  font-weight: 800; letter-spacing: -0.04em;
+  font-weight: 600; letter-spacing: -0.01em;
   color: #F5EDE8; line-height: 1.06;
 }
 
@@ -560,36 +561,6 @@ ul { list-style: none; }
 ══════════════════════════════════════════ */
 .sec-alt { background: var(--bg2); }
 
-.pkg-hero {
-  text-align: center;
-  margin-bottom: 56px;
-}
-.pkg-hero-title {
-  font-size: clamp(2.2rem, 4vw, 3.6rem);
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  color: var(--text);
-  line-height: 1.08;
-  margin-bottom: 14px;
-  transition: color 0.4s;
-}
-.pkg-hero-sub {
-  font-size: 1rem;
-  color: var(--muted);
-  font-weight: 400;
-  transition: color 0.4s;
-}
-
-.pkg-label {
-  font-size: 0.60rem;
-  font-weight: 700;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-  color: var(--muted);
-  transition: color 0.4s;
-}
-.pkg-label-inv { color: rgba(255,255,255,0.50); }
-
 .pkg-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -622,8 +593,7 @@ ul { list-style: none; }
 
 .pkg-top { display: flex; flex-direction: column; gap: 6px; }
 .pkg-name {
-  font-size: 1.7rem; font-weight: 800;
-  letter-spacing: -0.03em;
+  font-family: var(--serif); font-size: 1.7rem; font-weight: 600;
   color: var(--text); line-height: 1;
   transition: color 0.4s;
 }
@@ -641,7 +611,7 @@ ul { list-style: none; }
   transition: color 0.4s;
 }
 .pkg-features li::before {
-  content: '✓'; position: absolute; left: 0;
+  content: '—'; position: absolute; left: 0;
   color: var(--accent); font-weight: 700; font-size: 0.75rem;
 }
 .pkg-featured .pkg-features li { color: rgba(255,255,255,0.88); }
@@ -695,9 +665,8 @@ ul { list-style: none; }
 }
 
 .blog-title {
-  font-size: 1.18rem; font-weight: 700;
-  letter-spacing: -0.02em;
-  color: var(--text); line-height: 1.28;
+  font-family: var(--serif); font-size: 1.18rem; font-weight: 600;
+  color: var(--text); line-height: 1.32;
   transition: color 0.4s;
 }
 

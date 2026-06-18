@@ -7,7 +7,7 @@
   <title>faa4k — Graphic Designer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <script>
     (function(){ const t = localStorage.getItem('theme')||'dark'; document.documentElement.setAttribute('data-theme',t); })();
@@ -141,17 +141,19 @@
   <!-- ═══ PACKAGES ═══ -->
   <section class="sec-pad sec-alt" id="packages">
     <div class="sec-inner">
-      <div class="pkg-hero anim">
-        <h2 class="pkg-hero-title" data-i18n="pk.heading">Выберите свой пакет</h2>
-        <p class="pkg-hero-sub" data-i18n="pk.sub">Выберите подходящий формат сотрудничества</p>
+      <div class="sec-head anim">
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          <span class="eyebrow-txt" data-i18n="pk.tag">пакеты</span>
+        </div>
+        <h2 class="sec-title" data-i18n="pk.heading">Тарифы</h2>
       </div>
       <div class="pkg-grid">
 
         <div class="pkg-card anim">
-          <div class="pkg-label" data-i18n="pk.tag">пакеты</div>
           <div class="pkg-top">
-            <h3 class="pkg-name" data-i18n="pk.n1">Старт</h3>
-            <p class="pkg-desc" data-i18n="pk.d1">Для малого бизнеса</p>
+            <span class="pkg-name" data-i18n="pk.n1">Старт</span>
+            <span class="pkg-desc" data-i18n="pk.d1">Для малого бизнеса</span>
           </div>
           <ul class="pkg-features">
             <li>Логотип + фирменный стиль</li>
@@ -159,15 +161,14 @@
             <li>3 правки</li>
             <li>Исходные файлы</li>
           </ul>
-          <a href="#contact" class="pkg-btn" data-i18n="pk.btn">Выбрать пакет</a>
+          <a href="#contact" class="pkg-btn" data-i18n="pk.btn">Выбрать</a>
         </div>
 
         <div class="pkg-card pkg-featured anim d1">
           <div class="pkg-badge" data-i18n="pk.popular">Популярный</div>
-          <div class="pkg-label pkg-label-inv" data-i18n="pk.tag">пакеты</div>
           <div class="pkg-top">
-            <h3 class="pkg-name" data-i18n="pk.n2">Стандарт</h3>
-            <p class="pkg-desc" data-i18n="pk.d2">Для растущих брендов</p>
+            <span class="pkg-name" data-i18n="pk.n2">Стандарт</span>
+            <span class="pkg-desc" data-i18n="pk.d2">Для растущих брендов</span>
           </div>
           <ul class="pkg-features">
             <li>Полный фирменный стиль</li>
@@ -176,14 +177,13 @@
             <li>Гайдлайн бренда</li>
             <li>Соцсети + шаблоны</li>
           </ul>
-          <a href="#contact" class="pkg-btn" data-i18n="pk.btn">Выбрать пакет</a>
+          <a href="#contact" class="pkg-btn" data-i18n="pk.btn">Выбрать</a>
         </div>
 
         <div class="pkg-card anim d2">
-          <div class="pkg-label" data-i18n="pk.tag">пакеты</div>
           <div class="pkg-top">
-            <h3 class="pkg-name" data-i18n="pk.n3">Премиум</h3>
-            <p class="pkg-desc" data-i18n="pk.d3">Для крупных проектов</p>
+            <span class="pkg-name" data-i18n="pk.n3">Премиум</span>
+            <span class="pkg-desc" data-i18n="pk.d3">Для крупных проектов</span>
           </div>
           <ul class="pkg-features">
             <li>Полная айдентика</li>
@@ -193,7 +193,7 @@
             <li>Упаковка + иллюстрации</li>
             <li>Приоритетная поддержка</li>
           </ul>
-          <a href="#contact" class="pkg-btn" data-i18n="pk.btn">Выбрать пакет</a>
+          <a href="#contact" class="pkg-btn" data-i18n="pk.btn">Выбрать</a>
         </div>
 
       </div>
