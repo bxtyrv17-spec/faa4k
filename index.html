@@ -3,18 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" id="themeColor" content="#F2F2EC" />
+  <meta name="theme-color" id="themeColor" content="#F5F5F0" />
   <title>faa4k — Graphic Designer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <script>
-    /* apply saved theme before paint to avoid flash */
-    (function(){
-      const t = localStorage.getItem('theme') || 'light';
-      document.documentElement.setAttribute('data-theme', t);
-    })();
+    (function(){ const t = localStorage.getItem('theme')||'light'; document.documentElement.setAttribute('data-theme',t); })();
   </script>
 </head>
 <body>
@@ -23,45 +19,27 @@
   <nav class="navbar" id="navbar">
     <div class="navbar-inner">
 
+      <!-- Logo placeholder — replace with your own -->
       <div class="nav-logo">
-        <svg width="30" height="30" viewBox="0 0 32 32" fill="none">
-          <path d="M5 6L16 16L5 26" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M16 16H27" stroke="#FF3A00" stroke-width="3" stroke-linecap="round"/>
-        </svg>
+        <span class="logo-text">faa4k</span>
       </div>
 
       <ul class="nav-links">
-        <li><a href="#portfolio" class="nav-link" data-i18n="nav.portfolio">Портфолио</a></li>
+        <li><a href="#portfolio" class="nav-link" data-i18n="nav.work">Портфолио</a></li>
         <li><a href="#about"     class="nav-link" data-i18n="nav.about">Обо мне</a></li>
-        <li><a href="#resume"    class="nav-link" data-i18n="nav.resume">Резюме</a></li>
-        <li><a href="#contact"   class="nav-link" data-i18n="nav.contact">Контакты</a></li>
+        <li><a href="#contact"   class="nav-link" data-i18n="nav.contact">Контакт</a></li>
       </ul>
 
       <div class="nav-actions">
-
-        <!-- Language switcher -->
         <div class="lang-sw">
           <button class="lang-btn active" data-lang="ru">RU</button>
           <button class="lang-btn"        data-lang="uz">UZ</button>
           <button class="lang-btn"        data-lang="en">EN</button>
         </div>
 
-        <!-- Dark / Light toggle -->
         <button class="theme-btn" id="themeToggle" aria-label="Switch theme">
-          <svg class="ico ico-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-          </svg>
-          <svg class="ico ico-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="5"/>
-            <line x1="12" y1="1"  x2="12" y2="3"/>
-            <line x1="12" y1="21" x2="12" y2="23"/>
-            <line x1="4.22" y1="4.22"   x2="5.64"  y2="5.64"/>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-            <line x1="1"  y1="12" x2="3"  y2="12"/>
-            <line x1="21" y1="12" x2="23" y2="12"/>
-            <line x1="4.22"  y1="19.78" x2="5.64"  y2="18.36"/>
-            <line x1="18.36" y1="5.64"  x2="19.78" y2="4.22"/>
-          </svg>
+          <svg class="ico ico-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="ico ico-sun"  width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
         </button>
 
         <a href="#contact" class="nav-cta" data-i18n="nav.cta">Связаться</a>
@@ -72,12 +50,10 @@
       </div>
     </div>
 
-    <!-- Mobile drawer -->
     <div class="nav-drawer">
-      <a href="#portfolio" class="drawer-link" data-i18n="nav.portfolio">Портфолио</a>
+      <a href="#portfolio" class="drawer-link" data-i18n="nav.work">Портфолио</a>
       <a href="#about"     class="drawer-link" data-i18n="nav.about">Обо мне</a>
-      <a href="#resume"    class="drawer-link" data-i18n="nav.resume">Резюме</a>
-      <a href="#contact"   class="drawer-link" data-i18n="nav.contact">Контакты</a>
+      <a href="#contact"   class="drawer-link" data-i18n="nav.contact">Контакт</a>
       <a href="#contact"   class="drawer-link drawer-cta" data-i18n="nav.cta">Связаться</a>
     </div>
   </nav>
@@ -87,27 +63,26 @@
     <div class="hero-inner">
 
       <div class="hero-text">
-        <div class="hero-badge">
-          <span class="badge-dot"></span>
-          <span data-i18n="hero.badge">Открыт к работе</span>
-        </div>
-        <h1 class="hero-heading">
-          <span data-i18n="hero.h1">Создаю</span><br>
-          <span data-i18n="hero.h2">визуальные истории</span>
+        <p  class="hero-role hero-anim hero-a1" data-i18n="hero.role">Графический дизайнер</p>
+        <h1 class="hero-heading hero-anim hero-a2">
+          <span data-i18n="hero.h1">Дизайн — это</span><br>
+          <span data-i18n="hero.h2">язык без слов</span>
         </h1>
-        <p class="hero-desc" data-i18n="hero.desc">Специализируюсь на брендинге, айдентике и дизайне интерфейсов. Превращаю идеи в сильные визуальные образы.</p>
-        <div class="hero-actions">
+        <p  class="hero-desc hero-anim hero-a3" data-i18n="hero.desc">Создаю визуальные образы, которые вдохновляют и навсегда остаются в памяти.</p>
+        <div class="hero-actions hero-anim hero-a4">
           <a href="#portfolio" class="btn-fill" data-i18n="hero.cta1">Смотреть работы</a>
           <a href="#about"     class="btn-ring" data-i18n="hero.cta2">Обо мне</a>
         </div>
       </div>
 
-      <div class="hero-media">
-        <div class="hero-card">
-          <div class="hero-card-visual"></div>
-          <div class="hero-card-label">
-            <span class="label-dot"></span>
-            <span data-i18n="hero.badge">Открыт к работе</span>
+      <div class="hero-media hero-anim hero-a2">
+        <div class="hero-float">
+          <div class="hero-card">
+            <div class="hero-card-visual"></div>
+            <div class="hero-card-label">
+              <span class="label-dot"></span>
+              <span data-i18n="hero.label">Дизайн студия</span>
+            </div>
           </div>
         </div>
       </div>
@@ -118,34 +93,22 @@
   <!-- ═══ STATS ═══ -->
   <section class="stats">
     <div class="stats-grid">
-      <div class="stat-card">
-        <span class="stat-num">5+</span>
-        <span class="stat-lbl" data-i18n="stat.years">лет опыта</span>
-      </div>
-      <div class="stat-card">
-        <span class="stat-num">50+</span>
-        <span class="stat-lbl" data-i18n="stat.projects">проектов</span>
-      </div>
-      <div class="stat-card">
-        <span class="stat-num">20+</span>
-        <span class="stat-lbl" data-i18n="stat.clients">клиентов</span>
-      </div>
-      <div class="stat-card stat-accent">
-        <span class="stat-num">3</span>
-        <span class="stat-lbl" data-i18n="stat.awards">награды</span>
-      </div>
+      <div class="stat-card anim"><span class="stat-num">5+</span><span class="stat-lbl" data-i18n="stat.years">лет в дизайне</span></div>
+      <div class="stat-card anim d1"><span class="stat-num">50+</span><span class="stat-lbl" data-i18n="stat.projects">проектов</span></div>
+      <div class="stat-card anim d2"><span class="stat-num">20+</span><span class="stat-lbl" data-i18n="stat.clients">брендов</span></div>
+      <div class="stat-card stat-accent anim d3"><span class="stat-num">3</span><span class="stat-lbl" data-i18n="stat.awards">награды</span></div>
     </div>
   </section>
 
   <!-- ═══ ABOUT ═══ -->
   <section class="about" id="about">
     <div class="about-inner">
-      <div class="eyebrow">
+      <div class="eyebrow anim">
         <span class="eyebrow-dot"></span>
         <span class="eyebrow-txt" data-i18n="about.tag">обо мне</span>
       </div>
-      <p class="about-body" data-i18n-html="about.body">
-        Я — графический дизайнер, создающий смелые визуальные <mark>истории</mark>, которые помогают брендам обрести свой голос и выделиться с помощью <mark>сильного дизайна</mark>
+      <p class="about-body anim d1" data-i18n-html="about.body">
+        Хороший дизайн — это не просто красота. Это <mark>ясность мысли</mark>, воплощённая в форме, которая меняет то, как мир <mark>видит себя</mark>
       </p>
     </div>
   </section>
@@ -153,90 +116,32 @@
   <!-- ═══ PORTFOLIO ═══ -->
   <section class="sec-pad" id="portfolio">
     <div class="sec-inner">
-      <div class="sec-head">
+      <div class="sec-head anim">
         <div class="eyebrow">
           <span class="eyebrow-dot"></span>
           <span class="eyebrow-txt" data-i18n="pf.tag">портфолио</span>
         </div>
-        <h2 class="sec-title" data-i18n="pf.heading">Избранные работы</h2>
+        <h2 class="sec-title" data-i18n="pf.heading">Работы</h2>
       </div>
       <div class="pf-grid">
-        <div class="pc"><div class="pc-bg pc-1"></div><div class="pc-body"><span class="pc-tag" data-i18n="pf.c1">Брендинг</span><h3 class="pc-title">Brand Identity System</h3></div></div>
-        <div class="pc"><div class="pc-bg pc-2"></div><div class="pc-body"><span class="pc-tag" data-i18n="pf.c2">Айдентика</span><h3 class="pc-title">Visual Identity Pack</h3></div></div>
-        <div class="pc"><div class="pc-bg pc-3"></div><div class="pc-body"><span class="pc-tag" data-i18n="pf.c3">UI/UX</span><h3 class="pc-title">Mobile App Design</h3></div></div>
-        <div class="pc"><div class="pc-bg pc-4"></div><div class="pc-body"><span class="pc-tag" data-i18n="pf.c4">Упаковка</span><h3 class="pc-title">Product Packaging</h3></div></div>
-        <div class="pc"><div class="pc-bg pc-5"></div><div class="pc-body"><span class="pc-tag" data-i18n="pf.c5">Типографика</span><h3 class="pc-title">Typography Poster</h3></div></div>
-        <div class="pc"><div class="pc-bg pc-6"></div><div class="pc-body"><span class="pc-tag" data-i18n="pf.c6">Иллюстрация</span><h3 class="pc-title">Digital Illustration</h3></div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ RESUME ═══ -->
-  <section class="sec-pad sec-alt" id="resume">
-    <div class="sec-inner">
-      <div class="sec-head">
-        <div class="eyebrow">
-          <span class="eyebrow-dot"></span>
-          <span class="eyebrow-txt" data-i18n="cv.tag">резюме</span>
-        </div>
-        <h2 class="sec-title" data-i18n="cv.heading">Навыки и опыт</h2>
-      </div>
-      <div class="cv-grid">
-
-        <!-- Skills -->
-        <div class="cv-col">
-          <h3 class="cv-col-h" data-i18n="cv.tools">Инструменты</h3>
-          <div class="chips">
-            <span class="chip">Figma</span>
-            <span class="chip">Illustrator</span>
-            <span class="chip">Photoshop</span>
-            <span class="chip">After Effects</span>
-            <span class="chip">InDesign</span>
-            <span class="chip">Blender</span>
-            <span class="chip">Cinema 4D</span>
-            <span class="chip">Procreate</span>
-          </div>
-        </div>
-
-        <!-- Experience + Education -->
-        <div class="cv-col">
-          <h3 class="cv-col-h" data-i18n="cv.exp">Опыт работы</h3>
-          <div class="exp-list">
-            <div class="exp-item">
-              <span class="exp-yr" data-i18n="cv.e1d">2020 — н.в.</span>
-              <div><div class="exp-ttl" data-i18n="cv.e1t">Фриланс-дизайнер</div><div class="exp-dsc" data-i18n="cv.e1s">Брендинг, айдентика, визуальные коммуникации</div></div>
-            </div>
-            <div class="exp-item">
-              <span class="exp-yr" data-i18n="cv.e2d">2019 — 2020</span>
-              <div><div class="exp-ttl" data-i18n="cv.e2t">Младший дизайнер</div><div class="exp-dsc" data-i18n="cv.e2s">Дизайн-студия, Ташкент</div></div>
-            </div>
-            <div class="exp-item">
-              <span class="exp-yr" data-i18n="cv.e3d">2018 — 2019</span>
-              <div><div class="exp-ttl" data-i18n="cv.e3t">Стажёр-дизайнер</div><div class="exp-dsc" data-i18n="cv.e3s">Рекламное агентство</div></div>
-            </div>
-          </div>
-
-          <h3 class="cv-col-h" style="margin-top:40px" data-i18n="cv.edu">Образование</h3>
-          <div class="exp-list">
-            <div class="exp-item">
-              <span class="exp-yr" data-i18n="cv.ed">2014 — 2018</span>
-              <div><div class="exp-ttl" data-i18n="cv.et">Бакалавр, Графический дизайн</div><div class="exp-dsc" data-i18n="cv.es">Университет, Ташкент</div></div>
-            </div>
-          </div>
-        </div>
-
+        <div class="pc anim">    <div class="pc-bg pc-1"></div><div class="pc-body"><span class="pc-tag" data-i18n="pf.c1">Брендинг</span><h3 class="pc-title">Brand Identity System</h3></div></div>
+        <div class="pc anim d1"> <div class="pc-bg pc-2"></div><div class="pc-body"><span class="pc-tag" data-i18n="pf.c2">Айдентика</span><h3 class="pc-title">Visual Identity Pack</h3></div></div>
+        <div class="pc anim d2"> <div class="pc-bg pc-3"></div><div class="pc-body"><span class="pc-tag" data-i18n="pf.c3">UI/UX</span><h3 class="pc-title">Mobile App Design</h3></div></div>
+        <div class="pc anim d3"> <div class="pc-bg pc-4"></div><div class="pc-body"><span class="pc-tag" data-i18n="pf.c4">Упаковка</span><h3 class="pc-title">Product Packaging</h3></div></div>
+        <div class="pc anim d1"> <div class="pc-bg pc-5"></div><div class="pc-body"><span class="pc-tag" data-i18n="pf.c5">Типографика</span><h3 class="pc-title">Typography Poster</h3></div></div>
+        <div class="pc anim d2"> <div class="pc-bg pc-6"></div><div class="pc-body"><span class="pc-tag" data-i18n="pf.c6">Иллюстрация</span><h3 class="pc-title">Digital Illustration</h3></div></div>
       </div>
     </div>
   </section>
 
   <!-- ═══ CONTACT ═══ -->
   <section class="contact-sec" id="contact">
-    <div class="contact-inner">
+    <div class="contact-inner anim">
       <div class="eyebrow eyebrow-inv">
-        <span class="eyebrow-dot eyebrow-dot-inv"></span>
-        <span class="eyebrow-txt" data-i18n="ct.tag">контакты</span>
+        <span class="eyebrow-dot"></span>
+        <span class="eyebrow-txt" data-i18n="ct.tag">контакт</span>
       </div>
-      <h2 class="contact-h" data-i18n-html="ct.heading">Давайте создадим<br>что-то вместе</h2>
+      <h2 class="contact-h" data-i18n-html="ct.heading">Начнём что-то создавать?</h2>
       <div class="contact-btns">
         <a href="mailto:hello@faa4k.com" class="btn-fill-inv" data-i18n="ct.email">Написать на почту</a>
         <a href="https://t.me/faa4k"     class="btn-ring-inv" data-i18n="ct.tg">Telegram</a>

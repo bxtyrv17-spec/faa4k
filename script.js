@@ -3,26 +3,26 @@
 ═══════════════════════════════════════════ */
 const T = {
   ru: {
-    'nav.portfolio': 'Портфолио',
-    'nav.about':     'Обо мне',
-    'nav.resume':    'Резюме',
-    'nav.contact':   'Контакты',
-    'nav.cta':       'Связаться',
+    'nav.work':    'Портфолио',
+    'nav.about':   'Обо мне',
+    'nav.contact': 'Контакт',
+    'nav.cta':     'Связаться',
 
-    'hero.badge': 'Открыт к работе',
-    'hero.h1':    'Создаю',
-    'hero.h2':    'визуальные истории',
-    'hero.desc':  'Специализируюсь на брендинге, айдентике и дизайне интерфейсов. Превращаю идеи в сильные визуальные образы.',
+    'hero.role':  'Графический дизайнер',
+    'hero.h1':    'Дизайн — это',
+    'hero.h2':    'язык без слов',
+    'hero.desc':  'Создаю визуальные образы, которые вдохновляют и навсегда остаются в памяти.',
     'hero.cta1':  'Смотреть работы',
     'hero.cta2':  'Обо мне',
+    'hero.label': 'Дизайн студия',
 
-    'stat.years':    'лет опыта',
+    'stat.years':    'лет в дизайне',
     'stat.projects': 'проектов',
-    'stat.clients':  'клиентов',
+    'stat.clients':  'брендов',
     'stat.awards':   'награды',
 
     'about.tag':  'обо мне',
-    'about.body': 'Я — графический дизайнер, создающий смелые визуальные <mark>истории</mark>, которые помогают брендам обрести свой голос и выделиться с помощью <mark>сильного дизайна</mark>',
+    'about.body': 'Хороший дизайн — это не просто красота. Это <mark>ясность мысли</mark>, воплощённая в форме, которая меняет то, как мир <mark>видит себя</mark>',
 
     'pf.tag':     'портфолио',
     'pf.heading': 'Избранные работы',
@@ -30,48 +30,33 @@ const T = {
     'pf.c3': 'UI/UX',       'pf.c4': 'Упаковка',
     'pf.c5': 'Типографика', 'pf.c6': 'Иллюстрация',
 
-    'cv.tag':     'резюме',
-    'cv.heading': 'Навыки и опыт',
-    'cv.tools':   'Инструменты',
-    'cv.exp':     'Опыт работы',
-    'cv.edu':     'Образование',
-
-    'cv.e1d': '2020 — н.в.',  'cv.e1t': 'Фриланс-дизайнер',
-    'cv.e1s': 'Брендинг, айдентика, визуальные коммуникации',
-    'cv.e2d': '2019 — 2020',  'cv.e2t': 'Младший дизайнер',
-    'cv.e2s': 'Дизайн-студия, Ташкент',
-    'cv.e3d': '2018 — 2019',  'cv.e3t': 'Стажёр-дизайнер',
-    'cv.e3s': 'Рекламное агентство',
-    'cv.ed':  '2014 — 2018',  'cv.et':  'Бакалавр, Графический дизайн',
-    'cv.es':  'Университет, Ташкент',
-
-    'ct.tag':     'контакты',
-    'ct.heading': 'Давайте создадим<br>что-то вместе',
+    'ct.tag':     'контакт',
+    'ct.heading': 'Начнём что-то<br>создавать?',
     'ct.email':   'Написать на почту',
     'ct.tg':      'Telegram',
   },
 
   uz: {
-    'nav.portfolio': 'Portfolio',
-    'nav.about':     'Men haqimda',
-    'nav.resume':    'Rezyume',
-    'nav.contact':   'Aloqa',
-    'nav.cta':       'Bog\'lanish',
+    'nav.work':    'Portfolio',
+    'nav.about':   'Men haqimda',
+    'nav.contact': 'Aloqa',
+    'nav.cta':     'Bog\'lanish',
 
-    'hero.badge': 'Ishga tayyor',
-    'hero.h1':    'Vizual',
-    'hero.h2':    'hikoyalar yarataman',
-    'hero.desc':  'Brending, identifikatsiya va interfeys dizayniga ixtisoslashganman. G\'oyalarni kuchli vizual obrazlarga aylantiraman.',
+    'hero.role':  'Grafik dizayner',
+    'hero.h1':    'Dizayn —',
+    'hero.h2':    'so\'zsiz til',
+    'hero.desc':  'Ilhom beradigan va xotirada abadiy qoladigan vizual obrazlar yarataman.',
     'hero.cta1':  'Ishlarni ko\'rish',
     'hero.cta2':  'Men haqimda',
+    'hero.label': 'Dizayn studiyasi',
 
     'stat.years':    'yil tajriba',
     'stat.projects': 'loyiha',
-    'stat.clients':  'mijoz',
+    'stat.clients':  'brend',
     'stat.awards':   'mukofot',
 
     'about.tag':  'men haqimda',
-    'about.body': 'Men grafik dizayner bo\'lib, brendlarga o\'z ovozlarini topishga yordam beradigan vizual <mark>hikoyalar</mark> yarataman va kuchli <mark>dizayn</mark> orqali ajralib chiqaman',
+    'about.body': 'Yaxshi dizayn — bu faqat chiroyli ko\'rinish emas. Bu <mark>fikrning ravshanligi</mark>, shaklda mujassamlashgan va dunyo o\'zini qanday <mark>ko\'rishini</mark> o\'zgartiradi',
 
     'pf.tag':     'portfolio',
     'pf.heading': 'Tanlangan ishlar',
@@ -79,69 +64,39 @@ const T = {
     'pf.c3': 'UI/UX',          'pf.c4': 'Qadoqlash',
     'pf.c5': 'Tipografiya',    'pf.c6': 'Illustratsiya',
 
-    'cv.tag':     'rezyume',
-    'cv.heading': 'Ko\'nikmalar va tajriba',
-    'cv.tools':   'Dasturlar',
-    'cv.exp':     'Ish tajribasi',
-    'cv.edu':     'Ta\'lim',
-
-    'cv.e1d': '2020 — hoz.',   'cv.e1t': 'Frilanser dizayner',
-    'cv.e1s': 'Brending, identifikatsiya, vizual kommunikatsiyalar',
-    'cv.e2d': '2019 — 2020',   'cv.e2t': 'Kichik dizayner',
-    'cv.e2s': 'Dizayn studiyasi, Toshkent',
-    'cv.e3d': '2018 — 2019',   'cv.e3t': 'Dizayn stajiyor',
-    'cv.e3s': 'Reklama agentligi',
-    'cv.ed':  '2014 — 2018',   'cv.et':  'Bakalavr, Grafik dizayn',
-    'cv.es':  'Universitet, Toshkent',
-
     'ct.tag':     'aloqa',
-    'ct.heading': 'Birgalikda nimadir<br>yarataylik',
+    'ct.heading': 'Birgalikda nimadir<br>yarataylik?',
     'ct.email':   'Pochta yozish',
     'ct.tg':      'Telegram',
   },
 
   en: {
-    'nav.portfolio': 'Portfolio',
-    'nav.about':     'About',
-    'nav.resume':    'Resume',
-    'nav.contact':   'Contact',
-    'nav.cta':       'Hire me',
+    'nav.work':    'Portfolio',
+    'nav.about':   'About',
+    'nav.contact': 'Contact',
+    'nav.cta':     'Hire me',
 
-    'hero.badge': 'Open to work',
-    'hero.h1':    'Crafting',
-    'hero.h2':    'visual stories',
-    'hero.desc':  'Specializing in branding, identity and interface design. Turning ideas into powerful visual narratives.',
+    'hero.role':  'Graphic Designer',
+    'hero.h1':    'Design is a',
+    'hero.h2':    'language without words',
+    'hero.desc':  'Creating visual images that inspire and stay in memory forever.',
     'hero.cta1':  'View work',
     'hero.cta2':  'About me',
+    'hero.label': 'Design studio',
 
-    'stat.years':    'years exp.',
+    'stat.years':    'years in design',
     'stat.projects': 'projects',
-    'stat.clients':  'clients',
+    'stat.clients':  'brands',
     'stat.awards':   'awards',
 
     'about.tag':  'about me',
-    'about.body': 'I\'m a graphic designer crafting bold visual <mark>stories</mark> that help brands find their voice and stand out through <mark>powerful design</mark>',
+    'about.body': 'Good design is not just beauty. It is <mark>clarity of thought</mark>, embodied in form that changes how the world <mark>sees itself</mark>',
 
     'pf.tag':     'portfolio',
     'pf.heading': 'Selected works',
     'pf.c1': 'Branding',    'pf.c2': 'Identity',
     'pf.c3': 'UI/UX',       'pf.c4': 'Packaging',
     'pf.c5': 'Typography',  'pf.c6': 'Illustration',
-
-    'cv.tag':     'resume',
-    'cv.heading': 'Skills & experience',
-    'cv.tools':   'Tools',
-    'cv.exp':     'Work experience',
-    'cv.edu':     'Education',
-
-    'cv.e1d': '2020 — now',   'cv.e1t': 'Freelance Designer',
-    'cv.e1s': 'Branding, identity, visual communications',
-    'cv.e2d': '2019 — 2020',  'cv.e2t': 'Junior Designer',
-    'cv.e2s': 'Design Studio, Tashkent',
-    'cv.e3d': '2018 — 2019',  'cv.e3t': 'Design Intern',
-    'cv.e3s': 'Advertising agency',
-    'cv.ed':  '2014 — 2018',  'cv.et':  'Bachelor of Graphic Design',
-    'cv.es':  'University, Tashkent',
 
     'ct.tag':     'contact',
     'ct.heading': 'Let\'s create<br>something together',
@@ -187,7 +142,7 @@ document.querySelectorAll('.lang-btn').forEach(btn =>
 function setTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
   const mc = document.getElementById('themeColor');
-  if (mc) mc.content = theme === 'dark' ? '#111111' : '#F2F2EC';
+  if (mc) mc.content = theme === 'dark' ? '#0F0F0F' : '#F5F5F0';
   localStorage.setItem('theme', theme);
 }
 
@@ -195,6 +150,20 @@ document.getElementById('themeToggle').addEventListener('click', () => {
   const cur = document.documentElement.getAttribute('data-theme');
   setTheme(cur === 'dark' ? 'light' : 'dark');
 });
+
+/* ═══════════════════════════════════════════
+   SCROLL ANIMATIONS
+═══════════════════════════════════════════ */
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.anim').forEach(el => observer.observe(el));
 
 /* ═══════════════════════════════════════════
    HAMBURGER
