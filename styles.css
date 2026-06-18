@@ -395,6 +395,12 @@ ul { list-style: none; }
 /* ══════════════════════════════════════════
    SECTIONS SHARED
 ══════════════════════════════════════════ */
+.sec-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
 .sec-pad {
   background: var(--bg);
   padding: 110px var(--pad);
