@@ -1,108 +1,219 @@
 /* ═══════════════════════════════════════════
-   TRANSLATIONS
+   LANGUAGE DATA
 ═══════════════════════════════════════════ */
+const LANG_META = {
+  ru: { code: 'RU', name: 'Русский' },
+  en: { code: 'EN', name: 'English' },
+  uz: { code: 'UZ', name: "O'zbek" },
+  kz: { code: 'KZ', name: 'Қазақша' },
+  ge: { code: 'GE', name: 'ქართული' },
+  tr: { code: 'TR', name: 'Türkçe' },
+  az: { code: 'AZ', name: 'Azərbaycan' },
+  ua: { code: 'UA', name: 'Українська' },
+  zh: { code: 'ZH', name: '中文' },
+  es: { code: 'ES', name: 'Español' },
+  tj: { code: 'TJ', name: 'Тоҷикӣ' },
+};
+
 const T = {
   ru: {
-    'nav.work':    'Портфолио',
-    'nav.about':   'Обо мне',
-    'nav.contact': 'Контакт',
-    'nav.cta':     'Связаться',
-
-    'hero.role':  'Графический дизайнер',
-    'hero.h1':    'Дизайн — это',
-    'hero.h2':    'язык без слов',
-    'hero.desc':  'Создаю визуальные образы, которые вдохновляют и навсегда остаются в памяти.',
-    'hero.cta1':  'Смотреть работы',
-    'hero.cta2':  'Обо мне',
-    'hero.label': 'Дизайн студия',
-
-    'stat.years':    'лет в дизайне',
-    'stat.projects': 'проектов',
-    'stat.clients':  'брендов',
-    'stat.awards':   'награды',
-
-    'about.tag':  'обо мне',
+    'nav.home': 'Главная', 'nav.services': 'Услуги', 'nav.packages': 'Пакеты',
+    'nav.blog': 'Блог', 'nav.about': 'Обо мне', 'nav.contact': 'Контакты', 'nav.book': 'Записаться',
+    'hero.role': 'Графический дизайнер', 'hero.h1': 'Дизайн — это', 'hero.h2': 'язык без слов',
+    'hero.desc': 'Создаю визуальные образы, которые вдохновляют и навсегда остаются в памяти.',
+    'hero.cta1': 'Смотреть работы', 'hero.cta2': 'Обо мне', 'hero.label': 'Дизайн студия',
+    'stat.years': 'лет в дизайне', 'stat.projects': 'проектов', 'stat.clients': 'брендов', 'stat.awards': 'награды',
+    'about.tag': 'обо мне',
     'about.body': 'Хороший дизайн — это не просто красота. Это <mark>ясность мысли</mark>, воплощённая в форме, которая меняет то, как мир <mark>видит себя</mark>',
-
-    'pf.tag':     'портфолио',
-    'pf.heading': 'Избранные работы',
-    'pf.c1': 'Брендинг',    'pf.c2': 'Айдентика',
-    'pf.c3': 'UI/UX',       'pf.c4': 'Упаковка',
-    'pf.c5': 'Типографика', 'pf.c6': 'Иллюстрация',
-
-    'ct.tag':     'контакт',
-    'ct.heading': 'Начнём что-то<br>создавать?',
-    'ct.email':   'Написать на почту',
-    'ct.tg':      'Telegram',
+    'sv.tag': 'услуги', 'sv.heading': 'Что я делаю',
+    'sv.c1': 'Брендинг', 'sv.c2': 'Айдентика', 'sv.c3': 'UI/UX', 'sv.c4': 'Упаковка', 'sv.c5': 'Типографика', 'sv.c6': 'Иллюстрация',
+    'pk.tag': 'пакеты', 'pk.heading': 'Тарифы',
+    'pk.n1': 'Старт', 'pk.n2': 'Стандарт', 'pk.n3': 'Премиум',
+    'pk.d1': 'Для малого бизнеса', 'pk.d2': 'Для растущих брендов', 'pk.d3': 'Для крупных проектов',
+    'pk.popular': 'Популярный', 'pk.btn': 'Выбрать',
+    'bl.tag': 'блог', 'bl.heading': 'Статьи', 'bl.read': 'Читать →',
+    'ct.tag': 'контакты', 'ct.heading': 'Начнём что-то<br>создавать?', 'ct.email': 'Написать на почту', 'ct.tg': 'Telegram',
   },
-
-  uz: {
-    'nav.work':    'Portfolio',
-    'nav.about':   'Men haqimda',
-    'nav.contact': 'Aloqa',
-    'nav.cta':     'Bog\'lanish',
-
-    'hero.role':  'Grafik dizayner',
-    'hero.h1':    'Dizayn —',
-    'hero.h2':    'so\'zsiz til',
-    'hero.desc':  'Ilhom beradigan va xotirada abadiy qoladigan vizual obrazlar yarataman.',
-    'hero.cta1':  'Ishlarni ko\'rish',
-    'hero.cta2':  'Men haqimda',
-    'hero.label': 'Dizayn studiyasi',
-
-    'stat.years':    'yil tajriba',
-    'stat.projects': 'loyiha',
-    'stat.clients':  'brend',
-    'stat.awards':   'mukofot',
-
-    'about.tag':  'men haqimda',
-    'about.body': 'Yaxshi dizayn — bu faqat chiroyli ko\'rinish emas. Bu <mark>fikrning ravshanligi</mark>, shaklda mujassamlashgan va dunyo o\'zini qanday <mark>ko\'rishini</mark> o\'zgartiradi',
-
-    'pf.tag':     'portfolio',
-    'pf.heading': 'Tanlangan ishlar',
-    'pf.c1': 'Brending',       'pf.c2': 'Identifikatsiya',
-    'pf.c3': 'UI/UX',          'pf.c4': 'Qadoqlash',
-    'pf.c5': 'Tipografiya',    'pf.c6': 'Illustratsiya',
-
-    'ct.tag':     'aloqa',
-    'ct.heading': 'Birgalikda nimadir<br>yarataylik?',
-    'ct.email':   'Pochta yozish',
-    'ct.tg':      'Telegram',
-  },
-
   en: {
-    'nav.work':    'Portfolio',
-    'nav.about':   'About',
-    'nav.contact': 'Contact',
-    'nav.cta':     'Hire me',
-
-    'hero.role':  'Graphic Designer',
-    'hero.h1':    'Design is a',
-    'hero.h2':    'language without words',
-    'hero.desc':  'Creating visual images that inspire and stay in memory forever.',
-    'hero.cta1':  'View work',
-    'hero.cta2':  'About me',
-    'hero.label': 'Design studio',
-
-    'stat.years':    'years in design',
-    'stat.projects': 'projects',
-    'stat.clients':  'brands',
-    'stat.awards':   'awards',
-
-    'about.tag':  'about me',
+    'nav.home': 'Home', 'nav.services': 'Services', 'nav.packages': 'Packages',
+    'nav.blog': 'Blog', 'nav.about': 'About', 'nav.contact': 'Contact', 'nav.book': 'Book now',
+    'hero.role': 'Graphic Designer', 'hero.h1': 'Design is a', 'hero.h2': 'language without words',
+    'hero.desc': 'Creating visual images that inspire and stay in memory forever.',
+    'hero.cta1': 'View work', 'hero.cta2': 'About me', 'hero.label': 'Design studio',
+    'stat.years': 'years in design', 'stat.projects': 'projects', 'stat.clients': 'brands', 'stat.awards': 'awards',
+    'about.tag': 'about me',
     'about.body': 'Good design is not just beauty. It is <mark>clarity of thought</mark>, embodied in form that changes how the world <mark>sees itself</mark>',
-
-    'pf.tag':     'portfolio',
-    'pf.heading': 'Selected works',
-    'pf.c1': 'Branding',    'pf.c2': 'Identity',
-    'pf.c3': 'UI/UX',       'pf.c4': 'Packaging',
-    'pf.c5': 'Typography',  'pf.c6': 'Illustration',
-
-    'ct.tag':     'contact',
-    'ct.heading': 'Let\'s create<br>something together',
-    'ct.email':   'Send email',
-    'ct.tg':      'Telegram',
-  }
+    'sv.tag': 'services', 'sv.heading': 'What I do',
+    'sv.c1': 'Branding', 'sv.c2': 'Identity', 'sv.c3': 'UI/UX', 'sv.c4': 'Packaging', 'sv.c5': 'Typography', 'sv.c6': 'Illustration',
+    'pk.tag': 'packages', 'pk.heading': 'Pricing',
+    'pk.n1': 'Start', 'pk.n2': 'Standard', 'pk.n3': 'Premium',
+    'pk.d1': 'For small business', 'pk.d2': 'For growing brands', 'pk.d3': 'For big projects',
+    'pk.popular': 'Popular', 'pk.btn': 'Choose',
+    'bl.tag': 'blog', 'bl.heading': 'Articles', 'bl.read': 'Read →',
+    'ct.tag': 'contact', 'ct.heading': "Let's create<br>something together", 'ct.email': 'Send email', 'ct.tg': 'Telegram',
+  },
+  uz: {
+    'nav.home': 'Bosh sahifa', 'nav.services': 'Xizmatlar', 'nav.packages': 'Paketlar',
+    'nav.blog': 'Blog', 'nav.about': 'Men haqimda', 'nav.contact': 'Aloqa', 'nav.book': "Ro'yxatdan o'tish",
+    'hero.role': 'Grafik dizayner', 'hero.h1': 'Dizayn —', 'hero.h2': "so'zsiz til",
+    'hero.desc': "Ilhom beradigan va xotirada abadiy qoladigan vizual obrazlar yarataman.",
+    'hero.cta1': "Ishlarni ko'rish", 'hero.cta2': 'Men haqimda', 'hero.label': 'Dizayn studiyasi',
+    'stat.years': 'yil tajriba', 'stat.projects': 'loyiha', 'stat.clients': 'brend', 'stat.awards': 'mukofot',
+    'about.tag': 'men haqimda',
+    'about.body': "Yaxshi dizayn — bu faqat chiroyli ko'rinish emas. Bu <mark>fikrning ravshanligi</mark>, shaklda mujassamlashgan va dunyo o'zini qanday <mark>ko'rishini</mark> o'zgartiradi",
+    'sv.tag': 'xizmatlar', 'sv.heading': 'Nima qilaman',
+    'sv.c1': 'Brending', 'sv.c2': 'Identifikatsiya', 'sv.c3': 'UI/UX', 'sv.c4': 'Qadoqlash', 'sv.c5': 'Tipografiya', 'sv.c6': 'Illustratsiya',
+    'pk.tag': 'paketlar', 'pk.heading': 'Tariflar',
+    'pk.n1': 'Start', 'pk.n2': 'Standart', 'pk.n3': 'Premium',
+    'pk.d1': 'Kichik biznes uchun', 'pk.d2': "O'suvchi brendlar uchun", 'pk.d3': 'Yirik loyihalar uchun',
+    'pk.popular': 'Mashhur', 'pk.btn': 'Tanlash',
+    'bl.tag': 'blog', 'bl.heading': 'Maqolalar', 'bl.read': "O'qish →",
+    'ct.tag': 'aloqa', 'ct.heading': 'Birgalikda nimadir<br>yarataylik?', 'ct.email': 'Pochta yozish', 'ct.tg': 'Telegram',
+  },
+  kz: {
+    'nav.home': 'Басты', 'nav.services': 'Қызметтер', 'nav.packages': 'Пакеттер',
+    'nav.blog': 'Блог', 'nav.about': 'Мен туралы', 'nav.contact': 'Байланыс', 'nav.book': 'Жазылу',
+    'hero.role': 'Графикалық дизайнер', 'hero.h1': 'Дизайн —', 'hero.h2': 'сөзсіз тіл',
+    'hero.desc': 'Шабыт беріп, жадта мәңгі қалатын визуал бейнелер жасаймын.',
+    'hero.cta1': 'Жұмыстарды көру', 'hero.cta2': 'Мен туралы', 'hero.label': 'Дизайн студиясы',
+    'stat.years': 'жыл тәжірибе', 'stat.projects': 'жоба', 'stat.clients': 'брендтер', 'stat.awards': 'марапат',
+    'about.tag': 'мен туралы',
+    'about.body': 'Жақсы дизайн — тек сұлулық емес. Бұл <mark>ой айқындығы</mark>, дүниенің өзін қалай <mark>көретінін</mark> өзгертетін форма',
+    'sv.tag': 'қызметтер', 'sv.heading': 'Не жасаймын',
+    'sv.c1': 'Брендинг', 'sv.c2': 'Айдентика', 'sv.c3': 'UI/UX', 'sv.c4': 'Қаптама', 'sv.c5': 'Типография', 'sv.c6': 'Иллюстрация',
+    'pk.tag': 'пакеттер', 'pk.heading': 'Тарифтер',
+    'pk.n1': 'Старт', 'pk.n2': 'Стандарт', 'pk.n3': 'Премиум',
+    'pk.d1': 'Шағын бизнес үшін', 'pk.d2': 'Өсіп келе жатқан брендтер үшін', 'pk.d3': 'Ірі жобалар үшін',
+    'pk.popular': 'Танымал', 'pk.btn': 'Таңдау',
+    'bl.tag': 'блог', 'bl.heading': 'Мақалалар', 'bl.read': 'Оқу →',
+    'ct.tag': 'байланыс', 'ct.heading': 'Бірге бірдеңе<br>жасайық?', 'ct.email': 'Хат жазу', 'ct.tg': 'Telegram',
+  },
+  ge: {
+    'nav.home': 'მთავარი', 'nav.services': 'სერვისები', 'nav.packages': 'პაკეტები',
+    'nav.blog': 'ბლოგი', 'nav.about': 'ჩემ შესახებ', 'nav.contact': 'კონტაქტი', 'nav.book': 'დარეგისტრირება',
+    'hero.role': 'გრაფიკული დიზაინერი', 'hero.h1': 'დიზაინი —', 'hero.h2': 'სიტყვებს მიღმა',
+    'hero.desc': 'ვქმნი ვიზუალურ სახეებს, რომლებიც შთააგონებენ და სამუდამოდ რჩებიან მეხსიერებაში.',
+    'hero.cta1': 'ნამუშევრები', 'hero.cta2': 'ჩემ შესახებ', 'hero.label': 'დიზაინ სტუდია',
+    'stat.years': 'წელი დიზაინში', 'stat.projects': 'პროექტი', 'stat.clients': 'ბრენდი', 'stat.awards': 'ჯილდო',
+    'about.tag': 'ჩემ შესახებ',
+    'about.body': 'კარგი დიზაინი მხოლოდ სილამაზე არ არის. ეს <mark>აზრის სიცხადეა</mark>, ფორმაში მოცემული, რომელიც ცვლის სამყაროს <mark>თვით-ხედვას</mark>',
+    'sv.tag': 'სერვისები', 'sv.heading': 'რას ვაკეთებ',
+    'sv.c1': 'ბრენდინგი', 'sv.c2': 'იდენტობა', 'sv.c3': 'UI/UX', 'sv.c4': 'შეფუთვა', 'sv.c5': 'ტიპოგრაფია', 'sv.c6': 'ილუსტრაცია',
+    'pk.tag': 'პაკეტები', 'pk.heading': 'ფასები',
+    'pk.n1': 'სტარტი', 'pk.n2': 'სტანდარტი', 'pk.n3': 'პრემიუმი',
+    'pk.d1': 'მცირე ბიზნესისთვის', 'pk.d2': 'მზარდი ბრენდებისთვის', 'pk.d3': 'მსხვილი პროექტებისთვის',
+    'pk.popular': 'პოპულარული', 'pk.btn': 'არჩევა',
+    'bl.tag': 'ბლოგი', 'bl.heading': 'სტატიები', 'bl.read': 'წაკითხვა →',
+    'ct.tag': 'კონტაქტი', 'ct.heading': 'ერთად შევქმნათ<br>რაიმე?', 'ct.email': 'ელ-ფოსტა', 'ct.tg': 'Telegram',
+  },
+  tr: {
+    'nav.home': 'Ana Sayfa', 'nav.services': 'Hizmetler', 'nav.packages': 'Paketler',
+    'nav.blog': 'Blog', 'nav.about': 'Hakkımda', 'nav.contact': 'İletişim', 'nav.book': 'Rezervasyon',
+    'hero.role': 'Grafik Tasarımcı', 'hero.h1': 'Tasarım —', 'hero.h2': 'sözsüz bir dil',
+    'hero.desc': 'İlham veren ve belleklerde sonsuza kadar kalan görsel imgeler yaratıyorum.',
+    'hero.cta1': 'İşleri Gör', 'hero.cta2': 'Hakkımda', 'hero.label': 'Tasarım Stüdyosu',
+    'stat.years': 'yıl deneyim', 'stat.projects': 'proje', 'stat.clients': 'marka', 'stat.awards': 'ödül',
+    'about.tag': 'hakkımda',
+    'about.body': "İyi tasarım sadece güzellik değildir. Bu <mark>düşünce netliği</mark>, dünyanın kendini nasıl <mark>gördüğünü</mark> değiştiren formdur",
+    'sv.tag': 'hizmetler', 'sv.heading': 'Ne yapıyorum',
+    'sv.c1': 'Marka Kimliği', 'sv.c2': 'Kurumsal Kimlik', 'sv.c3': 'UI/UX', 'sv.c4': 'Ambalaj', 'sv.c5': 'Tipografi', 'sv.c6': 'İllüstrasyon',
+    'pk.tag': 'paketler', 'pk.heading': 'Fiyatlar',
+    'pk.n1': 'Başlangıç', 'pk.n2': 'Standart', 'pk.n3': 'Premium',
+    'pk.d1': 'Küçük işletmeler için', 'pk.d2': 'Büyüyen markalar için', 'pk.d3': 'Büyük projeler için',
+    'pk.popular': 'Popüler', 'pk.btn': 'Seç',
+    'bl.tag': 'blog', 'bl.heading': 'Makaleler', 'bl.read': 'Oku →',
+    'ct.tag': 'iletişim', 'ct.heading': 'Birlikte bir şeyler<br>yaratalım?', 'ct.email': 'E-posta Gönder', 'ct.tg': 'Telegram',
+  },
+  az: {
+    'nav.home': 'Ana Səhifə', 'nav.services': 'Xidmətlər', 'nav.packages': 'Paketlər',
+    'nav.blog': 'Bloq', 'nav.about': 'Haqqımda', 'nav.contact': 'Əlaqə', 'nav.book': 'Qeydiyyat',
+    'hero.role': 'Qrafik Dizayner', 'hero.h1': 'Dizayn —', 'hero.h2': 'sözsüz bir dil',
+    'hero.desc': 'İlham verən və yaddaşlarda əbədi qalan vizual obrazlar yaradıram.',
+    'hero.cta1': 'İşlərə bax', 'hero.cta2': 'Haqqımda', 'hero.label': 'Dizayn Studiyası',
+    'stat.years': 'il təcrübə', 'stat.projects': 'layihə', 'stat.clients': 'brend', 'stat.awards': 'mükafat',
+    'about.tag': 'haqqımda',
+    'about.body': 'Yaxşı dizayn yalnız gözəllik deyil. Bu <mark>fikrin aydınlığıdır</mark>, dünyanın özünü necə <mark>gördüyünü</mark> dəyişdirən forma',
+    'sv.tag': 'xidmətlər', 'sv.heading': 'Nə edirəm',
+    'sv.c1': 'Brendinq', 'sv.c2': 'Korporativ Kimlik', 'sv.c3': 'UI/UX', 'sv.c4': 'Qablaşdırma', 'sv.c5': 'Tipoqrafiya', 'sv.c6': 'İllüstrasiya',
+    'pk.tag': 'paketlər', 'pk.heading': 'Tariflər',
+    'pk.n1': 'Start', 'pk.n2': 'Standart', 'pk.n3': 'Premium',
+    'pk.d1': 'Kiçik biznes üçün', 'pk.d2': 'Böyüyən brendlər üçün', 'pk.d3': 'Böyük layihələr üçün',
+    'pk.popular': 'Məşhur', 'pk.btn': 'Seçin',
+    'bl.tag': 'bloq', 'bl.heading': 'Məqalələr', 'bl.read': 'Oxu →',
+    'ct.tag': 'əlaqə', 'ct.heading': 'Birlikdə bir şey<br>yaradaq?', 'ct.email': 'E-poçt göndər', 'ct.tg': 'Telegram',
+  },
+  ua: {
+    'nav.home': 'Головна', 'nav.services': 'Послуги', 'nav.packages': 'Пакети',
+    'nav.blog': 'Блог', 'nav.about': 'Про мене', 'nav.contact': 'Контакти', 'nav.book': 'Записатись',
+    'hero.role': 'Графічний дизайнер', 'hero.h1': 'Дизайн — це', 'hero.h2': 'мова без слів',
+    'hero.desc': "Створюю візуальні образи, які надихають і назавжди залишаються у пам'яті.",
+    'hero.cta1': 'Дивитись роботи', 'hero.cta2': 'Про мене', 'hero.label': 'Дизайн студія',
+    'stat.years': 'роки в дизайні', 'stat.projects': 'проектів', 'stat.clients': 'брендів', 'stat.awards': 'нагороди',
+    'about.tag': 'про мене',
+    'about.body': "Гарний дизайн — це не просто краса. Це <mark>ясність думки</mark>, втілена у формі, яка змінює те, як світ <mark>бачить себе</mark>",
+    'sv.tag': 'послуги', 'sv.heading': 'Що я роблю',
+    'sv.c1': 'Брендинг', 'sv.c2': 'Айдентика', 'sv.c3': 'UI/UX', 'sv.c4': 'Упаковка', 'sv.c5': 'Типографіка', 'sv.c6': 'Ілюстрація',
+    'pk.tag': 'пакети', 'pk.heading': 'Тарифи',
+    'pk.n1': 'Старт', 'pk.n2': 'Стандарт', 'pk.n3': 'Преміум',
+    'pk.d1': 'Для малого бізнесу', 'pk.d2': 'Для зростаючих брендів', 'pk.d3': 'Для великих проектів',
+    'pk.popular': 'Популярний', 'pk.btn': 'Обрати',
+    'bl.tag': 'блог', 'bl.heading': 'Статті', 'bl.read': 'Читати →',
+    'ct.tag': 'контакти', 'ct.heading': 'Почнімо щось<br>створювати?', 'ct.email': 'Написати на пошту', 'ct.tg': 'Telegram',
+  },
+  zh: {
+    'nav.home': '首页', 'nav.services': '服务', 'nav.packages': '套餐',
+    'nav.blog': '博客', 'nav.about': '关于我', 'nav.contact': '联系', 'nav.book': '预约',
+    'hero.role': '平面设计师', 'hero.h1': '设计是', 'hero.h2': '无声的语言',
+    'hero.desc': '创造能够激励人心、永留记忆的视觉形象。',
+    'hero.cta1': '查看作品', 'hero.cta2': '关于我', 'hero.label': '设计工作室',
+    'stat.years': '年设计经验', 'stat.projects': '个项目', 'stat.clients': '个品牌', 'stat.awards': '个奖项',
+    'about.tag': '关于我',
+    'about.body': '好的设计不仅仅是美观。它是<mark>思想的清晰</mark>，以形式呈现，改变世界<mark>认识自己</mark>的方式',
+    'sv.tag': '服务', 'sv.heading': '我能做什么',
+    'sv.c1': '品牌设计', 'sv.c2': '视觉识别', 'sv.c3': 'UI/UX', 'sv.c4': '包装设计', 'sv.c5': '字体设计', 'sv.c6': '插画',
+    'pk.tag': '套餐', 'pk.heading': '价格',
+    'pk.n1': '基础', 'pk.n2': '标准', 'pk.n3': '高级',
+    'pk.d1': '适合小型企业', 'pk.d2': '适合成长中的品牌', 'pk.d3': '适合大型项目',
+    'pk.popular': '热门', 'pk.btn': '选择',
+    'bl.tag': '博客', 'bl.heading': '文章', 'bl.read': '阅读 →',
+    'ct.tag': '联系', 'ct.heading': '让我们一起<br>创造？', 'ct.email': '发送邮件', 'ct.tg': 'Telegram',
+  },
+  es: {
+    'nav.home': 'Inicio', 'nav.services': 'Servicios', 'nav.packages': 'Paquetes',
+    'nav.blog': 'Blog', 'nav.about': 'Sobre mí', 'nav.contact': 'Contacto', 'nav.book': 'Reservar',
+    'hero.role': 'Diseñador Gráfico', 'hero.h1': 'El diseño es', 'hero.h2': 'un lenguaje sin palabras',
+    'hero.desc': 'Creo imágenes visuales que inspiran y permanecen en la memoria para siempre.',
+    'hero.cta1': 'Ver trabajos', 'hero.cta2': 'Sobre mí', 'hero.label': 'Estudio de diseño',
+    'stat.years': 'años en diseño', 'stat.projects': 'proyectos', 'stat.clients': 'marcas', 'stat.awards': 'premios',
+    'about.tag': 'sobre mí',
+    'about.body': 'El buen diseño no es solo belleza. Es <mark>claridad de pensamiento</mark>, encarnada en forma que cambia cómo el mundo <mark>se ve a sí mismo</mark>',
+    'sv.tag': 'servicios', 'sv.heading': 'Qué hago',
+    'sv.c1': 'Branding', 'sv.c2': 'Identidad', 'sv.c3': 'UI/UX', 'sv.c4': 'Packaging', 'sv.c5': 'Tipografía', 'sv.c6': 'Ilustración',
+    'pk.tag': 'paquetes', 'pk.heading': 'Tarifas',
+    'pk.n1': 'Inicio', 'pk.n2': 'Estándar', 'pk.n3': 'Premium',
+    'pk.d1': 'Para pequeñas empresas', 'pk.d2': 'Para marcas en crecimiento', 'pk.d3': 'Para grandes proyectos',
+    'pk.popular': 'Popular', 'pk.btn': 'Elegir',
+    'bl.tag': 'blog', 'bl.heading': 'Artículos', 'bl.read': 'Leer →',
+    'ct.tag': 'contacto', 'ct.heading': '¿Creemos algo<br>juntos?', 'ct.email': 'Enviar correo', 'ct.tg': 'Telegram',
+  },
+  tj: {
+    'nav.home': 'Саҳифаи асосӣ', 'nav.services': 'Хизматҳо', 'nav.packages': 'Бастаҳо',
+    'nav.blog': 'Блог', 'nav.about': 'Дар бораи ман', 'nav.contact': 'Тамос', 'nav.book': 'Сабтном',
+    'hero.role': 'Тарроҳи графикӣ', 'hero.h1': 'Тарроҳӣ —', 'hero.h2': 'забони бесухан',
+    'hero.desc': 'Тасвирҳои визуалӣ эҷод мекунам, ки илҳом мебахшанд ва абадӣ дар хотир мемонанд.',
+    'hero.cta1': 'Дидани корҳо', 'hero.cta2': 'Дар бораи ман', 'hero.label': 'Студияи тарроҳӣ',
+    'stat.years': 'сол дар тарроҳӣ', 'stat.projects': 'лоиҳа', 'stat.clients': 'бренд', 'stat.awards': 'ҷоиза',
+    'about.tag': 'дар бораи ман',
+    'about.body': 'Тарроҳии хуб танҳо зебоӣ нест. Ин <mark>равшании фикр</mark> аст, ки дар шакл мавҷуд буда, дигар мекунад, ки дунё худро чӣ гуна <mark>мебинад</mark>',
+    'sv.tag': 'хизматҳо', 'sv.heading': 'Чи мекунам',
+    'sv.c1': 'Брендинг', 'sv.c2': 'Айдентика', 'sv.c3': 'UI/UX', 'sv.c4': 'Ҷабъбандӣ', 'sv.c5': 'Типография', 'sv.c6': 'Тасвиргарӣ',
+    'pk.tag': 'бастаҳо', 'pk.heading': 'Нархҳо',
+    'pk.n1': 'Старт', 'pk.n2': 'Стандарт', 'pk.n3': 'Премиум',
+    'pk.d1': 'Барои бизнеси хурд', 'pk.d2': 'Барои брендҳои рушдёбанда', 'pk.d3': 'Барои лоиҳаҳои бузург',
+    'pk.popular': 'Маъмул', 'pk.btn': 'Интихоб',
+    'bl.tag': 'блог', 'bl.heading': 'Мақолаҳо', 'bl.read': 'Хондан →',
+    'ct.tag': 'тамос', 'ct.heading': 'Биёед якҷоя<br>чизе созем?', 'ct.email': 'Нома фиристодан', 'ct.tg': 'Telegram',
+  },
 };
 
 /* ═══════════════════════════════════════════
@@ -111,6 +222,7 @@ const T = {
 let currentLang = localStorage.getItem('lang') || 'ru';
 
 function applyLang(lang) {
+  if (!T[lang]) return;
   currentLang = lang;
   const dict = T[lang];
 
@@ -124,7 +236,12 @@ function applyLang(lang) {
     if (dict[k] !== undefined) el.innerHTML = dict[k];
   });
 
-  document.querySelectorAll('.lang-btn').forEach(btn =>
+  // Update dropdown button label
+  const cur = document.getElementById('langCurrent');
+  if (cur) cur.textContent = LANG_META[lang].code;
+
+  // Update active state in dropdown
+  document.querySelectorAll('.lang-item').forEach(btn =>
     btn.classList.toggle('active', btn.dataset.lang === lang)
   );
 
@@ -132,9 +249,33 @@ function applyLang(lang) {
   localStorage.setItem('lang', lang);
 }
 
-document.querySelectorAll('.lang-btn').forEach(btn =>
-  btn.addEventListener('click', () => applyLang(btn.dataset.lang))
-);
+/* ═══════════════════════════════════════════
+   LANGUAGE DROPDOWN
+═══════════════════════════════════════════ */
+const langDropdown = document.getElementById('langDropdown');
+const langToggle   = document.getElementById('langToggle');
+const langMenu     = document.getElementById('langMenu');
+
+langToggle.addEventListener('click', (e) => {
+  e.stopPropagation();
+  langDropdown.classList.toggle('open');
+  langMenu.classList.toggle('open');
+});
+
+document.querySelectorAll('.lang-item').forEach(btn => {
+  btn.addEventListener('click', () => {
+    applyLang(btn.dataset.lang);
+    langDropdown.classList.remove('open');
+    langMenu.classList.remove('open');
+  });
+});
+
+document.addEventListener('click', (e) => {
+  if (!langDropdown.contains(e.target)) {
+    langDropdown.classList.remove('open');
+    langMenu.classList.remove('open');
+  }
+});
 
 /* ═══════════════════════════════════════════
    THEME
@@ -142,7 +283,7 @@ document.querySelectorAll('.lang-btn').forEach(btn =>
 function setTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
   const mc = document.getElementById('themeColor');
-  if (mc) mc.content = theme === 'dark' ? '#0F0F0F' : '#F5F5F0';
+  if (mc) mc.content = theme === 'dark' ? '#0C0308' : '#F9F1EE';
   localStorage.setItem('theme', theme);
 }
 
@@ -161,7 +302,7 @@ const observer = new IntersectionObserver((entries) => {
       observer.unobserve(e.target);
     }
   });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+}, { threshold: 0.08, rootMargin: '0px 0px -36px 0px' });
 
 document.querySelectorAll('.anim').forEach(el => observer.observe(el));
 
@@ -171,9 +312,7 @@ document.querySelectorAll('.anim').forEach(el => observer.observe(el));
 const navbar    = document.getElementById('navbar');
 const navBurger = document.getElementById('navBurger');
 
-navBurger.addEventListener('click', () => {
-  navbar.classList.toggle('is-open');
-});
+navBurger.addEventListener('click', () => navbar.classList.toggle('is-open'));
 
 document.querySelectorAll('.drawer-link').forEach(link =>
   link.addEventListener('click', () => navbar.classList.remove('is-open'))
