@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kinetic Studio — Desktop Presentation</title>
+  <meta name="theme-color" content="#F2F2EC" />
+  <title>Kinetic Studio — SMM агентство</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -11,112 +12,122 @@
 </head>
 <body>
 
-  <!-- ─── Presentation Banner ─── -->
-  <header class="pres-banner">
-    <div class="pres-star">✳</div>
-    <h1 class="pres-title">Desktop<br>Presentation</h1>
-    <p class="pres-sub">The desktop version was designed with large modular<br>blocks, bold sections, and smooth rhythm.</p>
-  </header>
+  <!-- ─── Navigation ─── -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
 
-  <!-- ─── Website Preview ─── -->
-  <main class="site-wrap">
-
-    <!-- Navigation -->
-    <nav class="navbar">
-      <div class="navbar-inner">
-        <div class="nav-logo">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5 6L16 16L5 26" stroke="#111111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M16 16H27" stroke="#FF3A00" stroke-width="3" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <ul class="nav-links">
-          <li><a href="#" class="nav-link active">Home</a></li>
-          <li><a href="#" class="nav-link">About</a></li>
-          <li><a href="#" class="nav-link">Services</a></li>
-          <li><a href="#" class="nav-link">Blog</a></li>
-          <li><a href="#" class="nav-link">Pricing</a></li>
-        </ul>
-        <a href="#" class="nav-cta">Contact us</a>
+      <div class="nav-logo">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 6L16 16L5 26" stroke="#111111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M16 16H27" stroke="#FF3A00" stroke-width="3" stroke-linecap="round"/>
+        </svg>
       </div>
-    </nav>
 
-    <!-- Hero -->
-    <section class="hero">
-      <div class="hero-inner">
-        <div class="hero-text">
-          <h2 class="hero-heading">Redefine<br>digital stories</h2>
-          <p class="hero-desc">We craft bold social strategies that drive real<br>results and reshape how brands connect<br>with their audience online.</p>
-          <div class="hero-actions">
-            <a href="#" class="btn-fill">Begin now</a>
-            <a href="#" class="btn-ring">Learn more</a>
-          </div>
+      <ul class="nav-links">
+        <li><a href="#" class="nav-link active">Главная</a></li>
+        <li><a href="#about" class="nav-link">О нас</a></li>
+        <li><a href="#services" class="nav-link">Услуги</a></li>
+        <li><a href="#" class="nav-link">Блог</a></li>
+        <li><a href="#" class="nav-link">Цены</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#" class="nav-cta">Связаться</a>
+        <button class="nav-burger" id="navBurger" aria-label="Открыть меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile dropdown -->
+    <div class="nav-drawer" id="navDrawer">
+      <a href="#" class="drawer-link">Главная</a>
+      <a href="#about" class="drawer-link">О нас</a>
+      <a href="#services" class="drawer-link">Услуги</a>
+      <a href="#" class="drawer-link">Блог</a>
+      <a href="#" class="drawer-link">Цены</a>
+      <a href="#" class="drawer-link drawer-cta">Связаться</a>
+    </div>
+  </nav>
+
+  <!-- ─── Hero ─── -->
+  <section class="hero">
+    <div class="hero-inner">
+
+      <div class="hero-text">
+        <h1 class="hero-heading">Переосмысли<br>цифровые<br class="br-mob">истории</h1>
+        <p class="hero-desc">Мы создаём смелые SMM-стратегии, которые дают реальный результат и меняют то, как бренды общаются с аудиторией.</p>
+        <div class="hero-actions">
+          <a href="#" class="btn-fill">Начать</a>
+          <a href="#" class="btn-ring">Узнать больше</a>
         </div>
-        <div class="hero-media">
-          <div class="hero-card">
-            <div class="hero-card-visual"></div>
-            <div class="hero-card-label">
-              <span class="label-dot"></span>
-              Detailing service
-            </div>
+      </div>
+
+      <div class="hero-media">
+        <div class="hero-card">
+          <div class="hero-card-visual"></div>
+          <div class="hero-card-label">
+            <span class="label-dot"></span>
+            Услуга продвижения
           </div>
         </div>
       </div>
-      <div class="hero-wm" aria-hidden="true">kinetic</div>
-    </section>
 
-    <!-- About -->
-    <section class="about">
-      <div class="about-inner">
-        <div class="about-eyebrow">
-          <span class="eyebrow-dot"></span>
-          <span class="eyebrow-text">about studio</span>
-        </div>
-        <p class="about-body">
-          Kinetic Studio&nbsp;– is an SMM<br>
-          agency of bold <mark>creators</mark> that<br>
-          delivers the power of social media<br>
-          with <mark>cutting&#8209;edge&nbsp;strategy</mark>
-        </p>
+    </div>
+    <div class="hero-wm" aria-hidden="true">kinetic</div>
+  </section>
+
+  <!-- ─── About ─── -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div class="about-eyebrow">
+        <span class="eyebrow-dot"></span>
+        <span class="eyebrow-text">о студии</span>
       </div>
-    </section>
+      <p class="about-body">
+        Kinetic Studio&nbsp;— это SMM-агентство смелых <mark>создателей</mark>, которое раскрывает силу социальных сетей с помощью <mark>передовых&nbsp;стратегий</mark>
+      </p>
+    </div>
+  </section>
 
-    <!-- Services -->
-    <section class="services">
-      <div class="services-grid">
+  <!-- ─── Services ─── -->
+  <section class="services" id="services">
+    <div class="services-grid">
 
-        <div class="sc sc-dark">
-          <div class="sc-body">
-            <span class="sc-num">01</span>
-            <h3 class="sc-title">Bold strategies<br>that shape identities</h3>
-          </div>
+      <div class="sc sc-dark">
+        <div class="sc-body">
+          <span class="sc-num">01</span>
+          <h3 class="sc-title">Стратегии,<br>формирующие<br>идентичность</h3>
         </div>
-
-        <div class="sc sc-motion">
-          <div class="sc-bg sc-motion-bg"></div>
-          <div class="sc-body">
-            <h3 class="sc-title">Driving measurable<br>growth through impact</h3>
-          </div>
-        </div>
-
-        <div class="sc sc-speed">
-          <div class="sc-bg sc-speed-bg"></div>
-          <div class="sc-body">
-            <h3 class="sc-title">Creative processes<br>with rapid delivery</h3>
-          </div>
-        </div>
-
-        <div class="sc sc-light">
-          <div class="sc-body">
-            <span class="sc-num sc-num-dark">04</span>
-            <h3 class="sc-title sc-title-dark">A dedicated team<br>behind success</h3>
-          </div>
-        </div>
-
       </div>
-    </section>
 
-  </main>
+      <div class="sc sc-motion">
+        <div class="sc-bg sc-motion-bg"></div>
+        <div class="sc-body">
+          <h3 class="sc-title">Измеримый рост<br>через вовлечённость</h3>
+        </div>
+      </div>
 
+      <div class="sc sc-speed">
+        <div class="sc-bg sc-speed-bg"></div>
+        <div class="sc-body">
+          <h3 class="sc-title">Творческие процессы<br>с быстрой реализацией</h3>
+        </div>
+      </div>
+
+      <div class="sc sc-light">
+        <div class="sc-body">
+          <span class="sc-num sc-num-dark">04</span>
+          <h3 class="sc-title sc-title-dark">Профессиональная<br>команда за<br>каждым успехом</h3>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
