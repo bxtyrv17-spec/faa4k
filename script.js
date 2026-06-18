@@ -187,4 +187,4 @@ document.addEventListener('click', e => {
    INIT
 ═══════════════════════════════════════════ */
 applyLang(currentLang);
-setTheme(localStorage.getItem('theme') || 'light');
+setTheme(localStorage.getItem('theme') || 'dark');
