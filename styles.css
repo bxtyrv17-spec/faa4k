@@ -397,7 +397,6 @@ ul { list-style: none; }
 .about-body mark {
   background: none;
   color: var(--accent);
-  font-style: italic;
 }
 
 /* ══════════════════════════════════════════
