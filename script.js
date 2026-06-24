@@ -283,7 +283,7 @@ document.addEventListener('click', (e) => {
 function setTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
   const mc = document.getElementById('themeColor');
-  if (mc) mc.content = theme === 'dark' ? '#0C0308' : '#F9F1EE';
+  if (mc) mc.content = theme === 'dark' ? '#0C0308' : '#F6F0EB';
   localStorage.setItem('theme', theme);
 }
 
@@ -431,4 +431,4 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeArticle
    INIT
 ═══════════════════════════════════════════ */
 applyLang(currentLang);
-setTheme(localStorage.getItem('theme') || 'dark');
+setTheme(localStorage.getItem('theme') || 'light');
