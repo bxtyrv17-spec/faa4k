@@ -464,67 +464,121 @@ document.querySelectorAll('.ov-close').forEach(btn => {
 });
 
 /* ═══════════════════════════════════════════
-   CLIENT REVIEWS SECTION
+   REVIEWS CAROUSEL
 ═══════════════════════════════════════════ */
-(function injectReviews() {
-  const reviews = [
-    { name: 'Азиза Р.',   service: 'Брендинг',        text: 'Результат превзошёл все ожидания. Логотип и фирменный стиль получились именно такими, как я мечтала. Спасибо за внимание к деталям!', stars: 5 },
-    { name: 'Тимур К.',   service: 'Логотип',          text: 'Очень профессиональная работа. Сделал несколько вариантов логотипа, быстро вносил правки. Рекомендую всем, кто ищет качественный дизайн.', stars: 5 },
-    { name: 'Камилла М.', service: 'Дизайн упаковки',  text: 'Упаковка для нашего продукта выглядит потрясающе! Покупатели сразу замечают и хвалят оформление. Буду обращаться ещё.', stars: 5 },
-    { name: 'Санжар Б.',  service: 'UI/UX',            text: 'Интерфейс мобильного приложения стал намного удобнее и красивее. Пользователи довольны, конверсия выросла. Спасибо за проделанную работу!', stars: 5 },
+(function initReviewsCarousel() {
+  const REVIEWS = [
+    { name: 'Азиза Р.',       service: 'Брендинг',           text: 'Результат превзошёл все ожидания. Логотип и фирменный стиль получились именно такими, как я мечтала. Спасибо за внимание к деталям!' },
+    { name: 'Тимур К.',       service: 'Логотип',            text: 'Очень профессиональная работа. Несколько вариантов логотипа, быстрые правки. Рекомендую всем, кто ищет качественный дизайн.' },
+    { name: 'Камилла М.',     service: 'Дизайн упаковки',    text: 'Упаковка для нашего продукта выглядит потрясающе! Покупатели сразу замечают и хвалят оформление. Буду обращаться снова.' },
+    { name: 'Санжар Б.',      service: 'UI/UX',              text: 'Интерфейс приложения стал намного удобнее и красивее. Пользователи довольны, конверсия выросла. Отличная работа!' },
+    { name: 'Нилуфар А.',     service: 'Айдентика',          text: 'Полностью обновили образ бренда. Клиенты сразу заметили разницу и стали чаще обращаться.' },
+    { name: 'Отабек Х.',      service: 'Презентация',        text: 'Презентация для инвесторов получилась на высшем уровне. Успешно привлекли финансирование — спасибо!' },
+    { name: 'Зарина У.',      service: 'Соцсети',            text: 'Оформление Instagram-аккаунта преобразило наш профиль. Подписчики растут, охваты увеличились вдвое.' },
+    { name: 'Бахром Ю.',      service: 'Логотип',            text: 'Простой и запоминающийся логотип — именно то, что нужно для нашего бизнеса. Работали быстро и чётко.' },
+    { name: 'Дилноза С.',     service: 'Брендинг',           text: 'Работали очень быстро и качественно. Всё сделали в срок и с душой. Ощущается, что дизайнер вникает в задачу.' },
+    { name: 'Акбар Т.',       service: 'UI/UX',              text: 'Дизайн сайта стал намного привлекательнее. Среднее время на странице увеличилось вдвое.' },
+    { name: 'Феруза Н.',      service: 'Упаковка',           text: 'Упаковка получилась стильной и функциональной. Товар начал выделяться на полке среди конкурентов.' },
+    { name: 'Джасур М.',      service: 'Иллюстрация',        text: 'Иллюстрации для книги получились живыми и выразительными. Издательство тоже осталось в восторге.' },
+    { name: 'Шахло И.',       service: 'Типографика',        text: 'Постер с типографикой украсил наш офис. Стильно, со смыслом, и каждый гость спрашивает, кто автор.' },
+    { name: 'Улугбек Р.',     service: 'Брендинг',           text: 'Новый фирменный стиль сразу повысил узнаваемость компании. Партнёры заметили изменения с первого взгляда.' },
+    { name: 'Малика К.',      service: 'Упаковка',           text: 'Клиенты постоянно спрашивают, кто делал упаковку. Это лучший комплимент для дизайнера!' },
+    { name: 'Рустам Д.',      service: 'Презентация',        text: 'Делали презентацию для конференции — выступление прошло на ура. Слайды выглядели профессионально.' },
+    { name: 'Гульнора Ш.',    service: 'Логотип',            text: 'Логотип получился лаконичным и современным. Именно так и представляли с самого начала.' },
+    { name: 'Бобур А.',       service: 'Соцсети',            text: 'Контент для соцсетей стал системным и красивым. Аудитория реагирует активнее.' },
+    { name: 'Наргиза В.',     service: 'UI/UX',              text: 'Мобильное приложение теперь радует глаз. Пользователи оставляют положительные отзывы в сторах.' },
+    { name: 'Комил Р.',       service: 'Айдентика',          text: 'Айдентика для нашего ресторана создала нужную атмосферу ещё до открытия.' },
+    { name: 'Лола Б.',        service: 'Брендинг',           text: 'Профессионал своего дела. Всё объяснил, выслушал пожелания, сделал идеально и в срок.' },
+    { name: 'Хуршид Е.',      service: 'Иллюстрация',        text: 'Персонажи для игры получились яркими и запоминающимися. Продолжаем долгосрочное сотрудничество.' },
+    { name: 'Мадина Ф.',      service: 'Типографика',        text: 'Афиша для нашего мероприятия привлекла намного больше людей, чем раньше.' },
+    { name: 'Алишер Г.',      service: 'Упаковка',           text: 'Редизайн упаковки поднял продажи. Инвестиции в дизайн окупились за первый месяц.' },
+    { name: 'Юлдуз Р.',       service: 'Логотип',            text: 'Работала с несколькими дизайнерами, но только здесь поняли мою идею с первого раза.' },
+    { name: 'Фаррух Н.',      service: 'UI/UX',              text: 'Дизайн интернет-магазина увеличил конверсию на 30%. Инвестиции окупились очень быстро.' },
+    { name: 'Сабина А.',      service: 'Брендинг',           text: 'Бренд стал узнаваемым и цельным. Клиенты часто говорят, что у нас «красиво».' },
+    { name: 'Тошпулат М.',    service: 'Презентация',        text: 'Сделали за одну ночь перед важной встречей — и всё было идеально. Реально спасли!' },
+    { name: 'Мухаммад О.',    service: 'Соцсети',            text: 'Визуальный стиль профиля изменился до неузнаваемости. Теперь не стыдно показывать клиентам.' },
+    { name: 'Дина К.',        service: 'Айдентика',          text: 'Новая айдентика для нашей клиники вызывает доверие у пациентов с первого взгляда.' },
+    { name: 'Асел Р.',        service: 'Иллюстрация',        text: 'Иллюстрации для детского журнала полюбили и дети, и родители! Тёплые и живые образы.' },
+    { name: 'Нодир Б.',       service: 'Брендинг',           text: 'Полный ребрендинг прошёл гладко. Команда профессионалов, которые слышат заказчика.' },
+    { name: 'Зебо И.',        service: 'Логотип',            text: 'Логотип отражает ценности нашей компании. Очень точное попадание в концепцию с первого варианта.' },
+    { name: 'Сарвар У.',      service: 'UI/UX',              text: 'Юзабилити сайта улучшилось значительно. Клиенты находят нужную информацию намного быстрее.' },
+    { name: 'Барно Х.',       service: 'Упаковка',           text: 'Наш продукт наконец выглядит так же хорошо, как и на вкус. Огромное спасибо!' },
+    { name: 'Озодбек Л.',     service: 'Типографика',        text: 'Фирменный шрифтовой стиль придал изданию особый характер. Читатели сразу отличают нас от других.' },
+    { name: 'Чулпан М.',      service: 'Брендинг',           text: 'Детальная проработка каждого элемента. Брендбук — настоящее произведение искусства.' },
+    { name: 'Хамид Т.',       service: 'Соцсети',            text: 'Шаблоны для постов экономят время и держат единый стиль. Удобно и очень красиво.' },
+    { name: 'Матлуба В.',     service: 'Айдентика',          text: 'Корпоративная айдентика объединила всю команду. Сотрудники гордятся своим брендом.' },
+    { name: 'Ислом Р.',       service: 'Иллюстрация',        text: 'Иллюстрации для рекламной кампании были восприняты очень тепло. Результат превзошёл все KPI.' },
   ];
 
-  function buildHTML() {
-    const cards = reviews.map(r => {
-      const stars = '★'.repeat(r.stars);
-      const initials = r.name.split(' ').map(w => w[0]).join('').toUpperCase();
-      return `<div class="review-card">
-        <div class="review-stars">${stars}</div>
-        <p class="review-text">${r.text}</p>
-        <div class="review-author">
-          <div class="review-avatar" style="display:flex;align-items:center;justify-content:center;">${initials}</div>
-          <div>
-            <div class="review-name">${r.name}</div>
-            <div class="review-service">${r.service}</div>
-          </div>
-        </div>
-      </div>`;
-    }).join('');
+  const track = document.getElementById('reviewsTrack');
+  if (!track) return;
 
-    return `<section class="ov-reviews">
-      <div class="reviews-layout">
+  // Inject cards
+  track.innerHTML = REVIEWS.map(r => {
+    const initials = r.name.split(' ').map(w => w[0]).join('').toUpperCase();
+    return `<div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">${r.text}</p>
+      <div class="review-author">
+        <div class="review-avatar">${initials}</div>
         <div>
-          <p class="reviews-label">Отзывы</p>
-          <h3 class="reviews-heading">Что говорят клиенты</h3>
-        </div>
-        <div class="reviews-cards">${cards}</div>
-        <div style="text-align:center;">
-          <div class="reviews-score">5.0</div>
-          <div class="reviews-stars-display">★★★★★</div>
-          <p class="reviews-score-lbl">Средняя оценка</p>
-          <div class="reviews-total">${reviews.length}</div>
-          <p class="reviews-total-lbl">Отзывов</p>
+          <div class="review-name">${r.name}</div>
+          <div class="review-service">${r.service}</div>
         </div>
       </div>
-    </section>`;
+    </div>`;
+  }).join('');
+
+  const prevBtn = document.querySelector('.rev-arr-prev');
+  const nextBtn = document.querySelector('.rev-arr-next');
+  let current = 0;
+
+  function getVisible() {
+    const w = window.innerWidth;
+    if (w >= 1100) return 4;
+    if (w >= 768)  return 3;
+    if (w >= 500)  return 2;
+    return 1;
   }
 
-  const html = buildHTML();
+  function getStepPx() {
+    const card = track.querySelector('.review-card');
+    if (!card) return 0;
+    const gap = parseFloat(getComputedStyle(track).gap) || 20;
+    return card.getBoundingClientRect().width + gap;
+  }
 
-  // Insert after .ov-contact in each overlay (services, packages, blog, about)
-  document.querySelectorAll('.page-ov .ov-contact').forEach(block => {
-    const div = document.createElement('div');
-    div.innerHTML = html;
-    block.parentNode.insertBefore(div.firstElementChild, block.nextSibling);
+  function setCardWidths() {
+    const vp = document.querySelector('.reviews-viewport');
+    if (!vp) return;
+    const vis = getVisible();
+    const gap = 20;
+    const w = Math.floor((vp.offsetWidth - gap * (vis - 1)) / vis);
+    track.querySelectorAll('.review-card').forEach(c => { c.style.width = w + 'px'; });
+  }
+
+  function go(n) {
+    const max = REVIEWS.length - getVisible();
+    current = Math.max(0, Math.min(n, max));
+    track.style.transform = `translateX(${-current * getStepPx()}px)`;
+    prevBtn.disabled = current === 0;
+    nextBtn.disabled = current >= REVIEWS.length - getVisible();
+  }
+
+  prevBtn.addEventListener('click', () => go(current - 1));
+  nextBtn.addEventListener('click', () => go(current + 1));
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      setCardWidths();
+      go(current);
+    }, 80);
   });
 
-  // Insert after .contact-sec in the contact overlay
-  const contactSec = document.querySelector('#ov-contact .contact-sec');
-  if (contactSec) {
-    const div = document.createElement('div');
-    div.innerHTML = html;
-    contactSec.parentNode.insertBefore(div.firstElementChild, contactSec.nextSibling);
-  }
+  setCardWidths();
+  go(0);
 })();
 
 // FAB chat button — open contact overlay
