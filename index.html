@@ -25,11 +25,11 @@
 
       <ul class="nav-links">
         <li><a href="#hero"     class="nav-link" data-i18n="nav.home">Главная</a></li>
-        <li><a href="#services" class="nav-link" data-i18n="nav.services">Услуги</a></li>
-        <li><a href="#packages" class="nav-link" data-i18n="nav.packages">Пакеты</a></li>
-        <li><a href="#blog"     class="nav-link" data-i18n="nav.blog">Блог</a></li>
-        <li><a href="#about"    class="nav-link" data-i18n="nav.about">Обо мне</a></li>
-        <li><a href="#contact"  class="nav-link" data-i18n="nav.contact">Контакты</a></li>
+        <li><a href="#" class="nav-link" data-overlay="services" data-i18n="nav.services">Услуги</a></li>
+        <li><a href="#" class="nav-link" data-overlay="packages" data-i18n="nav.packages">Пакеты</a></li>
+        <li><a href="#" class="nav-link" data-overlay="blog"     data-i18n="nav.blog">Блог</a></li>
+        <li><a href="#" class="nav-link" data-overlay="about"    data-i18n="nav.about">Обо мне</a></li>
+        <li><a href="#" class="nav-link" data-overlay="contact"  data-i18n="nav.contact">Контакты</a></li>
       </ul>
 
       <div class="nav-actions">
@@ -61,7 +61,7 @@
           </div>
         </div>
 
-        <a href="#contact" class="nav-cta" data-i18n="nav.book">Записаться</a>
+        <a href="#" class="nav-cta" data-overlay="contact" data-i18n="nav.book">Записаться</a>
 
         <button class="nav-burger" id="navBurger" aria-label="Меню">
           <span></span><span></span><span></span>
@@ -70,13 +70,13 @@
     </div>
 
     <div class="nav-drawer">
-      <a href="#hero"     class="drawer-link" data-i18n="nav.home">Главная</a>
-      <a href="#services" class="drawer-link" data-i18n="nav.services">Услуги</a>
-      <a href="#packages" class="drawer-link" data-i18n="nav.packages">Пакеты</a>
-      <a href="#blog"     class="drawer-link" data-i18n="nav.blog">Блог</a>
-      <a href="#about"    class="drawer-link" data-i18n="nav.about">Обо мне</a>
-      <a href="#contact"  class="drawer-link" data-i18n="nav.contact">Контакты</a>
-      <a href="#contact"  class="drawer-link drawer-cta" data-i18n="nav.book">Записаться</a>
+      <a href="#hero" class="drawer-link" data-i18n="nav.home">Главная</a>
+      <a href="#" class="drawer-link" data-overlay="services" data-i18n="nav.services">Услуги</a>
+      <a href="#" class="drawer-link" data-overlay="packages" data-i18n="nav.packages">Пакеты</a>
+      <a href="#" class="drawer-link" data-overlay="blog"     data-i18n="nav.blog">Блог</a>
+      <a href="#" class="drawer-link" data-overlay="about"    data-i18n="nav.about">Обо мне</a>
+      <a href="#" class="drawer-link" data-overlay="contact"  data-i18n="nav.contact">Контакты</a>
+      <a href="#" class="drawer-link drawer-cta" data-overlay="contact" data-i18n="nav.book">Записаться</a>
     </div>
   </nav>
 
@@ -308,6 +308,151 @@
       </div>
     </div>
   </section>
+
+  <!-- ═══ PAGE OVERLAYS ═══ -->
+
+  <!-- SERVICES -->
+  <div class="page-ov" id="ov-services" role="dialog" aria-modal="true">
+    <div class="ov-topbar">
+      <span class="ov-logo-txt">faa4k</span>
+      <button class="ov-close" aria-label="Закрыть"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <div class="sec-pad">
+      <div class="sec-inner">
+        <div class="sec-head"><h2 class="sec-title" data-i18n="sv.heading">Что я делаю</h2></div>
+        <div class="pf-grid">
+          <div class="pc"><div class="pc-bg pc-1"></div><div class="pc-body"><span class="pc-tag" data-i18n="sv.c1">Брендинг</span><h3 class="pc-title">Brand Identity System</h3></div></div>
+          <div class="pc"><div class="pc-bg pc-2"></div><div class="pc-body"><span class="pc-tag" data-i18n="sv.c2">Айдентика</span><h3 class="pc-title">Visual Identity Pack</h3></div></div>
+          <div class="pc"><div class="pc-bg pc-3"></div><div class="pc-body"><span class="pc-tag" data-i18n="sv.c3">UI/UX</span><h3 class="pc-title">Mobile App Design</h3></div></div>
+          <div class="pc"><div class="pc-bg pc-4"></div><div class="pc-body"><span class="pc-tag" data-i18n="sv.c4">Упаковка</span><h3 class="pc-title">Product Packaging</h3></div></div>
+          <div class="pc"><div class="pc-bg pc-5"></div><div class="pc-body"><span class="pc-tag" data-i18n="sv.c5">Типографика</span><h3 class="pc-title">Typography Poster</h3></div></div>
+          <div class="pc"><div class="pc-bg pc-6"></div><div class="pc-body"><span class="pc-tag" data-i18n="sv.c6">Иллюстрация</span><h3 class="pc-title">Digital Illustration</h3></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="ov-contact"><div class="ov-contact-inner">
+      <h2 class="ov-contact-h" data-i18n-html="ct.heading">Начнём что-то<br>создавать?</h2>
+      <div class="ov-contact-btns">
+        <a href="mailto:hello@faa4k.com" class="btn-fill-inv" data-i18n="ct.email">Написать на почту</a>
+        <a href="https://t.me/faa4k" class="btn-ring-inv" data-i18n="ct.tg">Telegram</a>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- PACKAGES -->
+  <div class="page-ov" id="ov-packages" role="dialog" aria-modal="true">
+    <div class="ov-topbar">
+      <span class="ov-logo-txt">faa4k</span>
+      <button class="ov-close" aria-label="Закрыть"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <div class="sec-pad sec-alt">
+      <div class="sec-inner">
+        <div class="pkg-hero">
+          <h2 class="pkg-hero-title" data-i18n="pk.heading">Выберите свой пакет</h2>
+          <p class="pkg-hero-sub" data-i18n="pk.sub">Выберите подходящий формат сотрудничества</p>
+        </div>
+        <div class="pkg-grid">
+          <div class="pkg-card">
+            <span class="pkg-zone">Стартовый пакет</span>
+            <h3 class="pkg-name" data-i18n="pk.n1">Старт</h3>
+            <p class="pkg-desc" data-i18n="pk.d1">Для малого бизнеса</p>
+            <ul class="pkg-features"><li>Логотип + фирменный стиль</li><li>1 концепция</li><li>3 правки</li><li>Исходные файлы</li></ul>
+            <div class="pkg-price-block"><div class="pkg-price"><span class="pkg-price-val">1 200 000</span><span class="pkg-price-cur">сум</span></div><p class="pkg-price-note">Уточняется на консультации</p></div>
+            <a href="mailto:hello@faa4k.com" class="pkg-btn" data-i18n="pk.btn">Выбрать пакет</a>
+          </div>
+          <div class="pkg-card pkg-featured">
+            <div class="pkg-badge" data-i18n="pk.popular">Популярный</div>
+            <span class="pkg-zone pkg-zone-inv">Стандартный пакет</span>
+            <h3 class="pkg-name" data-i18n="pk.n2">Стандарт</h3>
+            <p class="pkg-desc" data-i18n="pk.d2">Для растущих брендов</p>
+            <ul class="pkg-features"><li>Полный фирменный стиль</li><li>2 концепции</li><li>5 правок</li><li>Гайдлайн бренда</li><li>Соцсети + шаблоны</li></ul>
+            <div class="pkg-price-block"><div class="pkg-price"><span class="pkg-price-val">3 000 000</span><span class="pkg-price-cur">сум</span></div><p class="pkg-price-note">Уточняется на консультации</p></div>
+            <a href="mailto:hello@faa4k.com" class="pkg-btn" data-i18n="pk.btn">Выбрать пакет</a>
+          </div>
+          <div class="pkg-card">
+            <span class="pkg-zone">Премиум пакет</span>
+            <h3 class="pkg-name" data-i18n="pk.n3">Премиум</h3>
+            <p class="pkg-desc" data-i18n="pk.d3">Для крупных проектов</p>
+            <ul class="pkg-features"><li>Полная айдентика</li><li>3 концепции</li><li>Безлимит правок</li><li>Брендбук</li><li>Упаковка + иллюстрации</li><li>Приоритетная поддержка</li></ul>
+            <div class="pkg-price-block"><div class="pkg-price"><span class="pkg-price-val">5 000 000</span><span class="pkg-price-cur">сум+</span></div><p class="pkg-price-note">Зависит от проекта</p></div>
+            <a href="mailto:hello@faa4k.com" class="pkg-btn" data-i18n="pk.btn">Выбрать пакет</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ov-contact"><div class="ov-contact-inner">
+      <h2 class="ov-contact-h" data-i18n-html="ct.heading">Начнём что-то<br>создавать?</h2>
+      <div class="ov-contact-btns">
+        <a href="mailto:hello@faa4k.com" class="btn-fill-inv" data-i18n="ct.email">Написать на почту</a>
+        <a href="https://t.me/faa4k" class="btn-ring-inv" data-i18n="ct.tg">Telegram</a>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- BLOG -->
+  <div class="page-ov" id="ov-blog" role="dialog" aria-modal="true">
+    <div class="ov-topbar">
+      <span class="ov-logo-txt">faa4k</span>
+      <button class="ov-close" aria-label="Закрыть"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <div class="sec-pad">
+      <div class="sec-inner">
+        <div class="sec-head"><h2 class="sec-title" data-i18n="bl.heading">Статьи</h2></div>
+        <div class="blog-grid">
+          <div class="blog-card"><div class="blog-orb blog-orb-1"></div><div class="blog-body"><span class="blog-date">15 мая 2025</span><h3 class="blog-title">Как создать сильный бренд: 5 ключевых принципов</h3><p class="blog-desc">Брендинг — это не просто логотип. Это целая система, которая делает ваш бизнес узнаваемым...</p><button class="blog-link" data-article="0">Читать →</button></div></div>
+          <div class="blog-card"><div class="blog-orb blog-orb-2"></div><div class="blog-body"><span class="blog-date">3 апреля 2025</span><h3 class="blog-title">Типографика в брендинге: почему шрифт важнее, чем кажется</h3><p class="blog-desc">Правильный выбор шрифта способен передать характер бренда лучше любого изображения...</p><button class="blog-link" data-article="1">Читать →</button></div></div>
+          <div class="blog-card"><div class="blog-orb blog-orb-3"></div><div class="blog-body"><span class="blog-date">18 февраля 2025</span><h3 class="blog-title">Психология цвета: как выбрать палитру для бренда</h3><p class="blog-desc">Цвет — один из самых мощных инструментов в дизайне. Он влияет на восприятие и решения...</p><button class="blog-link" data-article="2">Читать →</button></div></div>
+          <div class="blog-card"><div class="blog-orb blog-orb-4"></div><div class="blog-body"><span class="blog-date">10 января 2025</span><h3 class="blog-title">Минимализм в дизайне: когда меньше — это больше</h3><p class="blog-desc">Пустое пространство — это не пустота. Это воздух, который позволяет смыслу дышать...</p><button class="blog-link" data-article="3">Читать →</button></div></div>
+          <div class="blog-card"><div class="blog-orb blog-orb-5"></div><div class="blog-body"><span class="blog-date">5 декабря 2024</span><h3 class="blog-title">Сила логотипа: как символ становится историей бренда</h3><p class="blog-desc">Великие логотипы — это не просто картинки. Это сжатая философия компании в одной форме...</p><button class="blog-link" data-article="4">Читать →</button></div></div>
+          <div class="blog-card"><div class="blog-orb blog-orb-6"></div><div class="blog-body"><span class="blog-date">20 ноября 2024</span><h3 class="blog-title">Тренды графического дизайна 2025</h3><p class="blog-desc">Что будет определять визуальный язык брендов в 2025 году — разбираем ключевые направления...</p><button class="blog-link" data-article="5">Читать →</button></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="ov-contact"><div class="ov-contact-inner">
+      <h2 class="ov-contact-h" data-i18n-html="ct.heading">Начнём что-то<br>создавать?</h2>
+      <div class="ov-contact-btns">
+        <a href="mailto:hello@faa4k.com" class="btn-fill-inv" data-i18n="ct.email">Написать на почту</a>
+        <a href="https://t.me/faa4k" class="btn-ring-inv" data-i18n="ct.tg">Telegram</a>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- ABOUT -->
+  <div class="page-ov" id="ov-about" role="dialog" aria-modal="true">
+    <div class="ov-topbar">
+      <span class="ov-logo-txt">faa4k</span>
+      <button class="ov-close" aria-label="Закрыть"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <div class="about" style="min-height:60vh">
+      <div class="about-inner">
+        <p class="about-body" data-i18n-html="about.body">Хороший дизайн — это не просто красота. Это <mark>ясность мысли</mark>, воплощённая в форме, которая меняет то, как мир <mark>видит себя</mark></p>
+      </div>
+    </div>
+    <div class="ov-contact"><div class="ov-contact-inner">
+      <h2 class="ov-contact-h" data-i18n-html="ct.heading">Начнём что-то<br>создавать?</h2>
+      <div class="ov-contact-btns">
+        <a href="mailto:hello@faa4k.com" class="btn-fill-inv" data-i18n="ct.email">Написать на почту</a>
+        <a href="https://t.me/faa4k" class="btn-ring-inv" data-i18n="ct.tg">Telegram</a>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="page-ov" id="ov-contact" role="dialog" aria-modal="true">
+    <div class="ov-topbar">
+      <span class="ov-logo-txt">faa4k</span>
+      <button class="ov-close" aria-label="Закрыть"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <div class="contact-sec" style="min-height:calc(100vh - 64px)">
+      <div class="contact-inner">
+        <h2 class="contact-h" data-i18n-html="ct.heading">Начнём что-то<br>создавать?</h2>
+        <div class="contact-btns">
+          <a href="mailto:hello@faa4k.com" class="btn-fill-inv" data-i18n="ct.email">Написать на почту</a>
+          <a href="https://t.me/faa4k" class="btn-ring-inv" data-i18n="ct.tg">Telegram</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ═══ ARTICLE MODAL ═══ -->
   <div class="article-modal" id="articleModal" role="dialog" aria-modal="true">

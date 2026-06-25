@@ -425,7 +425,43 @@ document.querySelectorAll('.blog-link[data-article]').forEach(btn => {
 
 articleClose.addEventListener('click', closeArticle);
 articleBackdrop.addEventListener('click', closeArticle);
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeArticle(); });
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    const modal = document.getElementById('articleModal');
+    if (modal && modal.classList.contains('open')) { closeArticle(); return; }
+    closeAllOverlays();
+  }
+});
+
+/* ═══════════════════════════════════════════
+   PAGE OVERLAYS
+═══════════════════════════════════════════ */
+function openOverlay(id) {
+  const ov = document.getElementById('ov-' + id);
+  if (!ov) return;
+  closeAllOverlays();
+  ov.classList.add('ov-open');
+  document.body.classList.add('ov-active');
+  ov.scrollTop = 0;
+  // Close mobile drawer
+  document.getElementById('navbar').classList.remove('is-open');
+}
+
+function closeAllOverlays() {
+  document.querySelectorAll('.page-ov.ov-open').forEach(o => o.classList.remove('ov-open'));
+  document.body.classList.remove('ov-active');
+}
+
+document.querySelectorAll('[data-overlay]').forEach(el => {
+  el.addEventListener('click', e => {
+    e.preventDefault();
+    openOverlay(el.dataset.overlay);
+  });
+});
+
+document.querySelectorAll('.ov-close').forEach(btn => {
+  btn.addEventListener('click', closeAllOverlays);
+});
 
 /* ═══════════════════════════════════════════
    INIT

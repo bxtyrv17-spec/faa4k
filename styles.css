@@ -868,6 +868,94 @@ ul { list-style: none; }
 }
 
 /* ══════════════════════════════════════════
+   PAGE OVERLAYS
+══════════════════════════════════════════ */
+body.ov-active { overflow: hidden; }
+
+.page-ov {
+  position: fixed;
+  inset: 0;
+  z-index: 600;
+  background: var(--bg);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.46s var(--spring), transform 0.46s var(--spring), visibility 0s linear 0.46s, background 0.4s;
+}
+.page-ov.ov-open {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.46s var(--spring), transform 0.46s var(--spring), background 0.4s;
+}
+
+.ov-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--pad);
+  background: rgba(246,240,235,0.92);
+  backdrop-filter: saturate(160%) blur(24px);
+  -webkit-backdrop-filter: saturate(160%) blur(24px);
+  border-bottom: 1px solid var(--border);
+  transition: background 0.4s, border-color 0.4s;
+}
+[data-theme="dark"] .ov-topbar {
+  background: rgba(12,3,8,0.88);
+}
+
+.ov-logo-txt {
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--text);
+  transition: color 0.4s;
+}
+
+.ov-close {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: border-color 0.2s, background 0.2s, color 0.2s;
+}
+.ov-close:hover { border-color: var(--accent); background: var(--accent); color: #fff; }
+
+/* Contact mini at bottom of overlays */
+.ov-contact {
+  background: var(--deep);
+  padding: 100px var(--pad);
+  position: relative;
+  overflow: hidden;
+  transition: background 0.4s;
+}
+.ov-contact::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse 65% 70% at 50% 50%, rgba(155,24,50,.10) 0%, transparent 70%);
+  pointer-events: none;
+}
+.ov-contact-inner {
+  position: relative;
+  display: flex; flex-direction: column; align-items: flex-start; gap: 36px;
+  max-width: 1200px; margin: 0 auto;
+}
+.ov-contact-h {
+  font-size: clamp(2.4rem, 5vw, 4.8rem);
+  font-weight: 700; letter-spacing: -0.02em;
+  color: #F5EDE8; line-height: 1.06;
+}
+.ov-contact-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+
+/* ══════════════════════════════════════════
    TABLET ≤ 1024px
 ══════════════════════════════════════════ */
 @media (max-width: 1024px) {
