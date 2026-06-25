@@ -956,6 +956,101 @@ body.ov-active { overflow: hidden; }
 .ov-contact-btns { display: flex; gap: 12px; flex-wrap: wrap; }
 
 /* ══════════════════════════════════════════
+   REVIEWS SECTION
+══════════════════════════════════════════ */
+.ov-reviews {
+  background: var(--bg);
+  padding: 96px var(--pad) 100px;
+  transition: background 0.4s;
+}
+.reviews-layout {
+  max-width: 1200px; margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.6fr 0.75fr;
+  gap: 60px;
+  align-items: start;
+}
+.reviews-label {
+  font-size: 0.65rem; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 16px;
+  transition: color 0.4s;
+}
+.reviews-heading {
+  font-size: clamp(1.7rem, 2.8vw, 2.4rem);
+  font-weight: 700; letter-spacing: -0.02em;
+  line-height: 1.15; color: var(--text);
+  transition: color 0.4s;
+}
+.reviews-cards { display: flex; flex-direction: column; gap: 14px; }
+.review-card {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: 16px; padding: 22px 24px;
+  transition: background 0.4s, border-color 0.4s;
+}
+.review-stars { color: #E8A020; font-size: 0.82rem; letter-spacing: 2px; margin-bottom: 12px; }
+.review-text {
+  font-size: 0.87rem; color: var(--text);
+  line-height: 1.65; margin-bottom: 18px;
+  transition: color 0.4s;
+}
+.review-author { display: flex; align-items: center; gap: 10px; }
+.review-avatar {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--accent); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.72rem; font-weight: 700; flex-shrink: 0;
+}
+.review-name { font-size: 0.82rem; font-weight: 600; color: var(--text); transition: color 0.4s; }
+.review-service { font-size: 0.68rem; color: var(--muted); transition: color 0.4s; }
+.reviews-right { padding-top: 8px; }
+.reviews-score {
+  font-size: 4rem; font-weight: 800; letter-spacing: -0.04em;
+  color: var(--text); line-height: 1; margin-bottom: 6px;
+  transition: color 0.4s;
+}
+.reviews-stars-display { color: #E8A020; font-size: 1rem; letter-spacing: 3px; margin-bottom: 6px; }
+.reviews-score-lbl {
+  font-size: 0.60rem; font-weight: 700; letter-spacing: 0.10em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 28px;
+  transition: color 0.4s;
+}
+.reviews-total {
+  font-size: 2.2rem; font-weight: 800; letter-spacing: -0.03em;
+  color: var(--text); line-height: 1; margin-bottom: 4px;
+  transition: color 0.4s;
+}
+.reviews-total-lbl {
+  font-size: 0.60rem; font-weight: 700; letter-spacing: 0.10em;
+  text-transform: uppercase; color: var(--muted);
+  transition: color 0.4s;
+}
+
+/* ══════════════════════════════════════════
+   FLOATING ACTION BUTTONS
+══════════════════════════════════════════ */
+.fab-group {
+  position: fixed; bottom: 26px; right: 26px;
+  z-index: 700; display: flex; flex-direction: column;
+  gap: 10px; align-items: center;
+}
+.fab {
+  width: 50px; height: 50px; border-radius: 50%;
+  background: var(--accent); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  text-decoration: none; border: none; cursor: pointer;
+  box-shadow: 0 4px 20px rgba(155,24,50,.32);
+  transition: transform 0.22s var(--spring), box-shadow 0.22s var(--spring);
+}
+.fab:hover { transform: scale(1.12) translateY(-2px); box-shadow: 0 8px 28px rgba(155,24,50,.46); }
+.fab-chat {
+  background: var(--bg2); color: var(--text);
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 16px rgba(13,4,7,.10);
+}
+[data-theme="dark"] .fab-chat { box-shadow: 0 4px 16px rgba(0,0,0,.32); }
+
+/* ══════════════════════════════════════════
    TABLET ≤ 1024px
 ══════════════════════════════════════════ */
 @media (max-width: 1024px) {
@@ -1004,6 +1099,9 @@ body.ov-active { overflow: hidden; }
 
   .contact-sec { padding: 72px var(--pad); }
   .contact-h   { font-size: clamp(2rem, 8.5vw, 3rem); }
+
+  .ov-reviews { padding: 64px var(--pad); }
+  .reviews-layout { grid-template-columns: 1fr; gap: 36px; }
 }
 
 /* ══════════════════════════════════════════
@@ -1021,4 +1119,7 @@ body.ov-active { overflow: hidden; }
   .stat-num     { font-size: 2.4rem; }
 
   .pf-grid { grid-template-columns: 1fr; gap: 10px; }
+
+  .fab-group { bottom: 18px; right: 18px; }
+  .fab { width: 44px; height: 44px; }
 }

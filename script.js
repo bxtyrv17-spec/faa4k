@@ -464,6 +464,73 @@ document.querySelectorAll('.ov-close').forEach(btn => {
 });
 
 /* ═══════════════════════════════════════════
+   CLIENT REVIEWS SECTION
+═══════════════════════════════════════════ */
+(function injectReviews() {
+  const reviews = [
+    { name: 'Азиза Р.',   service: 'Брендинг',        text: 'Результат превзошёл все ожидания. Логотип и фирменный стиль получились именно такими, как я мечтала. Спасибо за внимание к деталям!', stars: 5 },
+    { name: 'Тимур К.',   service: 'Логотип',          text: 'Очень профессиональная работа. Сделал несколько вариантов логотипа, быстро вносил правки. Рекомендую всем, кто ищет качественный дизайн.', stars: 5 },
+    { name: 'Камилла М.', service: 'Дизайн упаковки',  text: 'Упаковка для нашего продукта выглядит потрясающе! Покупатели сразу замечают и хвалят оформление. Буду обращаться ещё.', stars: 5 },
+    { name: 'Санжар Б.',  service: 'UI/UX',            text: 'Интерфейс мобильного приложения стал намного удобнее и красивее. Пользователи довольны, конверсия выросла. Спасибо за проделанную работу!', stars: 5 },
+  ];
+
+  function buildHTML() {
+    const cards = reviews.map(r => {
+      const stars = '★'.repeat(r.stars);
+      const initials = r.name.split(' ').map(w => w[0]).join('').toUpperCase();
+      return `<div class="review-card">
+        <div class="review-stars">${stars}</div>
+        <p class="review-text">${r.text}</p>
+        <div class="review-author">
+          <div class="review-avatar" style="display:flex;align-items:center;justify-content:center;">${initials}</div>
+          <div>
+            <div class="review-name">${r.name}</div>
+            <div class="review-service">${r.service}</div>
+          </div>
+        </div>
+      </div>`;
+    }).join('');
+
+    return `<section class="ov-reviews">
+      <div class="reviews-layout">
+        <div>
+          <p class="reviews-label">Отзывы</p>
+          <h3 class="reviews-heading">Что говорят клиенты</h3>
+        </div>
+        <div class="reviews-cards">${cards}</div>
+        <div style="text-align:center;">
+          <div class="reviews-score">5.0</div>
+          <div class="reviews-stars-display">★★★★★</div>
+          <p class="reviews-score-lbl">Средняя оценка</p>
+          <div class="reviews-total">${reviews.length}</div>
+          <p class="reviews-total-lbl">Отзывов</p>
+        </div>
+      </div>
+    </section>`;
+  }
+
+  const html = buildHTML();
+
+  // Insert after .ov-contact in each overlay (services, packages, blog, about)
+  document.querySelectorAll('.page-ov .ov-contact').forEach(block => {
+    const div = document.createElement('div');
+    div.innerHTML = html;
+    block.parentNode.insertBefore(div.firstElementChild, block.nextSibling);
+  });
+
+  // Insert after .contact-sec in the contact overlay
+  const contactSec = document.querySelector('#ov-contact .contact-sec');
+  if (contactSec) {
+    const div = document.createElement('div');
+    div.innerHTML = html;
+    contactSec.parentNode.insertBefore(div.firstElementChild, contactSec.nextSibling);
+  }
+})();
+
+// FAB chat button — open contact overlay
+document.getElementById('fabChat').addEventListener('click', () => openOverlay('contact'));
+
+/* ═══════════════════════════════════════════
    INIT
 ═══════════════════════════════════════════ */
 applyLang(currentLang);
