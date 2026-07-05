@@ -430,7 +430,7 @@ function closeArticle() {
   document.body.style.overflow = '';
 }
 
-document.querySelectorAll('.blog-link[data-article]').forEach(btn => {
+document.querySelectorAll('[data-article]').forEach(btn => {
   btn.addEventListener('click', () => openArticle(+btn.dataset.article));
 });
 

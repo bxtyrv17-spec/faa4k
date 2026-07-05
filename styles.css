@@ -698,6 +698,58 @@ ul { list-style: none; }
 }
 
 /* ══════════════════════════════════════════
+   BLOG — numbered list
+══════════════════════════════════════════ */
+.blog-head { text-align: center; margin-bottom: 40px; }
+.blog-title-c { margin-top: 14px; }
+
+.blog-list { border-top: 1px solid var(--border); }
+.blog-row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 44px 116px minmax(0,1.4fr) minmax(0,1.25fr) 56px 108px;
+  align-items: center; gap: 24px;
+  padding: 26px 10px;
+  border: none; border-bottom: 1px solid var(--border);
+  background: none; text-align: left; cursor: pointer; color: var(--text);
+  transition: background 0.25s;
+}
+.blog-row:hover { background: var(--bg2); }
+.blog-row-num { font-family: var(--serif); font-size: 0.92rem; font-weight: 700; color: var(--muted); }
+.blog-row-cat {
+  justify-self: start; font-size: 0.72rem; color: var(--muted);
+  border: 1px solid var(--border); border-radius: 100px; padding: 5px 12px; white-space: nowrap;
+}
+.blog-row-title { font-size: 1.12rem; font-weight: 600; line-height: 1.25; transition: color 0.22s; }
+.blog-row:hover .blog-row-title { color: var(--accent); }
+.blog-row-desc { font-size: 0.86rem; font-weight: 300; color: var(--muted); line-height: 1.5; }
+.blog-row-time { font-size: 0.82rem; color: var(--muted); white-space: nowrap; }
+.blog-row-read {
+  justify-self: end; font-size: 0.82rem; font-weight: 500; color: var(--muted);
+  border: 1px solid var(--border); border-radius: 100px; padding: 8px 18px; white-space: nowrap;
+  transition: border-color 0.22s, color 0.22s;
+}
+.blog-row:hover .blog-row-read { border-color: var(--accent); color: var(--accent); }
+
+@media (max-width: 900px) {
+  .blog-row {
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas:
+      "num  cat  time"
+      "title title title"
+      "desc desc desc"
+      "read read read";
+    gap: 8px 12px; padding: 22px 6px;
+  }
+  .blog-row-num  { grid-area: num; }
+  .blog-row-cat  { grid-area: cat; }
+  .blog-row-time { grid-area: time; justify-self: end; }
+  .blog-row-title{ grid-area: title; margin-top: 4px; }
+  .blog-row-desc { grid-area: desc; }
+  .blog-row-read { grid-area: read; justify-self: start; margin-top: 8px; }
+}
+
+/* ══════════════════════════════════════════
    PORTFOLIO
 ══════════════════════════════════════════ */
 .pf-grid {
