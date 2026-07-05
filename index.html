@@ -136,17 +136,74 @@
   <!-- ═══ SERVICES ═══ -->
   <section class="sec-pad" id="services">
     <div class="sec-inner">
-      <div class="sec-head anim">
-        <h2 class="sec-title" data-i18n="sv.heading">Что я делаю</h2>
+
+      <div class="srv-head anim">
+        <div>
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span class="eyebrow-txt" data-i18n="sv.tag">услуги</span>
+          </div>
+          <h2 class="sec-title" data-i18n="sv.heading">Что я делаю</h2>
+        </div>
+        <a href="#packages" class="srv-all" data-i18n="sv.all">Все услуги →</a>
       </div>
-      <div class="pf-grid">
-        <div class="pc anim">    <div class="pc-bg pc-1"></div><div class="pc-body"><span class="pc-tag" data-i18n="sv.c1">Брендинг</span><h3 class="pc-title">Brand Identity System</h3></div></div>
-        <div class="pc anim d1"> <div class="pc-bg pc-2"></div><div class="pc-body"><span class="pc-tag" data-i18n="sv.c2">Айдентика</span><h3 class="pc-title">Visual Identity Pack</h3></div></div>
-        <div class="pc anim d2"> <div class="pc-bg pc-3"></div><div class="pc-body"><span class="pc-tag" data-i18n="sv.c3">UI/UX</span><h3 class="pc-title">Mobile App Design</h3></div></div>
-        <div class="pc anim d3"> <div class="pc-bg pc-4"></div><div class="pc-body"><span class="pc-tag" data-i18n="sv.c4">Упаковка</span><h3 class="pc-title">Product Packaging</h3></div></div>
-        <div class="pc anim d1"> <div class="pc-bg pc-5"></div><div class="pc-body"><span class="pc-tag" data-i18n="sv.c5">Типографика</span><h3 class="pc-title">Typography Poster</h3></div></div>
-        <div class="pc anim d2"> <div class="pc-bg pc-6"></div><div class="pc-body"><span class="pc-tag" data-i18n="sv.c6">Иллюстрация</span><h3 class="pc-title">Digital Illustration</h3></div></div>
+
+      <div class="srv-filters anim d1">
+        <button class="srv-chip is-active" data-cat="all"  data-i18n="sv.all">Все услуги</button>
+        <button class="srv-chip"           data-cat="brand" data-i18n="sv.c1">Брендинг</button>
+        <button class="srv-chip"           data-cat="ident" data-i18n="sv.c2">Айдентика</button>
+        <button class="srv-chip"           data-cat="ux"    data-i18n="sv.c3">UI/UX</button>
+        <button class="srv-chip"           data-cat="pack"  data-i18n="sv.c4">Упаковка</button>
       </div>
+
+      <div class="srv-list anim d2">
+
+        <a class="srv-item is-open" data-cat="brand" href="#contact">
+          <div class="srv-item-row">
+            <span class="srv-item-name">Логотип и фирменный стиль</span>
+            <span class="srv-item-arrow">→</span>
+          </div>
+          <div class="srv-item-detail">
+            <p class="srv-item-desc">Разработка логотипа с фирменными цветами, типографикой и правилами использования. Глубокое погружение в суть бренда.</p>
+            <span class="srv-item-price">от 1 200 000 сум</span>
+          </div>
+        </a>
+
+        <a class="srv-item" data-cat="ident" href="#contact">
+          <div class="srv-item-row"><span class="srv-item-name">Визитки и полиграфия</span><span class="srv-item-arrow">→</span></div>
+        </a>
+        <a class="srv-item" data-cat="ux" href="#contact">
+          <div class="srv-item-row"><span class="srv-item-name">UI/UX мобильных приложений</span><span class="srv-item-arrow">→</span></div>
+        </a>
+
+        <a class="srv-item" data-cat="brand" href="#contact">
+          <div class="srv-item-row"><span class="srv-item-name">Ребрендинг</span><span class="srv-item-arrow">→</span></div>
+        </a>
+        <a class="srv-item" data-cat="ident" href="#contact">
+          <div class="srv-item-row"><span class="srv-item-name">Оформление соцсетей</span><span class="srv-item-arrow">→</span></div>
+        </a>
+        <a class="srv-item" data-cat="ux" href="#contact">
+          <div class="srv-item-row"><span class="srv-item-name">Веб-дизайн сайтов</span><span class="srv-item-arrow">→</span></div>
+        </a>
+
+        <a class="srv-item" data-cat="brand" href="#contact">
+          <div class="srv-item-row"><span class="srv-item-name">Гайдлайн бренда</span><span class="srv-item-arrow">→</span></div>
+        </a>
+        <a class="srv-item" data-cat="pack" href="#contact">
+          <div class="srv-item-row"><span class="srv-item-name">Дизайн упаковки</span><span class="srv-item-arrow">→</span></div>
+        </a>
+        <a class="srv-item" data-cat="pack" href="#contact">
+          <div class="srv-item-row"><span class="srv-item-name">Этикетки и стикеры</span><span class="srv-item-arrow">→</span></div>
+        </a>
+
+      </div>
+
+      <div class="srv-packages anim d3">
+        <a href="#packages" class="srv-pkg"><span class="srv-pkg-name" data-i18n="pk.n1">Старт</span><span class="srv-pkg-arrow">→</span></a>
+        <a href="#packages" class="srv-pkg"><span class="srv-pkg-name" data-i18n="pk.n2">Стандарт</span><span class="srv-pkg-tag" data-i18n="pk.popular">Популярный</span><span class="srv-pkg-arrow">→</span></a>
+        <a href="#packages" class="srv-pkg"><span class="srv-pkg-name" data-i18n="pk.n3">Премиум</span><span class="srv-pkg-arrow">→</span></a>
+      </div>
+
     </div>
   </section>
 

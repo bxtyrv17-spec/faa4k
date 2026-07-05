@@ -25,7 +25,7 @@ const T = {
     'stat.years': 'лет в дизайне', 'stat.projects': 'проектов', 'stat.clients': 'брендов', 'stat.awards': 'награды',
     'about.tag': 'обо мне',
     'about.body': 'Хороший дизайн — это не просто красота. Это <mark>ясность мысли</mark>, воплощённая в форме, которая меняет то, как мир <mark>видит себя</mark>',
-    'sv.tag': 'услуги', 'sv.heading': 'Что я делаю',
+    'sv.tag': 'услуги', 'sv.heading': 'Что я делаю', 'sv.all': 'Все услуги',
     'sv.c1': 'Брендинг', 'sv.c2': 'Айдентика', 'sv.c3': 'UI/UX', 'sv.c4': 'Упаковка', 'sv.c5': 'Типографика', 'sv.c6': 'Иллюстрация',
     'pk.tag': 'пакеты', 'pk.heading': 'Выберите свой пакет', 'pk.sub': 'Выберите подходящий формат сотрудничества',
     'pk.n1': 'Старт', 'pk.n2': 'Стандарт', 'pk.n3': 'Премиум',
@@ -43,7 +43,7 @@ const T = {
     'stat.years': 'years in design', 'stat.projects': 'projects', 'stat.clients': 'brands', 'stat.awards': 'awards',
     'about.tag': 'about me',
     'about.body': 'Good design is not just beauty. It is <mark>clarity of thought</mark>, embodied in form that changes how the world <mark>sees itself</mark>',
-    'sv.tag': 'services', 'sv.heading': 'What I do',
+    'sv.tag': 'services', 'sv.heading': 'What I do', 'sv.all': 'All services',
     'sv.c1': 'Branding', 'sv.c2': 'Identity', 'sv.c3': 'UI/UX', 'sv.c4': 'Packaging', 'sv.c5': 'Typography', 'sv.c6': 'Illustration',
     'pk.tag': 'packages', 'pk.heading': 'Choose your package', 'pk.sub': 'Choose the right format of collaboration',
     'pk.n1': 'Start', 'pk.n2': 'Standard', 'pk.n3': 'Premium',
@@ -61,7 +61,7 @@ const T = {
     'stat.years': 'yil tajriba', 'stat.projects': 'loyiha', 'stat.clients': 'brend', 'stat.awards': 'mukofot',
     'about.tag': 'men haqimda',
     'about.body': "Yaxshi dizayn — bu faqat chiroyli ko'rinish emas. Bu <mark>fikrning ravshanligi</mark>, shaklda mujassamlashgan va dunyo o'zini qanday <mark>ko'rishini</mark> o'zgartiradi",
-    'sv.tag': 'xizmatlar', 'sv.heading': 'Nima qilaman',
+    'sv.tag': 'xizmatlar', 'sv.heading': 'Nima qilaman', 'sv.all': 'Barcha xizmatlar',
     'sv.c1': 'Brending', 'sv.c2': 'Identifikatsiya', 'sv.c3': 'UI/UX', 'sv.c4': 'Qadoqlash', 'sv.c5': 'Tipografiya', 'sv.c6': 'Illustratsiya',
     'pk.tag': 'paketlar', 'pk.heading': "O'zingizga mos paketni tanlang", 'pk.sub': 'Hamkorlik formatini tanlang',
     'pk.n1': 'Start', 'pk.n2': 'Standart', 'pk.n3': 'Premium',
@@ -79,7 +79,7 @@ const T = {
     'stat.years': 'жыл тәжірибе', 'stat.projects': 'жоба', 'stat.clients': 'брендтер', 'stat.awards': 'марапат',
     'about.tag': 'мен туралы',
     'about.body': 'Жақсы дизайн — тек сұлулық емес. Бұл <mark>ой айқындығы</mark>, дүниенің өзін қалай <mark>көретінін</mark> өзгертетін форма',
-    'sv.tag': 'қызметтер', 'sv.heading': 'Не жасаймын',
+    'sv.tag': 'қызметтер', 'sv.heading': 'Не жасаймын', 'sv.all': 'Барлық қызметтер',
     'sv.c1': 'Брендинг', 'sv.c2': 'Айдентика', 'sv.c3': 'UI/UX', 'sv.c4': 'Қаптама', 'sv.c5': 'Типография', 'sv.c6': 'Иллюстрация',
     'pk.tag': 'пакеттер', 'pk.heading': 'Өзіңізге сай пакетті таңдаңыз', 'pk.sub': 'Қолайлы ынтымақтастық форматын таңдаңыз',
     'pk.n1': 'Старт', 'pk.n2': 'Стандарт', 'pk.n3': 'Премиум',
@@ -97,7 +97,7 @@ const T = {
     'stat.years': 'წელი დიზაინში', 'stat.projects': 'პროექტი', 'stat.clients': 'ბრენდი', 'stat.awards': 'ჯილდო',
     'about.tag': 'ჩემ შესახებ',
     'about.body': 'კარგი დიზაინი მხოლოდ სილამაზე არ არის. ეს <mark>აზრის სიცხადეა</mark>, ფორმაში მოცემული, რომელიც ცვლის სამყაროს <mark>თვით-ხედვას</mark>',
-    'sv.tag': 'სერვისები', 'sv.heading': 'რას ვაკეთებ',
+    'sv.tag': 'სერვისები', 'sv.heading': 'რას ვაკეთებ', 'sv.all': 'ყველა სერვისი',
     'sv.c1': 'ბრენდინგი', 'sv.c2': 'იდენტობა', 'sv.c3': 'UI/UX', 'sv.c4': 'შეფუთვა', 'sv.c5': 'ტიპოგრაფია', 'sv.c6': 'ილუსტრაცია',
     'pk.tag': 'პაკეტები', 'pk.heading': 'აირჩიეთ თქვენი პაკეტი', 'pk.sub': 'აირჩიეთ თანამშრომლობის სასურველი ფორმა',
     'pk.n1': 'სტარტი', 'pk.n2': 'სტანდარტი', 'pk.n3': 'პრემიუმი',
@@ -115,7 +115,7 @@ const T = {
     'stat.years': 'yıl deneyim', 'stat.projects': 'proje', 'stat.clients': 'marka', 'stat.awards': 'ödül',
     'about.tag': 'hakkımda',
     'about.body': "İyi tasarım sadece güzellik değildir. Bu <mark>düşünce netliği</mark>, dünyanın kendini nasıl <mark>gördüğünü</mark> değiştiren formdur",
-    'sv.tag': 'hizmetler', 'sv.heading': 'Ne yapıyorum',
+    'sv.tag': 'hizmetler', 'sv.heading': 'Ne yapıyorum', 'sv.all': 'Tüm hizmetler',
     'sv.c1': 'Marka Kimliği', 'sv.c2': 'Kurumsal Kimlik', 'sv.c3': 'UI/UX', 'sv.c4': 'Ambalaj', 'sv.c5': 'Tipografi', 'sv.c6': 'İllüstrasyon',
     'pk.tag': 'paketler', 'pk.heading': 'Paketinizi seçin', 'pk.sub': 'Size uygun iş birliği formatını seçin',
     'pk.n1': 'Başlangıç', 'pk.n2': 'Standart', 'pk.n3': 'Premium',
@@ -133,7 +133,7 @@ const T = {
     'stat.years': 'il təcrübə', 'stat.projects': 'layihə', 'stat.clients': 'brend', 'stat.awards': 'mükafat',
     'about.tag': 'haqqımda',
     'about.body': 'Yaxşı dizayn yalnız gözəllik deyil. Bu <mark>fikrin aydınlığıdır</mark>, dünyanın özünü necə <mark>gördüyünü</mark> dəyişdirən forma',
-    'sv.tag': 'xidmətlər', 'sv.heading': 'Nə edirəm',
+    'sv.tag': 'xidmətlər', 'sv.heading': 'Nə edirəm', 'sv.all': 'Bütün xidmətlər',
     'sv.c1': 'Brendinq', 'sv.c2': 'Korporativ Kimlik', 'sv.c3': 'UI/UX', 'sv.c4': 'Qablaşdırma', 'sv.c5': 'Tipoqrafiya', 'sv.c6': 'İllüstrasiya',
     'pk.tag': 'paketlər', 'pk.heading': 'Paketinizi seçin', 'pk.sub': 'Əməkdaşlıq formatını seçin',
     'pk.n1': 'Start', 'pk.n2': 'Standart', 'pk.n3': 'Premium',
@@ -151,7 +151,7 @@ const T = {
     'stat.years': 'роки в дизайні', 'stat.projects': 'проектів', 'stat.clients': 'брендів', 'stat.awards': 'нагороди',
     'about.tag': 'про мене',
     'about.body': "Гарний дизайн — це не просто краса. Це <mark>ясність думки</mark>, втілена у формі, яка змінює те, як світ <mark>бачить себе</mark>",
-    'sv.tag': 'послуги', 'sv.heading': 'Що я роблю',
+    'sv.tag': 'послуги', 'sv.heading': 'Що я роблю', 'sv.all': 'Усі послуги',
     'sv.c1': 'Брендинг', 'sv.c2': 'Айдентика', 'sv.c3': 'UI/UX', 'sv.c4': 'Упаковка', 'sv.c5': 'Типографіка', 'sv.c6': 'Ілюстрація',
     'pk.tag': 'пакети', 'pk.heading': 'Оберіть свій пакет', 'pk.sub': 'Оберіть зручний формат співпраці',
     'pk.n1': 'Старт', 'pk.n2': 'Стандарт', 'pk.n3': 'Преміум',
@@ -169,7 +169,7 @@ const T = {
     'stat.years': '年设计经验', 'stat.projects': '个项目', 'stat.clients': '个品牌', 'stat.awards': '个奖项',
     'about.tag': '关于我',
     'about.body': '好的设计不仅仅是美观。它是<mark>思想的清晰</mark>，以形式呈现，改变世界<mark>认识自己</mark>的方式',
-    'sv.tag': '服务', 'sv.heading': '我能做什么',
+    'sv.tag': '服务', 'sv.heading': '我能做什么', 'sv.all': '全部服务',
     'sv.c1': '品牌设计', 'sv.c2': '视觉识别', 'sv.c3': 'UI/UX', 'sv.c4': '包装设计', 'sv.c5': '字体设计', 'sv.c6': '插画',
     'pk.tag': '套餐', 'pk.heading': '选择您的套餐', 'pk.sub': '选择适合您的合作方式',
     'pk.n1': '基础', 'pk.n2': '标准', 'pk.n3': '高级',
@@ -187,7 +187,7 @@ const T = {
     'stat.years': 'años en diseño', 'stat.projects': 'proyectos', 'stat.clients': 'marcas', 'stat.awards': 'premios',
     'about.tag': 'sobre mí',
     'about.body': 'El buen diseño no es solo belleza. Es <mark>claridad de pensamiento</mark>, encarnada en forma que cambia cómo el mundo <mark>se ve a sí mismo</mark>',
-    'sv.tag': 'servicios', 'sv.heading': 'Qué hago',
+    'sv.tag': 'servicios', 'sv.heading': 'Qué hago', 'sv.all': 'Todos los servicios',
     'sv.c1': 'Branding', 'sv.c2': 'Identidad', 'sv.c3': 'UI/UX', 'sv.c4': 'Packaging', 'sv.c5': 'Tipografía', 'sv.c6': 'Ilustración',
     'pk.tag': 'paquetes', 'pk.heading': 'Elige tu paquete', 'pk.sub': 'Elige el formato de colaboración adecuado',
     'pk.n1': 'Inicio', 'pk.n2': 'Estándar', 'pk.n3': 'Premium',
@@ -205,7 +205,7 @@ const T = {
     'stat.years': 'сол дар тарроҳӣ', 'stat.projects': 'лоиҳа', 'stat.clients': 'бренд', 'stat.awards': 'ҷоиза',
     'about.tag': 'дар бораи ман',
     'about.body': 'Тарроҳии хуб танҳо зебоӣ нест. Ин <mark>равшании фикр</mark> аст, ки дар шакл мавҷуд буда, дигар мекунад, ки дунё худро чӣ гуна <mark>мебинад</mark>',
-    'sv.tag': 'хизматҳо', 'sv.heading': 'Чи мекунам',
+    'sv.tag': 'хизматҳо', 'sv.heading': 'Чи мекунам', 'sv.all': 'Ҳамаи хизматҳо',
     'sv.c1': 'Брендинг', 'sv.c2': 'Айдентика', 'sv.c3': 'UI/UX', 'sv.c4': 'Ҷабъбандӣ', 'sv.c5': 'Типография', 'sv.c6': 'Тасвиргарӣ',
     'pk.tag': 'бастаҳо', 'pk.heading': 'Бастаи худро интихоб кунед', 'pk.sub': 'Формати ҳамкориро интихоб кунед',
     'pk.n1': 'Старт', 'pk.n2': 'Стандарт', 'pk.n3': 'Премиум',
@@ -583,6 +583,32 @@ document.querySelectorAll('.ov-close').forEach(btn => {
 
 // FAB chat button — open contact overlay
 document.getElementById('fabChat').addEventListener('click', () => openOverlay('contact'));
+
+/* ═══════════════════════════════════════════
+   SERVICES FILTER
+═══════════════════════════════════════════ */
+(function () {
+  const chips = Array.from(document.querySelectorAll('.srv-chip'));
+  const list  = document.querySelector('.srv-list');
+  if (!chips.length || !list) return;
+  const items = Array.from(list.querySelectorAll('.srv-item'));
+
+  function apply(cat) {
+    list.classList.add('is-switching');
+    setTimeout(() => {
+      items.forEach(it => {
+        const show = cat === 'all' || it.dataset.cat === cat;
+        it.classList.toggle('hide', !show);
+      });
+      list.classList.remove('is-switching');
+    }, 200);
+  }
+
+  chips.forEach(chip => chip.addEventListener('click', () => {
+    chips.forEach(c => c.classList.toggle('is-active', c === chip));
+    apply(chip.dataset.cat);
+  }));
+})();
 
 /* ═══════════════════════════════════════════
    HERO CAROUSEL
