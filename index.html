@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=4" />
+  <link rel="stylesheet" href="styles.css?v=5" />
   <script>
     (function(){ const t = localStorage.getItem('theme')||'light'; document.documentElement.setAttribute('data-theme',t); })();
   </script>
@@ -104,7 +104,7 @@
         <p class="hero-desc hero-anim hero-a3" data-i18n="hero.desc">Создаю визуальные образы, которые вдохновляют и навсегда остаются в памяти.</p>
         <div class="hero-actions hero-anim hero-a4">
           <a href="#services" class="btn-hero-fill" data-i18n="hero.cta1">Смотреть работы</a>
-          <a href="#about" class="btn-hero-ghost">
+          <a href="#about" data-overlay="about" class="btn-hero-ghost">
             <span data-i18n="hero.cta2">Обо мне</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
@@ -121,15 +121,6 @@
         <button class="hero-dot" data-slide="2" aria-label="Слайд 3"></button>
       </div>
 
-    </div>
-  </section>
-
-  <!-- ═══ STATS ═══ -->
-  <section class="stats">
-    <div class="stats-grid">
-      <div class="stat-card anim">   <span class="stat-num">3+</span> <span class="stat-lbl" data-i18n="stat.years">лет опыта</span></div>
-      <div class="stat-card anim d1"><span class="stat-num">80+</span><span class="stat-lbl" data-i18n="stat.projects">проектов</span></div>
-      <div class="stat-card stat-accent anim d2"><span class="stat-num">20+</span><span class="stat-lbl" data-i18n="stat.clients">крупных компаний</span></div>
     </div>
   </section>
 
@@ -158,7 +149,7 @@
 
       <div class="srv-list anim d2">
 
-        <a class="srv-item is-open" data-cat="brand" href="#contact">
+        <a class="srv-item is-open" data-cat="brand" href="#contact" data-overlay="contact">
           <div class="srv-item-row">
             <span class="srv-item-name">Логотип и фирменный стиль</span>
             <span class="srv-item-arrow">→</span>
@@ -169,39 +160,33 @@
           </div>
         </a>
 
-        <a class="srv-item" data-cat="ident" href="#contact">
+        <a class="srv-item" data-cat="ident" href="#contact" data-overlay="contact">
           <div class="srv-item-row"><span class="srv-item-name">Визитки и полиграфия</span><span class="srv-item-arrow">→</span></div>
         </a>
-        <a class="srv-item" data-cat="ux" href="#contact">
+        <a class="srv-item" data-cat="ux" href="#contact" data-overlay="contact">
           <div class="srv-item-row"><span class="srv-item-name">UI/UX мобильных приложений</span><span class="srv-item-arrow">→</span></div>
         </a>
 
-        <a class="srv-item" data-cat="brand" href="#contact">
+        <a class="srv-item" data-cat="brand" href="#contact" data-overlay="contact">
           <div class="srv-item-row"><span class="srv-item-name">Ребрендинг</span><span class="srv-item-arrow">→</span></div>
         </a>
-        <a class="srv-item" data-cat="ident" href="#contact">
+        <a class="srv-item" data-cat="ident" href="#contact" data-overlay="contact">
           <div class="srv-item-row"><span class="srv-item-name">Оформление соцсетей</span><span class="srv-item-arrow">→</span></div>
         </a>
-        <a class="srv-item" data-cat="ux" href="#contact">
+        <a class="srv-item" data-cat="ux" href="#contact" data-overlay="contact">
           <div class="srv-item-row"><span class="srv-item-name">Веб-дизайн сайтов</span><span class="srv-item-arrow">→</span></div>
         </a>
 
-        <a class="srv-item" data-cat="brand" href="#contact">
+        <a class="srv-item" data-cat="brand" href="#contact" data-overlay="contact">
           <div class="srv-item-row"><span class="srv-item-name">Гайдлайн бренда</span><span class="srv-item-arrow">→</span></div>
         </a>
-        <a class="srv-item" data-cat="pack" href="#contact">
+        <a class="srv-item" data-cat="pack" href="#contact" data-overlay="contact">
           <div class="srv-item-row"><span class="srv-item-name">Дизайн упаковки</span><span class="srv-item-arrow">→</span></div>
         </a>
-        <a class="srv-item" data-cat="pack" href="#contact">
+        <a class="srv-item" data-cat="pack" href="#contact" data-overlay="contact">
           <div class="srv-item-row"><span class="srv-item-name">Этикетки и стикеры</span><span class="srv-item-arrow">→</span></div>
         </a>
 
-      </div>
-
-      <div class="srv-packages anim d3">
-        <a href="#packages" class="srv-pkg"><span class="srv-pkg-name" data-i18n="pk.n1">Старт</span><span class="srv-pkg-arrow">→</span></a>
-        <a href="#packages" class="srv-pkg"><span class="srv-pkg-name" data-i18n="pk.n2">Стандарт</span><span class="srv-pkg-tag" data-i18n="pk.popular">Популярный</span><span class="srv-pkg-arrow">→</span></a>
-        <a href="#packages" class="srv-pkg"><span class="srv-pkg-name" data-i18n="pk.n3">Премиум</span><span class="srv-pkg-arrow">→</span></a>
       </div>
 
     </div>
@@ -274,7 +259,7 @@
           <div class="bento-free-badge">FREE</div>
           <h3>Бесплатная консультация</h3>
           <p>Первая встреча — обсуждение проекта бесплатно</p>
-          <a href="#contact" class="bento-free-btn" data-i18n="nav.book">Записаться</a>
+          <a href="#contact" data-overlay="contact" class="bento-free-btn" data-i18n="nav.book">Записаться</a>
         </div>
 
         <div class="bento-card bento-v2 anim d1"><div class="bento-visual bv-3"></div></div>
@@ -312,7 +297,7 @@
             </div>
             <p class="pkg-price-note">Уточняется на консультации</p>
           </div>
-          <a href="#contact" class="pkg-btn" data-i18n="pk.btn">Выбрать пакет</a>
+          <a href="#contact" data-overlay="contact" class="pkg-btn" data-i18n="pk.btn">Выбрать пакет</a>
         </div>
 
         <div class="pkg-card pkg-featured anim d1">
@@ -334,7 +319,7 @@
             </div>
             <p class="pkg-price-note">Уточняется на консультации</p>
           </div>
-          <a href="#contact" class="pkg-btn" data-i18n="pk.btn">Выбрать пакет</a>
+          <a href="#contact" data-overlay="contact" class="pkg-btn" data-i18n="pk.btn">Выбрать пакет</a>
         </div>
 
         <div class="pkg-card anim d2">
@@ -356,7 +341,7 @@
             </div>
             <p class="pkg-price-note">Зависит от проекта</p>
           </div>
-          <a href="#contact" class="pkg-btn" data-i18n="pk.btn">Выбрать пакет</a>
+          <a href="#contact" data-overlay="contact" class="pkg-btn" data-i18n="pk.btn">Выбрать пакет</a>
         </div>
 
       </div>
@@ -434,57 +419,16 @@
     </div>
   </section>
 
-  <!-- ═══ ABOUT ═══ -->
-  <section class="about" id="about">
-    <div class="about-inner">
-      <p class="about-body anim" data-i18n-html="about.body">
-        Хороший дизайн — это не просто красота. Это <mark>ясность мысли</mark>, воплощённая в форме, которая меняет то, как мир <mark>видит себя</mark>
-      </p>
-    </div>
-  </section>
-
   <!-- ═══ CONSULT CTA BAND ═══ -->
   <section class="cta-band" id="consult">
     <div class="cta-band-inner anim">
       <span class="cta-band-tag">Специальное предложение</span>
       <h2 class="cta-band-h">Первая консультация<br>бесплатно</h2>
       <p class="cta-band-sub">Обсудим ваш проект, задачи и стиль — бесплатно и без обязательств.</p>
-      <a href="#contact" class="cta-band-btn">
+      <a href="#contact" data-overlay="contact" class="cta-band-btn">
         <span>Записаться бесплатно</span>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
-    </div>
-  </section>
-
-  <!-- ═══ REVIEWS ═══ -->
-  <section class="reviews-sec" id="reviews">
-    <div class="reviews-sec-inner">
-      <div class="reviews-sec-head">
-        <div>
-          <p class="reviews-sec-label">Отзывы клиентов</p>
-          <h2 class="reviews-sec-title">Что говорят о работе</h2>
-        </div>
-        <div class="reviews-sec-right">
-          <div class="reviews-rating-block">
-            <span class="reviews-big-score">5.0</span>
-            <div class="reviews-rating-meta">
-              <span class="reviews-stars-gold">★★★★★</span>
-              <span class="reviews-count-txt">40 отзывов</span>
-            </div>
-          </div>
-          <div class="reviews-arrows">
-            <button class="rev-arr rev-arr-prev" aria-label="Назад" disabled>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-            </button>
-            <button class="rev-arr rev-arr-next" aria-label="Вперёд">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="reviews-viewport">
-        <div class="reviews-track" id="reviewsTrack"></div>
-      </div>
     </div>
   </section>
 
@@ -505,7 +449,7 @@
               <h3>Остались вопросы?</h3>
               <p>Напишите мне — отвечу лично.</p>
             </div>
-            <a href="#contact" class="faq-card-btn">Написать мне</a>
+            <a href="#contact" data-overlay="contact" class="faq-card-btn">Написать мне</a>
           </div>
         </div>
 
@@ -547,17 +491,6 @@
     </div>
   </section>
 
-  <!-- ═══ CONTACT ═══ -->
-  <section class="contact-sec" id="contact">
-    <div class="contact-inner anim">
-      <h2 class="contact-h" data-i18n-html="ct.heading">Начнём что-то<br>создавать?</h2>
-      <div class="contact-btns">
-        <a href="mailto:hello@faa4k.com" class="btn-fill-inv" data-i18n="ct.email">Написать на почту</a>
-        <a href="https://t.me/faa4k"     class="btn-ring-inv" data-i18n="ct.tg">Telegram</a>
-      </div>
-    </div>
-  </section>
-
   <!-- ═══ FOOTER ═══ -->
   <footer class="footer">
 
@@ -569,7 +502,7 @@
           <p class="footer-cta-sub">Скидка для новых клиентов на первый заказ.</p>
         </div>
         <div class="footer-cta-btns">
-          <a href="#contact" class="footer-cta-fill">Записаться</a>
+          <a href="#contact" data-overlay="contact" class="footer-cta-fill">Записаться</a>
           <a href="#services" class="footer-cta-ghost">Мои услуги →</a>
         </div>
       </div>
@@ -603,15 +536,15 @@
         <a href="#services">Услуги</a>
         <a href="#packages">Пакеты</a>
         <a href="#blog">Блог</a>
-        <a href="#about">Обо мне</a>
-        <a href="#contact">Контакты</a>
+        <a href="#about" data-overlay="about">Обо мне</a>
+        <a href="#contact" data-overlay="contact">Контакты</a>
       </div>
 
       <div class="footer-col">
         <h4>Связаться</h4>
         <a href="mailto:hello@faa4k.com">hello@faa4k.com</a>
         <a href="https://t.me/faa4k" target="_blank" rel="noopener">@faa4k в Telegram</a>
-        <a href="#contact">Записаться на консультацию</a>
+        <a href="#contact" data-overlay="contact">Записаться на консультацию</a>
       </div>
     </div>
 
@@ -789,6 +722,6 @@
     </button>
   </div>
 
-  <script src="script.js?v=4"></script>
+  <script src="script.js?v=5"></script>
 </body>
 </html>
