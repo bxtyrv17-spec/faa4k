@@ -622,6 +622,30 @@ document.getElementById('fabChat').addEventListener('click', () => openOverlay('
 })();
 
 /* ═══════════════════════════════════════════
+   FAQ ACCORDION
+═══════════════════════════════════════════ */
+(function () {
+  const items = Array.from(document.querySelectorAll('.faq-item'));
+  if (!items.length) return;
+  items.forEach(item => {
+    const q = item.querySelector('.faq-q');
+    const a = item.querySelector('.faq-a');
+    q.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      items.forEach(other => {
+        other.classList.remove('open');
+        const oa = other.querySelector('.faq-a');
+        if (oa) oa.style.maxHeight = null;
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        a.style.maxHeight = a.scrollHeight + 'px';
+      }
+    });
+  });
+})();
+
+/* ═══════════════════════════════════════════
    HERO CAROUSEL
 ═══════════════════════════════════════════ */
 (function () {
