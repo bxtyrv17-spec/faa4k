@@ -585,6 +585,36 @@ document.querySelectorAll('.ov-close').forEach(btn => {
 document.getElementById('fabChat').addEventListener('click', () => openOverlay('contact'));
 
 /* ═══════════════════════════════════════════
+   HERO CAROUSEL
+═══════════════════════════════════════════ */
+(function () {
+  const slides = Array.from(document.querySelectorAll('.hero-slide'));
+  const dots   = Array.from(document.querySelectorAll('.hero-dot'));
+  if (slides.length < 2) return;
+
+  let idx = 0, timer = null;
+
+  function go(n) {
+    idx = (n + slides.length) % slides.length;
+    slides.forEach((s, i) => s.classList.toggle('is-active', i === idx));
+    dots.forEach((d, i) => d.classList.toggle('is-active', i === idx));
+  }
+  function start() { stop(); timer = setInterval(() => go(idx + 1), 5500); }
+  function stop()  { if (timer) { clearInterval(timer); timer = null; } }
+
+  dots.forEach(d => d.addEventListener('click', () => { go(+d.dataset.slide); start(); }));
+
+  const stage = document.querySelector('.hero-stage');
+  if (stage) {
+    stage.addEventListener('mouseenter', stop);
+    stage.addEventListener('mouseleave', start);
+  }
+  document.addEventListener('visibilitychange', () => document.hidden ? stop() : start());
+
+  start();
+})();
+
+/* ═══════════════════════════════════════════
    INIT
 ═══════════════════════════════════════════ */
 applyLang(currentLang);

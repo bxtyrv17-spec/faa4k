@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" id="themeColor" content="#0C0308" />
   <title>faa4k — Graphic Designer</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230D0407'/%3E%3Ctext x='50' y='68' font-family='Arial, sans-serif' font-weight='800' font-size='58' fill='%239B1832' text-anchor='middle'%3Ef%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -82,30 +83,42 @@
 
   <!-- ═══ HERO ═══ -->
   <section class="hero" id="hero">
-    <div class="hero-inner">
+    <div class="hero-stage">
 
-      <div class="hero-text">
-        <h1 class="hero-heading hero-anim hero-a1">
+      <div class="hero-slides">
+        <div class="hero-slide hero-slide-1 is-active"></div>
+        <div class="hero-slide hero-slide-2"></div>
+        <div class="hero-slide hero-slide-3"></div>
+      </div>
+      <div class="hero-scrim"></div>
+
+      <div class="hero-content">
+        <div class="hero-badge hero-anim hero-a1">
+          <span class="hero-badge-dot"></span>
+          <span data-i18n="hero.role">Графический дизайнер</span>
+        </div>
+        <h1 class="hero-heading hero-anim hero-a2">
           <span data-i18n="hero.h1">Дизайн — это</span><br>
           <span data-i18n="hero.h2">язык без слов</span>
         </h1>
-        <p  class="hero-desc hero-anim hero-a3" data-i18n="hero.desc">Создаю визуальные образы, которые вдохновляют и навсегда остаются в памяти.</p>
+        <p class="hero-desc hero-anim hero-a3" data-i18n="hero.desc">Создаю визуальные образы, которые вдохновляют и навсегда остаются в памяти.</p>
         <div class="hero-actions hero-anim hero-a4">
-          <a href="#services" class="btn-fill" data-i18n="hero.cta1">Смотреть работы</a>
-          <a href="#about"    class="btn-ring" data-i18n="hero.cta2">Обо мне</a>
+          <a href="#services" class="btn-hero-fill" data-i18n="hero.cta1">Смотреть работы</a>
+          <a href="#about" class="btn-hero-ghost">
+            <span data-i18n="hero.cta2">Обо мне</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
         </div>
+
+        <a href="#services" class="hero-scroll hero-anim hero-a4" aria-label="Scroll down">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </a>
       </div>
 
-      <div class="hero-media hero-anim hero-a2">
-        <div class="hero-float">
-          <div class="hero-card">
-            <div class="hero-card-visual"></div>
-            <div class="hero-card-label">
-              <span class="label-dot"></span>
-              <span data-i18n="hero.label">Дизайн студия</span>
-            </div>
-          </div>
-        </div>
+      <div class="hero-dots" id="heroDots">
+        <button class="hero-dot is-active" data-slide="0" aria-label="Слайд 1"></button>
+        <button class="hero-dot" data-slide="1" aria-label="Слайд 2"></button>
+        <button class="hero-dot" data-slide="2" aria-label="Слайд 3"></button>
       </div>
 
     </div>
