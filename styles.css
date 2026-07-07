@@ -1443,6 +1443,25 @@ body.ov-active { overflow: hidden; }
   transition: opacity 0.46s var(--spring), transform 0.46s var(--spring), background 0.4s;
 }
 
+/* Apple-style staggered reveal of overlay content on open */
+.page-ov > :not(.ov-topbar) {
+  opacity: 0;
+  transform: translateY(24px);
+}
+.page-ov.ov-open > :not(.ov-topbar) {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.7s var(--spring) 0.08s, transform 0.7s var(--spring) 0.08s;
+}
+.page-ov.ov-open > :not(.ov-topbar):nth-of-type(2) { transition-delay: 0.16s; }
+.page-ov.ov-open > :not(.ov-topbar):nth-of-type(3) { transition-delay: 0.24s; }
+
+.footer-ov { margin-top: 8px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .page-ov > :not(.ov-topbar) { opacity: 1 !important; transform: none !important; transition: none !important; }
+}
+
 .ov-topbar {
   position: sticky;
   top: 0;

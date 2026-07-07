@@ -463,6 +463,24 @@ function closeAllOverlays() {
   document.body.classList.remove('ov-active');
 }
 
+/* Give every content overlay the same footer ending as the main page */
+(function () {
+  const footer = document.querySelector('footer.footer');
+  if (!footer) return;
+  const map = { '#services': 'services', '#packages': 'packages', '#blog': 'blog', '#about': 'about', '#contact': 'contact' };
+  document.querySelectorAll('.page-ov .ov-contact').forEach(oc => {
+    const clone = footer.cloneNode(true);
+    clone.classList.add('footer-ov');
+    clone.querySelectorAll('.anim').forEach(a => a.classList.remove('anim'));
+    clone.querySelectorAll('a[href^="#"]').forEach(a => {
+      const h = a.getAttribute('href');
+      if (map[h]) { a.setAttribute('data-overlay', map[h]); a.setAttribute('href', '#'); }
+      else if (h === '#hero') { a.classList.add('ov-close-link'); a.setAttribute('href', '#'); }
+    });
+    oc.replaceWith(clone);
+  });
+})();
+
 document.querySelectorAll('[data-overlay]').forEach(el => {
   el.addEventListener('click', e => {
     e.preventDefault();
@@ -470,8 +488,8 @@ document.querySelectorAll('[data-overlay]').forEach(el => {
   });
 });
 
-document.querySelectorAll('.ov-close').forEach(btn => {
-  btn.addEventListener('click', closeAllOverlays);
+document.querySelectorAll('.ov-close, .ov-close-link').forEach(btn => {
+  btn.addEventListener('click', e => { e.preventDefault(); closeAllOverlays(); });
 });
 
 /* ═══════════════════════════════════════════
