@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=6" />
+  <link rel="stylesheet" href="styles.css?v=7" />
   <script>
     (function(){ const t = localStorage.getItem('theme')||'light'; document.documentElement.setAttribute('data-theme',t); })();
   </script>
@@ -93,14 +93,14 @@
       <div class="hero-scrim"></div>
 
       <div class="hero-content">
-        <div class="hero-badge hero-anim hero-a1">
-          <span class="hero-badge-dot"></span>
-          <span data-i18n="hero.role">Графический дизайнер</span>
+        <span class="hero-role-text hero-anim hero-a1">Graphic Designer</span>
+
+        <div class="hero-headings hero-anim hero-a2">
+          <h1 class="hero-heading is-active" data-slide="0">Дизайн — это<br>язык без слов</h1>
+          <h1 class="hero-heading" data-slide="1">Создаю бренды,<br>которые запоминают</h1>
+          <h1 class="hero-heading" data-slide="2">Идея, обретающая<br>форму</h1>
         </div>
-        <h1 class="hero-heading hero-anim hero-a2">
-          <span data-i18n="hero.h1">Дизайн — это</span><br>
-          <span data-i18n="hero.h2">язык без слов</span>
-        </h1>
+
         <p class="hero-desc hero-anim hero-a3" data-i18n="hero.desc">Создаю визуальные образы, которые вдохновляют и навсегда остаются в памяти.</p>
         <div class="hero-actions hero-anim hero-a4">
           <a href="#services" class="btn-hero-fill" data-i18n="hero.cta1">Смотреть работы</a>
@@ -670,9 +670,51 @@
       <span class="ov-logo-txt">faa4k</span>
       <button class="ov-close" aria-label="Закрыть"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
     </div>
-    <div class="about" style="min-height:60vh">
-      <div class="about-inner">
-        <p class="about-body" data-i18n-html="about.body">Хороший дизайн — это не просто красота. Это <mark>ясность мысли</mark>, воплощённая в форме, которая меняет то, как мир <mark>видит себя</mark></p>
+    <div class="about-new">
+      <div class="about-new-inner">
+
+        <div class="about-new-head">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span class="eyebrow-txt">обо мне</span>
+          </div>
+          <h2 class="about-new-title">Привет! Я — faa4k,<br>графический дизайнер</h2>
+          <p class="about-new-lead">Более 3 лет помогаю брендам находить свой визуальный язык — от логотипа до цельной айдентики. Верю, что хороший дизайн решает задачи бизнеса и остаётся в памяти.</p>
+        </div>
+
+        <div class="about-new-stats">
+          <div class="about-new-stat"><span class="about-new-num">3+</span><span class="about-new-lbl">года опыта</span></div>
+          <div class="about-new-stat"><span class="about-new-num">50+</span><span class="about-new-lbl">проектов</span></div>
+          <div class="about-new-stat"><span class="about-new-num">20+</span><span class="about-new-lbl">брендов</span></div>
+          <div class="about-new-stat about-new-stat-accent"><span class="about-new-num">99%</span><span class="about-new-lbl">довольных клиентов</span></div>
+        </div>
+
+        <div class="about-new-body">
+          <div class="about-new-col">
+            <h3 class="about-new-h3">Чем занимаюсь</h3>
+            <div class="about-new-chips">
+              <span>Брендинг</span>
+              <span>Логотипы</span>
+              <span>Айдентика</span>
+              <span>UI/UX</span>
+              <span>Упаковка</span>
+              <span>Типографика</span>
+              <span>Иллюстрация</span>
+            </div>
+          </div>
+          <div class="about-new-col">
+            <h3 class="about-new-h3">Как работаю</h3>
+            <ul class="about-new-steps">
+              <li><span>01</span> Погружаюсь в задачу и бренд</li>
+              <li><span>02</span> Показываю концепции на выбор</li>
+              <li><span>03</span> Дорабатываю по вашим правкам</li>
+              <li><span>04</span> Отдаю исходники и гайд</li>
+            </ul>
+          </div>
+        </div>
+
+        <blockquote class="about-new-quote">Хороший дизайн — это <mark>ясность мысли</mark>, воплощённая в форме, которая меняет то, как мир видит себя.</blockquote>
+
       </div>
     </div>
     <div class="ov-contact"><div class="ov-contact-inner">
@@ -722,6 +764,6 @@
     </button>
   </div>
 
-  <script src="script.js?v=6"></script>
+  <script src="script.js?v=7"></script>
 </body>
 </html>

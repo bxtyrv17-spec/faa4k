@@ -651,6 +651,7 @@ document.getElementById('fabChat').addEventListener('click', () => openOverlay('
 (function () {
   const slides = Array.from(document.querySelectorAll('.hero-slide'));
   const dots   = Array.from(document.querySelectorAll('.hero-dot'));
+  const heads  = Array.from(document.querySelectorAll('.hero-heading'));
   if (slides.length < 2) return;
 
   let idx = 0, timer = null;
@@ -659,8 +660,9 @@ document.getElementById('fabChat').addEventListener('click', () => openOverlay('
     idx = (n + slides.length) % slides.length;
     slides.forEach((s, i) => s.classList.toggle('is-active', i === idx));
     dots.forEach((d, i) => d.classList.toggle('is-active', i === idx));
+    heads.forEach((h, i) => h.classList.toggle('is-active', i === idx));
   }
-  function start() { stop(); timer = setInterval(() => go(idx + 1), 5500); }
+  function start() { stop(); timer = setInterval(() => go(idx + 1), 3000); }
   function stop()  { if (timer) { clearInterval(timer); timer = null; } }
 
   dots.forEach(d => d.addEventListener('click', () => { go(+d.dataset.slide); start(); }));
