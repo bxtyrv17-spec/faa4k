@@ -348,6 +348,15 @@ document.addEventListener('click', e => {
   openPanel(el.dataset.panel);
 });
 
+// Inject back button into every panel (shown only on mobile via CSS)
+document.querySelectorAll('.page-panel').forEach(panel => {
+  const btn = document.createElement('button');
+  btn.className = 'panel-back-btn';
+  btn.textContent = ' Главная';
+  btn.setAttribute('data-panel', '');
+  panel.prepend(btn);
+});
+
 // Clone main footer into each panel slot
 (function () {
   const footer = document.querySelector('footer.footer');
@@ -723,7 +732,7 @@ document.querySelectorAll('.srv-list').forEach(list => {
   dots.forEach(d => d.addEventListener('click', () => { go(+d.dataset.slide); start(); }));
 
   const stage = document.querySelector('.hero-stage');
-  if (stage) {
+  if (stage && window.matchMedia('(hover: hover)').matches) {
     stage.addEventListener('mouseenter', stop);
     stage.addEventListener('mouseleave', start);
   }

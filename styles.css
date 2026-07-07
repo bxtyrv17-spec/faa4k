@@ -88,6 +88,25 @@ section[id], footer[id] { scroll-margin-top: 72px; }
   padding-top: 60px;
 }
 
+/* Panel back button — visible on mobile */
+.panel-back-btn {
+  display: none;
+  align-items: center; gap: 8px;
+  position: sticky; top: 0; z-index: 10;
+  width: 100%;
+  padding: 14px var(--pad);
+  background: var(--bg);
+  border: none; border-bottom: 1px solid var(--border);
+  color: var(--text); font-family: var(--font); font-size: 0.9rem; font-weight: 500;
+  cursor: pointer; text-align: left;
+  transition: color 0.2s;
+}
+.panel-back-btn::before { content: '←'; font-size: 1rem; }
+.panel-back-btn:hover { color: var(--accent); }
+@media (max-width: 768px) {
+  .panel-back-btn { display: flex; padding: 14px 20px; }
+}
+
 /* ══════════════════════════════════════════
    BOOKING FORM PANEL
 ══════════════════════════════════════════ */
@@ -863,10 +882,12 @@ section[id], footer[id] { scroll-margin-top: 72px; }
   }
   .bento-card { grid-area: auto; }
   .bento-feat { grid-column: 1 / -1; min-height: 280px; }
+  .bento-sat { height: 260px; }
 }
 @media (max-width: 560px) {
   .bento { grid-template-columns: 1fr; }
   .bento-feat { min-height: 320px; }
+  .bento-sat { height: 260px; }
 }
 
 /* ══════════════════════════════════════════
