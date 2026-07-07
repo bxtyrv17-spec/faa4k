@@ -2,14 +2,14 @@
    TOKENS
 ══════════════════════════════════════════ */
 :root {
-  /* Editorial light — default */
-  --bg:      #F6F0EB;
-  --bg2:     #FFFFFF;
-  --text:    #0D0407;
-  --muted:   rgba(13,4,7,0.42);
-  --border:  rgba(13,4,7,0.09);
-  --accent:  #9B1832;
-  --deep:    #1A0509;
+  /* White / Black / Dark-Navy palette */
+  --bg:      #FFFFFF;
+  --bg2:     #F1F4FA;
+  --text:    #090E1B;
+  --muted:   rgba(9,14,27,0.44);
+  --border:  rgba(9,14,27,0.09);
+  --accent:  #0D1F3C;
+  --deep:    #070D1A;
   --font:    -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif;
   --serif:   -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif;
   --pad:     72px;
@@ -18,13 +18,13 @@
 }
 
 [data-theme="dark"] {
-  --bg:      #0C0308;
-  --bg2:     #140610;
-  --text:    #F5EDE8;
-  --muted:   rgba(245,237,232,0.42);
-  --border:  rgba(245,237,232,0.08);
-  --accent:  #C42D4E;
-  --deep:    #080205;
+  --bg:      #080E1C;
+  --bg2:     #0D1729;
+  --text:    #EEF2FF;
+  --muted:   rgba(238,242,255,0.44);
+  --border:  rgba(238,242,255,0.08);
+  --accent:  #5B8EFF;
+  --deep:    #040A13;
 }
 
 /* ══════════════════════════════════════════
@@ -879,7 +879,16 @@ section[id], footer[id] { scroll-margin-top: 72px; }
 }
 .blog-row-title { font-size: 1.12rem; font-weight: 500; line-height: 1.25; transition: color 0.22s; }
 .blog-row:hover .blog-row-title { color: var(--accent); }
-.blog-row-desc { font-size: 0.86rem; font-weight: 300; color: var(--muted); line-height: 1.5; }
+.blog-row-desc {
+  font-size: 0.86rem; font-weight: 300; color: var(--muted); line-height: 1.5;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: opacity 0.32s ease, transform 0.32s var(--spring);
+}
+.blog-row:hover .blog-row-desc {
+  opacity: 1;
+  transform: translateY(0);
+}
 .blog-row-time { font-size: 0.82rem; color: var(--muted); white-space: nowrap; }
 .blog-row-read {
   justify-self: end; font-size: 0.82rem; font-weight: 500; color: var(--muted);
@@ -1143,10 +1152,10 @@ section[id], footer[id] { scroll-margin-top: 72px; }
 /* All cards: flat solid burgundy family */
 .pc-1 { background: #1A0509; }
 .pc-2 { background: #26090F; }
-.pc-3 { background: #9B1832; }
+.pc-3 { background: #0D1F3C; }
 .pc-4 { background: #3E0F1B; }
 .pc-5 { background: #140407; }
-.pc-6 { background: #C42D4E; }
+.pc-6 { background: #1A3A6E; }
 
 .pc-body {
   position: absolute; bottom: 0; left: 0; right: 0;
