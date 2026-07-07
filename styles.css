@@ -214,14 +214,14 @@ section[id], footer[id] { scroll-margin-top: 72px; }
   right: 0;
   z-index: 1000;
   padding: 0 var(--pad);
-  background: rgba(246,240,235,0.90);
-  backdrop-filter: saturate(160%) blur(24px);
-  -webkit-backdrop-filter: saturate(160%) blur(24px);
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: saturate(180%) blur(24px);
+  -webkit-backdrop-filter: saturate(180%) blur(24px);
   border-bottom: 1px solid var(--border);
   transition: background 0.4s, border-color 0.4s;
 }
 [data-theme="dark"] .navbar {
-  background: rgba(12,3,8,0.82);
+  background: rgba(8,14,28,0.90);
 }
 
 .navbar-inner {
@@ -817,13 +817,28 @@ section[id], footer[id] { scroll-margin-top: 72px; }
 .bento-prog .bento-cap p { font-size: 0.84rem; font-weight: 300; color: var(--muted); }
 
 /* Satisfaction card (dark accent) */
-.bento-sat { background: var(--deep); color: #fff; padding: 24px; display: flex; flex-direction: column; }
+.bento-sat { background: var(--deep); color: #fff; padding: 24px; display: flex; flex-direction: column; overflow: hidden; }
 .bento-stars, .bento-mini-stars { color: #E8B84B; font-size: 0.8rem; letter-spacing: 2px; }
 .bento-sat-num { font-family: var(--serif); font-size: 2.8rem; font-weight: 500; line-height: 1; margin-top: 8px; }
-.bento-sat-lbl { font-size: 0.84rem; color: rgba(255,255,255,.6); }
-.bento-mini { margin-top: auto; background: rgba(255,255,255,.07); border-radius: 12px; padding: 12px 14px; }
+.bento-sat-lbl { font-size: 0.84rem; color: rgba(255,255,255,.6); margin-bottom: 14px; }
+.bento-ticker-wrap {
+  flex: 1; overflow: hidden; position: relative; min-height: 0;
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 18%, #000 82%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 18%, #000 82%, transparent 100%);
+}
+.bento-ticker {
+  display: flex; flex-direction: column; gap: 8px;
+  animation: tickerUp 32s linear infinite;
+}
+.bento-ticker:hover { animation-play-state: paused; }
+@keyframes tickerUp {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+.bento-mini { background: rgba(255,255,255,.07); border-radius: 12px; padding: 12px 14px; flex-shrink: 0; }
 .bento-mini p { font-size: 0.78rem; color: rgba(255,255,255,.82); line-height: 1.4; margin: 6px 0; }
 .bento-mini-name { font-size: 0.74rem; color: rgba(255,255,255,.5); }
+.bento-mini-stars { color: #E8B84B; font-size: 0.72rem; letter-spacing: 1px; }
 
 /* Free trial card */
 .bento-free { padding: 26px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
