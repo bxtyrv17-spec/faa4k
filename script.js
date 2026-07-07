@@ -697,7 +697,7 @@ document.querySelectorAll('.srv-list').forEach(list => {
 ═══════════════════════════════════════════ */
 // ↓ Fill in your bot token and group chat ID after getting them from @BotFather
 const TELEGRAM_TOKEN   = '8866781995:AAE6u4IDLUJ6M-4XJFqWemRUj81Nmtj-93M';
-const TELEGRAM_CHAT_ID = 'YOUR_CHAT_ID_HERE'; // ← chat ID ni topib yuboring
+const TELEGRAM_CHAT_ID = '-5348875104';
 
 // Pre-fill service select when panel is opened via data-service
 const _origOpenPanel = openPanel;
