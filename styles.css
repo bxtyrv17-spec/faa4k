@@ -32,7 +32,7 @@
 ══════════════════════════════════════════ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { font-family: var(--font); -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
-body { background: var(--bg); color: var(--text); min-height: 100vh; transition: background 0.4s, color 0.4s; }
+body { background: var(--bg); color: var(--text); min-height: 100vh; padding-top: 64px; transition: background 0.4s, color 0.4s; }
 a  { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 
@@ -50,8 +50,43 @@ ul { list-style: none; }
 .d2 { transition-delay: 0.24s; }
 .d3 { transition-delay: 0.36s; }
 
-/* Offset anchor scroll so sections aren't hidden behind sticky nav */
+/* Offset anchor scroll so sections aren't hidden behind fixed nav */
 section[id], footer[id] { scroll-margin-top: 72px; }
+
+/* ══════════════════════════════════════════
+   PAGE PANELS (nav overlay system)
+══════════════════════════════════════════ */
+.page-panel {
+  position: fixed;
+  top: 64px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 500;
+  background: var(--bg);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  opacity: 0;
+  transform: translateY(18px);
+  pointer-events: none;
+  visibility: hidden;
+  transition: opacity 0.55s var(--spring), transform 0.55s var(--spring), visibility 0s linear 0.55s;
+}
+.page-panel.is-open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+  visibility: visible;
+  transition: opacity 0.55s var(--spring), transform 0.55s var(--spring);
+}
+
+/* Panel content sections don't need top padding since panel starts below navbar */
+.page-panel .sec-pad:first-child,
+.page-panel .about-sec:first-child,
+.page-panel .footer:first-child {
+  padding-top: 60px;
+}
 
 /* Hero load */
 .hero-anim {
@@ -83,9 +118,11 @@ section[id], footer[id] { scroll-margin-top: 72px; }
    NAVBAR
 ══════════════════════════════════════════ */
 .navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 200;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   padding: 0 var(--pad);
   background: rgba(246,240,235,0.90);
   backdrop-filter: saturate(160%) blur(24px);
@@ -525,6 +562,7 @@ section[id], footer[id] { scroll-margin-top: 72px; }
   white-space: nowrap; transition: color 0.2s;
 }
 .srv-all:hover { color: var(--accent); }
+.srv-panel-sub { font-size: 0.95rem; color: var(--muted); max-width: 280px; line-height: 1.55; }
 
 .srv-filters { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 40px; }
 .srv-chip {

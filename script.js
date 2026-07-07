@@ -317,19 +317,49 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.anim').forEach(el => observer.observe(el));
 
-/* Active nav link on scroll */
+/* ═══════════════════════════════════════════
+   PAGE PANELS
+═══════════════════════════════════════════ */
+let currentPanel = '';
+
+function openPanel(name) {
+  currentPanel = name;
+  document.querySelectorAll('.page-panel').forEach(p => p.classList.remove('is-open'));
+  if (name) {
+    const panel = document.getElementById('panel-' + name);
+    if (panel) {
+      panel.classList.add('is-open');
+      panel.scrollTop = 0;
+    }
+  }
+  // Update active nav link
+  document.querySelectorAll('.nav-link, .drawer-link').forEach(l => {
+    l.classList.toggle('is-active', l.dataset.panel === name);
+  });
+  // Close mobile drawer
+  document.getElementById('navbar').classList.remove('is-open');
+}
+
+// Event delegation — handles [data-panel] on any element (including cloned footer)
+document.addEventListener('click', e => {
+  const el = e.target.closest('[data-panel]');
+  if (!el) return;
+  e.preventDefault();
+  openPanel(el.dataset.panel);
+});
+
+// Clone main footer into each panel slot
 (function () {
-  const sections = Array.from(document.querySelectorAll('section[id], footer[id]'));
-  const links = Array.from(document.querySelectorAll('.nav-link'));
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        const id = e.target.id;
-        links.forEach(l => l.classList.toggle('is-active', l.getAttribute('href') === '#' + id));
-      }
-    });
-  }, { rootMargin: '-20% 0px -70% 0px' });
-  sections.forEach(s => io.observe(s));
+  const footer = document.querySelector('footer.footer');
+  if (!footer) return;
+  document.querySelectorAll('.panel-footer-slot').forEach(slot => {
+    const clone = footer.cloneNode(true);
+    clone.id = ''; // remove id="contact" from clones
+    clone.classList.add('panel-footer-el');
+    // Remove scroll-animation classes so they show instantly
+    clone.querySelectorAll('.anim').forEach(a => a.classList.remove('anim'));
+    slot.replaceWith(clone);
+  });
 })();
 
 /* ═══════════════════════════════════════════
@@ -577,10 +607,8 @@ document.addEventListener('keydown', e => {
   go(0);
 })();
 
-// FAB chat button — scroll to contact (footer)
-document.getElementById('fabChat').addEventListener('click', () => {
-  document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-});
+// FAB chat button — open contact panel
+document.getElementById('fabChat').addEventListener('click', () => openPanel('contact'));
 
 /* ═══════════════════════════════════════════
    SERVICES FILTER
