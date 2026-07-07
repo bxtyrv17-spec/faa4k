@@ -607,8 +607,8 @@ document.addEventListener('keydown', e => {
   go(0);
 })();
 
-// FAB chat button — open contact panel
-document.getElementById('fabChat').addEventListener('click', () => openPanel('contact'));
+// FAB chat button — open booking panel
+document.getElementById('fabChat').addEventListener('click', () => openPanel('book'));
 
 /* ═══════════════════════════════════════════
    SERVICES FILTER
@@ -691,6 +691,111 @@ document.querySelectorAll('.srv-list').forEach(list => {
 
   start();
 })();
+
+/* ═══════════════════════════════════════════
+   BOOKING FORM
+═══════════════════════════════════════════ */
+// ↓ Fill in your bot token and group chat ID after getting them from @BotFather
+const TELEGRAM_TOKEN   = 'YOUR_BOT_TOKEN_HERE';
+const TELEGRAM_CHAT_ID = 'YOUR_CHAT_ID_HERE';
+
+// Pre-fill service select when panel is opened via data-service
+const _origOpenPanel = openPanel;
+(function () {
+  // Patch openPanel to handle service pre-fill
+  const _open = openPanel;
+  window._bookLastTrigger = null;
+  document.addEventListener('click', e => {
+    const el = e.target.closest('[data-panel="book"]');
+    if (el && el.dataset.service) window._bookLastTrigger = el.dataset.service;
+    else if (el) window._bookLastTrigger = null;
+  }, true); // capture phase — runs before the delegation handler
+})();
+
+// Watch for book panel opening and pre-fill service
+const _panelObserver = new MutationObserver(() => {
+  const panel = document.getElementById('panel-book');
+  if (!panel) return;
+  if (panel.classList.contains('is-open')) {
+    const sel = document.getElementById('bookService');
+    if (sel && window._bookLastTrigger) {
+      sel.value = window._bookLastTrigger;
+    }
+  }
+});
+const bookPanel = document.getElementById('panel-book');
+if (bookPanel) _panelObserver.observe(bookPanel, { attributes: true, attributeFilter: ['class'] });
+
+// Form submission
+const bookForm   = document.getElementById('bookForm');
+const bookSubmit = document.getElementById('bookSubmit');
+const bookNote   = document.getElementById('bookNote');
+
+if (bookForm) {
+  bookForm.addEventListener('submit', async e => {
+    e.preventDefault();
+
+    const name    = document.getElementById('bookName').value.trim();
+    const phone   = document.getElementById('bookPhone').value.trim();
+    const service = document.getElementById('bookService').value;
+    const budget  = document.getElementById('bookBudget').value;
+    const message = document.getElementById('bookMsg').value.trim();
+
+    if (!name) { showNote('Пожалуйста, введите ваше имя', 'err'); return; }
+
+    bookSubmit.disabled = true;
+    bookSubmit.textContent = 'Отправляю...';
+    bookNote.textContent = '';
+
+    const text =
+      `📩 Новая заявка с сайта faa4k\n\n` +
+      `👤 Имя: ${name}\n` +
+      `📞 Контакт: ${phone || 'не указан'}\n` +
+      `🎨 Услуга: ${service || 'не выбрана'}\n` +
+      `💰 Бюджет: ${budget || 'не указан'}\n` +
+      `💬 Сообщение: ${message || '—'}`;
+
+    try {
+      const res = await fetch(
+        `https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text, parse_mode: 'HTML' }),
+        }
+      );
+      const data = await res.json();
+      if (data.ok) {
+        bookSubmit.classList.add('is-ok');
+        bookSubmit.textContent = 'Заявка отправлена!';
+        showNote('Я свяжусь с вами в ближайшее время', 'ok');
+        bookForm.reset();
+        setTimeout(() => {
+          bookSubmit.classList.remove('is-ok');
+          bookSubmit.textContent = 'Отправить заявку';
+          bookSubmit.disabled = false;
+        }, 4000);
+      } else {
+        throw new Error(data.description || 'Telegram error');
+      }
+    } catch {
+      bookSubmit.classList.add('is-err-state');
+      bookSubmit.textContent = 'Ошибка — попробуйте ещё раз';
+      showNote('Не удалось отправить. Напишите мне напрямую в Telegram.', 'err');
+      setTimeout(() => {
+        bookSubmit.classList.remove('is-err-state');
+        bookSubmit.textContent = 'Отправить заявку';
+        bookSubmit.disabled = false;
+      }, 4000);
+    }
+  });
+}
+
+function showNote(msg, type) {
+  if (!bookNote) return;
+  bookNote.textContent = msg;
+  bookNote.className = 'book-note ' + (type === 'ok' ? 'book-note-ok' : 'book-note-err');
+}
 
 /* ═══════════════════════════════════════════
    INIT

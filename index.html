@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=12" />
+  <link rel="stylesheet" href="styles.css?v=13" />
   <script>
     (function(){ const t = localStorage.getItem('theme')||'light'; document.documentElement.setAttribute('data-theme',t); })();
   </script>
@@ -62,7 +62,7 @@
           </div>
         </div>
 
-        <a href="#" class="nav-cta" data-panel="contact" data-i18n="nav.book">Записаться</a>
+        <a href="#" class="nav-cta" data-panel="book" data-i18n="nav.book">Записаться</a>
 
         <button class="nav-burger" id="navBurger" aria-label="Меню">
           <span></span><span></span><span></span>
@@ -77,7 +77,7 @@
       <a href="#" class="drawer-link" data-panel="blog"     data-i18n="nav.blog">Блог</a>
       <a href="#" class="drawer-link" data-panel="about"    data-i18n="nav.about">Обо мне</a>
       <a href="#" class="drawer-link" data-panel="contact"  data-i18n="nav.contact">Контакты</a>
-      <a href="#" class="drawer-link drawer-cta" data-panel="contact" data-i18n="nav.book">Записаться</a>
+      <a href="#" class="drawer-link drawer-cta" data-panel="book" data-i18n="nav.book">Записаться</a>
     </div>
   </nav>
 
@@ -149,7 +149,7 @@
 
       <div class="srv-list anim d2">
 
-        <a class="srv-item is-open" data-cat="brand" href="#contact">
+        <a class="srv-item is-open" data-cat="brand" href="#" data-panel="book" data-service="Логотип и фирменный стиль">
           <div class="srv-item-row">
             <span class="srv-item-name">Логотип и фирменный стиль</span>
             <span class="srv-item-arrow">→</span>
@@ -160,30 +160,30 @@
           </div>
         </a>
 
-        <a class="srv-item" data-cat="ident" href="#contact">
+        <a class="srv-item" data-cat="ident" href="#" data-panel="book" data-service="Визитки и полиграфия">
           <div class="srv-item-row"><span class="srv-item-name">Визитки и полиграфия</span><span class="srv-item-arrow">→</span></div>
         </a>
-        <a class="srv-item" data-cat="ux" href="#contact">
+        <a class="srv-item" data-cat="ux" href="#" data-panel="book" data-service="UI/UX мобильных приложений">
           <div class="srv-item-row"><span class="srv-item-name">UI/UX мобильных приложений</span><span class="srv-item-arrow">→</span></div>
         </a>
 
-        <a class="srv-item" data-cat="brand" href="#contact">
+        <a class="srv-item" data-cat="brand" href="#" data-panel="book" data-service="Ребрендинг">
           <div class="srv-item-row"><span class="srv-item-name">Ребрендинг</span><span class="srv-item-arrow">→</span></div>
         </a>
-        <a class="srv-item" data-cat="ident" href="#contact">
+        <a class="srv-item" data-cat="ident" href="#" data-panel="book" data-service="Оформление соцсетей">
           <div class="srv-item-row"><span class="srv-item-name">Оформление соцсетей</span><span class="srv-item-arrow">→</span></div>
         </a>
-        <a class="srv-item" data-cat="ux" href="#contact">
+        <a class="srv-item" data-cat="ux" href="#" data-panel="book" data-service="Веб-дизайн сайтов">
           <div class="srv-item-row"><span class="srv-item-name">Веб-дизайн сайтов</span><span class="srv-item-arrow">→</span></div>
         </a>
 
-        <a class="srv-item" data-cat="brand" href="#contact">
+        <a class="srv-item" data-cat="brand" href="#" data-panel="book" data-service="Гайдлайн бренда">
           <div class="srv-item-row"><span class="srv-item-name">Гайдлайн бренда</span><span class="srv-item-arrow">→</span></div>
         </a>
-        <a class="srv-item" data-cat="pack" href="#contact">
+        <a class="srv-item" data-cat="pack" href="#" data-panel="book" data-service="Дизайн упаковки">
           <div class="srv-item-row"><span class="srv-item-name">Дизайн упаковки</span><span class="srv-item-arrow">→</span></div>
         </a>
-        <a class="srv-item" data-cat="pack" href="#contact">
+        <a class="srv-item" data-cat="pack" href="#" data-panel="book" data-service="Этикетки и стикеры">
           <div class="srv-item-row"><span class="srv-item-name">Этикетки и стикеры</span><span class="srv-item-arrow">→</span></div>
         </a>
 
@@ -259,7 +259,7 @@
           <div class="bento-free-badge">FREE</div>
           <h3>Бесплатная консультация</h3>
           <p>Первая встреча — обсуждение проекта бесплатно</p>
-          <a href="#contact" class="bento-free-btn" data-i18n="nav.book">Записаться</a>
+          <a href="#" class="bento-free-btn" data-panel="book" data-i18n="nav.book">Записаться</a>
         </div>
 
         <div class="bento-card bento-v2 anim d1"><div class="bento-visual bv-3"></div></div>
@@ -297,7 +297,7 @@
             </div>
             <p class="pkg-price-note">Уточняется на консультации</p>
           </div>
-          <a href="#contact" class="pkg-btn" data-i18n="pk.btn">Выбрать пакет</a>
+          <a href="#" class="pkg-btn" data-panel="book" data-i18n="pk.btn">Выбрать пакет</a>
         </div>
 
         <div class="pkg-card pkg-featured anim d1">
@@ -319,7 +319,7 @@
             </div>
             <p class="pkg-price-note">Уточняется на консультации</p>
           </div>
-          <a href="#contact" class="pkg-btn" data-i18n="pk.btn">Выбрать пакет</a>
+          <a href="#" class="pkg-btn" data-panel="book" data-i18n="pk.btn">Выбрать пакет</a>
         </div>
 
         <div class="pkg-card anim d2">
@@ -341,7 +341,7 @@
             </div>
             <p class="pkg-price-note">Зависит от проекта</p>
           </div>
-          <a href="#contact" class="pkg-btn" data-i18n="pk.btn">Выбрать пакет</a>
+          <a href="#" class="pkg-btn" data-panel="book" data-i18n="pk.btn">Выбрать пакет</a>
         </div>
 
       </div>
@@ -472,7 +472,7 @@
       <span class="cta-band-tag">Специальное предложение</span>
       <h2 class="cta-band-h">Первая консультация<br>бесплатно</h2>
       <p class="cta-band-sub">Обсудим ваш проект, задачи и стиль — бесплатно и без обязательств.</p>
-      <a href="#contact" class="cta-band-btn">
+      <a href="#" class="cta-band-btn" data-panel="book">
         <span>Записаться бесплатно</span>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
@@ -496,7 +496,7 @@
               <h3>Остались вопросы?</h3>
               <p>Напишите мне — отвечу лично.</p>
             </div>
-            <a href="#contact" class="faq-card-btn">Написать мне</a>
+            <a href="#" class="faq-card-btn" data-panel="book">Написать мне</a>
           </div>
         </div>
 
@@ -549,7 +549,7 @@
           <p class="footer-cta-sub">Скидка для новых клиентов на первый заказ.</p>
         </div>
         <div class="footer-cta-btns">
-          <a href="#contact" class="footer-cta-fill">Записаться</a>
+          <a href="#" class="footer-cta-fill" data-panel="book">Записаться</a>
           <a href="#services" class="footer-cta-ghost">Мои услуги →</a>
         </div>
       </div>
@@ -591,7 +591,7 @@
         <h4>Связаться</h4>
         <a href="mailto:hello@faa4k.com">hello@faa4k.com</a>
         <a href="https://t.me/faa4k" target="_blank" rel="noopener">@faa4k в Telegram</a>
-        <a href="#contact">Записаться на консультацию</a>
+        <a href="#" data-panel="book">Записаться на консультацию</a>
       </div>
     </div>
 
@@ -645,18 +645,18 @@
           <button class="srv-chip" data-cat="pack"  data-i18n="sv.c4">Упаковка</button>
         </div>
         <div class="srv-list">
-          <a class="srv-item is-open" data-cat="brand" href="#" data-panel="contact">
+          <a class="srv-item is-open" data-cat="brand" href="#" data-panel="book" data-service="Логотип и фирменный стиль">
             <div class="srv-item-row"><span class="srv-item-name">Логотип и фирменный стиль</span><span class="srv-item-arrow">→</span></div>
             <div class="srv-item-detail"><p class="srv-item-desc">Разработка логотипа с фирменными цветами, типографикой и правилами использования.</p><span class="srv-item-price">от 1 200 000 сум</span></div>
           </a>
-          <a class="srv-item" data-cat="ident" href="#" data-panel="contact"><div class="srv-item-row"><span class="srv-item-name">Визитки и полиграфия</span><span class="srv-item-arrow">→</span></div></a>
-          <a class="srv-item" data-cat="ux" href="#" data-panel="contact"><div class="srv-item-row"><span class="srv-item-name">UI/UX мобильных приложений</span><span class="srv-item-arrow">→</span></div></a>
-          <a class="srv-item" data-cat="brand" href="#" data-panel="contact"><div class="srv-item-row"><span class="srv-item-name">Ребрендинг</span><span class="srv-item-arrow">→</span></div></a>
-          <a class="srv-item" data-cat="ident" href="#" data-panel="contact"><div class="srv-item-row"><span class="srv-item-name">Оформление соцсетей</span><span class="srv-item-arrow">→</span></div></a>
-          <a class="srv-item" data-cat="ux" href="#" data-panel="contact"><div class="srv-item-row"><span class="srv-item-name">Веб-дизайн сайтов</span><span class="srv-item-arrow">→</span></div></a>
-          <a class="srv-item" data-cat="brand" href="#" data-panel="contact"><div class="srv-item-row"><span class="srv-item-name">Гайдлайн бренда</span><span class="srv-item-arrow">→</span></div></a>
-          <a class="srv-item" data-cat="pack" href="#" data-panel="contact"><div class="srv-item-row"><span class="srv-item-name">Дизайн упаковки</span><span class="srv-item-arrow">→</span></div></a>
-          <a class="srv-item" data-cat="pack" href="#" data-panel="contact"><div class="srv-item-row"><span class="srv-item-name">Этикетки и стикеры</span><span class="srv-item-arrow">→</span></div></a>
+          <a class="srv-item" data-cat="ident" href="#" data-panel="book" data-service="Визитки и полиграфия"><div class="srv-item-row"><span class="srv-item-name">Визитки и полиграфия</span><span class="srv-item-arrow">→</span></div></a>
+          <a class="srv-item" data-cat="ux" href="#" data-panel="book" data-service="UI/UX мобильных приложений"><div class="srv-item-row"><span class="srv-item-name">UI/UX мобильных приложений</span><span class="srv-item-arrow">→</span></div></a>
+          <a class="srv-item" data-cat="brand" href="#" data-panel="book" data-service="Ребрендинг"><div class="srv-item-row"><span class="srv-item-name">Ребрендинг</span><span class="srv-item-arrow">→</span></div></a>
+          <a class="srv-item" data-cat="ident" href="#" data-panel="book" data-service="Оформление соцсетей"><div class="srv-item-row"><span class="srv-item-name">Оформление соцсетей</span><span class="srv-item-arrow">→</span></div></a>
+          <a class="srv-item" data-cat="ux" href="#" data-panel="book" data-service="Веб-дизайн сайтов"><div class="srv-item-row"><span class="srv-item-name">Веб-дизайн сайтов</span><span class="srv-item-arrow">→</span></div></a>
+          <a class="srv-item" data-cat="brand" href="#" data-panel="book" data-service="Гайдлайн бренда"><div class="srv-item-row"><span class="srv-item-name">Гайдлайн бренда</span><span class="srv-item-arrow">→</span></div></a>
+          <a class="srv-item" data-cat="pack" href="#" data-panel="book" data-service="Дизайн упаковки"><div class="srv-item-row"><span class="srv-item-name">Дизайн упаковки</span><span class="srv-item-arrow">→</span></div></a>
+          <a class="srv-item" data-cat="pack" href="#" data-panel="book" data-service="Этикетки и стикеры"><div class="srv-item-row"><span class="srv-item-name">Этикетки и стикеры</span><span class="srv-item-arrow">→</span></div></a>
         </div>
       </div>
     </section>
@@ -683,7 +683,7 @@
               <div class="pkg-price"><span class="pkg-price-val">1 200 000</span><span class="pkg-price-cur">сум</span></div>
               <p class="pkg-price-note">Уточняется на консультации</p>
             </div>
-            <a href="#" class="pkg-btn" data-panel="contact" data-i18n="pk.btn">Выбрать пакет</a>
+            <a href="#" class="pkg-btn" data-panel="book" data-service="Пакет Старт" data-i18n="pk.btn">Выбрать пакет</a>
           </div>
           <div class="pkg-card pkg-featured">
             <div class="pkg-badge" data-i18n="pk.popular">Популярный</div>
@@ -697,7 +697,7 @@
               <div class="pkg-price"><span class="pkg-price-val">3 000 000</span><span class="pkg-price-cur">сум</span></div>
               <p class="pkg-price-note">Уточняется на консультации</p>
             </div>
-            <a href="#" class="pkg-btn" data-panel="contact" data-i18n="pk.btn">Выбрать пакет</a>
+            <a href="#" class="pkg-btn" data-panel="book" data-service="Пакет Стандарт" data-i18n="pk.btn">Выбрать пакет</a>
           </div>
           <div class="pkg-card">
             <span class="pkg-zone">Премиум пакет</span>
@@ -710,7 +710,7 @@
               <div class="pkg-price"><span class="pkg-price-val">5 000 000</span><span class="pkg-price-cur">сум+</span></div>
               <p class="pkg-price-note">Зависит от проекта</p>
             </div>
-            <a href="#" class="pkg-btn" data-panel="contact" data-i18n="pk.btn">Выбрать пакет</a>
+            <a href="#" class="pkg-btn" data-panel="book" data-service="Пакет Премиум" data-i18n="pk.btn">Выбрать пакет</a>
           </div>
         </div>
       </div>
@@ -779,6 +779,70 @@
     <div class="panel-footer-slot"></div>
   </div>
 
-  <script src="script.js?v=12"></script>
+  <!-- BOOK PANEL -->
+  <div class="page-panel" id="panel-book">
+    <section class="sec-pad">
+      <div class="book-wrap">
+        <div class="book-head">
+          <div class="eyebrow"><span class="eyebrow-dot"></span><span class="eyebrow-txt">заявка</span></div>
+          <h2 class="book-title">Оставьте заявку</h2>
+          <p class="book-sub">Опишите задачу — я свяжусь с вами в течение дня</p>
+        </div>
+        <form class="book-form" id="bookForm" novalidate>
+          <div class="book-row">
+            <div class="book-field">
+              <label class="book-label" for="bookName">Имя</label>
+              <input class="book-input" id="bookName" name="name" type="text" placeholder="Как к вам обращаться?" required>
+            </div>
+            <div class="book-field">
+              <label class="book-label" for="bookPhone">Телефон / Telegram</label>
+              <input class="book-input" id="bookPhone" name="phone" type="tel" placeholder="+998 __ ___ __ __">
+            </div>
+          </div>
+          <div class="book-row">
+            <div class="book-field">
+              <label class="book-label" for="bookService">Услуга</label>
+              <select class="book-input book-select" id="bookService" name="service">
+                <option value="">— выберите услугу —</option>
+                <option value="Логотип и фирменный стиль">Логотип и фирменный стиль</option>
+                <option value="Визитки и полиграфия">Визитки и полиграфия</option>
+                <option value="UI/UX мобильных приложений">UI/UX мобильных приложений</option>
+                <option value="Ребрендинг">Ребрендинг</option>
+                <option value="Оформление соцсетей">Оформление соцсетей</option>
+                <option value="Веб-дизайн сайтов">Веб-дизайн сайтов</option>
+                <option value="Гайдлайн бренда">Гайдлайн бренда</option>
+                <option value="Дизайн упаковки">Дизайн упаковки</option>
+                <option value="Этикетки и стикеры">Этикетки и стикеры</option>
+                <option value="Пакет Старт">Пакет Старт</option>
+                <option value="Пакет Стандарт">Пакет Стандарт</option>
+                <option value="Пакет Премиум">Пакет Премиум</option>
+                <option value="Другое">Другое</option>
+              </select>
+            </div>
+            <div class="book-field">
+              <label class="book-label" for="bookBudget">Бюджет</label>
+              <select class="book-input book-select" id="bookBudget" name="budget">
+                <option value="">— приблизительный бюджет —</option>
+                <option value="до 1 000 000 сум">до 1 000 000 сум</option>
+                <option value="1–3 млн сум">1–3 млн сум</option>
+                <option value="3–5 млн сум">3–5 млн сум</option>
+                <option value="5+ млн сум">5+ млн сум</option>
+                <option value="Обсудим">Обсудим на встрече</option>
+              </select>
+            </div>
+          </div>
+          <div class="book-field">
+            <label class="book-label" for="bookMsg">Сообщение</label>
+            <textarea class="book-input book-textarea" id="bookMsg" name="message" rows="4" placeholder="Расскажите о вашем проекте..."></textarea>
+          </div>
+          <button type="submit" class="book-submit" id="bookSubmit">Отправить заявку</button>
+          <p class="book-note" id="bookNote"></p>
+        </form>
+      </div>
+    </section>
+    <div class="panel-footer-slot"></div>
+  </div>
+
+  <script src="script.js?v=13"></script>
 </body>
 </html>
