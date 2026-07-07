@@ -684,10 +684,13 @@ section[id], footer[id] { scroll-margin-top: 72px; }
 .srv-item-name { font-size: 1.05rem; font-weight: 500; transition: color 0.22s; }
 .srv-item-arrow {
   color: var(--muted); font-size: 1.1rem;
+  text-decoration: none;
+  flex-shrink: 0;
   transition: transform 0.22s var(--spring), color 0.22s;
 }
 .srv-item:hover .srv-item-name { color: var(--accent); }
 .srv-item:hover .srv-item-arrow { color: var(--accent); transform: translateX(6px); }
+.srv-item-arrow:hover { color: var(--accent); transform: translateX(6px); }
 
 .srv-item-detail {
   display: grid;
