@@ -50,6 +50,9 @@ ul { list-style: none; }
 .d2 { transition-delay: 0.24s; }
 .d3 { transition-delay: 0.36s; }
 
+/* Offset anchor scroll so sections aren't hidden behind sticky nav */
+section[id], footer[id] { scroll-margin-top: 72px; }
+
 /* Hero load */
 .hero-anim {
   opacity: 0;
@@ -120,6 +123,7 @@ ul { list-style: none; }
   transition: color 0.18s;
 }
 .nav-link:hover { color: var(--text); }
+.nav-link.is-active { color: var(--text); font-weight: 500; }
 
 .nav-actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
 

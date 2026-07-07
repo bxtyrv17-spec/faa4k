@@ -317,6 +317,21 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.anim').forEach(el => observer.observe(el));
 
+/* Active nav link on scroll */
+(function () {
+  const sections = Array.from(document.querySelectorAll('section[id], footer[id]'));
+  const links = Array.from(document.querySelectorAll('.nav-link'));
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const id = e.target.id;
+        links.forEach(l => l.classList.toggle('is-active', l.getAttribute('href') === '#' + id));
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  sections.forEach(s => io.observe(s));
+})();
+
 /* ═══════════════════════════════════════════
    HAMBURGER
 ═══════════════════════════════════════════ */
@@ -439,58 +454,10 @@ articleBackdrop.addEventListener('click', closeArticle);
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') {
     const modal = document.getElementById('articleModal');
-    if (modal && modal.classList.contains('open')) { closeArticle(); return; }
-    closeAllOverlays();
+    if (modal && modal.classList.contains('open')) closeArticle();
   }
 });
 
-/* ═══════════════════════════════════════════
-   PAGE OVERLAYS
-═══════════════════════════════════════════ */
-function openOverlay(id) {
-  const ov = document.getElementById('ov-' + id);
-  if (!ov) return;
-  closeAllOverlays();
-  ov.classList.add('ov-open');
-  document.body.classList.add('ov-active');
-  ov.scrollTop = 0;
-  // Close mobile drawer
-  document.getElementById('navbar').classList.remove('is-open');
-}
-
-function closeAllOverlays() {
-  document.querySelectorAll('.page-ov.ov-open').forEach(o => o.classList.remove('ov-open'));
-  document.body.classList.remove('ov-active');
-}
-
-/* Give every content overlay the same footer ending as the main page */
-(function () {
-  const footer = document.querySelector('footer.footer');
-  if (!footer) return;
-  const map = { '#services': 'services', '#packages': 'packages', '#blog': 'blog', '#about': 'about', '#contact': 'contact' };
-  document.querySelectorAll('.page-ov .ov-contact').forEach(oc => {
-    const clone = footer.cloneNode(true);
-    clone.classList.add('footer-ov');
-    clone.querySelectorAll('.anim').forEach(a => a.classList.remove('anim'));
-    clone.querySelectorAll('a[href^="#"]').forEach(a => {
-      const h = a.getAttribute('href');
-      if (map[h]) { a.setAttribute('data-overlay', map[h]); a.setAttribute('href', '#'); }
-      else if (h === '#hero') { a.classList.add('ov-close-link'); a.setAttribute('href', '#'); }
-    });
-    oc.replaceWith(clone);
-  });
-})();
-
-document.querySelectorAll('[data-overlay]').forEach(el => {
-  el.addEventListener('click', e => {
-    e.preventDefault();
-    openOverlay(el.dataset.overlay);
-  });
-});
-
-document.querySelectorAll('.ov-close, .ov-close-link').forEach(btn => {
-  btn.addEventListener('click', e => { e.preventDefault(); closeAllOverlays(); });
-});
 
 /* ═══════════════════════════════════════════
    REVIEWS CAROUSEL
@@ -610,8 +577,10 @@ document.querySelectorAll('.ov-close, .ov-close-link').forEach(btn => {
   go(0);
 })();
 
-// FAB chat button — open contact overlay
-document.getElementById('fabChat').addEventListener('click', () => openOverlay('contact'));
+// FAB chat button — scroll to contact (footer)
+document.getElementById('fabChat').addEventListener('click', () => {
+  document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+});
 
 /* ═══════════════════════════════════════════
    SERVICES FILTER
