@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=8" />
+  <link rel="stylesheet" href="styles.css?v=9" />
   <script>
     (function(){ const t = localStorage.getItem('theme')||'light'; document.documentElement.setAttribute('data-theme',t); })();
   </script>
@@ -566,24 +566,43 @@
     </div>
     <div class="sec-pad">
       <div class="sec-inner">
-        <div class="sec-head"><h2 class="sec-title" data-i18n="sv.heading">Что я делаю</h2></div>
-        <div class="pf-grid">
-          <div class="pc"><div class="pc-bg pc-1"></div><div class="pc-body"><span class="pc-tag" data-i18n="sv.c1">Брендинг</span><h3 class="pc-title">Brand Identity System</h3></div></div>
-          <div class="pc"><div class="pc-bg pc-2"></div><div class="pc-body"><span class="pc-tag" data-i18n="sv.c2">Айдентика</span><h3 class="pc-title">Visual Identity Pack</h3></div></div>
-          <div class="pc"><div class="pc-bg pc-3"></div><div class="pc-body"><span class="pc-tag" data-i18n="sv.c3">UI/UX</span><h3 class="pc-title">Mobile App Design</h3></div></div>
-          <div class="pc"><div class="pc-bg pc-4"></div><div class="pc-body"><span class="pc-tag" data-i18n="sv.c4">Упаковка</span><h3 class="pc-title">Product Packaging</h3></div></div>
-          <div class="pc"><div class="pc-bg pc-5"></div><div class="pc-body"><span class="pc-tag" data-i18n="sv.c5">Типографика</span><h3 class="pc-title">Typography Poster</h3></div></div>
-          <div class="pc"><div class="pc-bg pc-6"></div><div class="pc-body"><span class="pc-tag" data-i18n="sv.c6">Иллюстрация</span><h3 class="pc-title">Digital Illustration</h3></div></div>
+
+        <div class="srv-head">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-dot"></span><span class="eyebrow-txt" data-i18n="sv.tag">услуги</span></div>
+            <h2 class="sec-title" data-i18n="sv.heading">Что я делаю</h2>
+          </div>
         </div>
+
+        <div class="srv-filters">
+          <button class="srv-chip is-active" data-cat="all"  data-i18n="sv.all">Все услуги</button>
+          <button class="srv-chip"           data-cat="brand" data-i18n="sv.c1">Брендинг</button>
+          <button class="srv-chip"           data-cat="ident" data-i18n="sv.c2">Айдентика</button>
+          <button class="srv-chip"           data-cat="ux"    data-i18n="sv.c3">UI/UX</button>
+          <button class="srv-chip"           data-cat="pack"  data-i18n="sv.c4">Упаковка</button>
+        </div>
+
+        <div class="srv-list">
+          <a class="srv-item is-open" data-cat="brand" href="#contact" data-overlay="contact">
+            <div class="srv-item-row"><span class="srv-item-name">Логотип и фирменный стиль</span><span class="srv-item-arrow">→</span></div>
+            <div class="srv-item-detail">
+              <p class="srv-item-desc">Разработка логотипа с фирменными цветами, типографикой и правилами использования. Глубокое погружение в суть бренда.</p>
+              <span class="srv-item-price">от 1 200 000 сум</span>
+            </div>
+          </a>
+          <a class="srv-item" data-cat="ident" href="#contact" data-overlay="contact"><div class="srv-item-row"><span class="srv-item-name">Визитки и полиграфия</span><span class="srv-item-arrow">→</span></div></a>
+          <a class="srv-item" data-cat="ux" href="#contact" data-overlay="contact"><div class="srv-item-row"><span class="srv-item-name">UI/UX мобильных приложений</span><span class="srv-item-arrow">→</span></div></a>
+          <a class="srv-item" data-cat="brand" href="#contact" data-overlay="contact"><div class="srv-item-row"><span class="srv-item-name">Ребрендинг</span><span class="srv-item-arrow">→</span></div></a>
+          <a class="srv-item" data-cat="ident" href="#contact" data-overlay="contact"><div class="srv-item-row"><span class="srv-item-name">Оформление соцсетей</span><span class="srv-item-arrow">→</span></div></a>
+          <a class="srv-item" data-cat="ux" href="#contact" data-overlay="contact"><div class="srv-item-row"><span class="srv-item-name">Веб-дизайн сайтов</span><span class="srv-item-arrow">→</span></div></a>
+          <a class="srv-item" data-cat="brand" href="#contact" data-overlay="contact"><div class="srv-item-row"><span class="srv-item-name">Гайдлайн бренда</span><span class="srv-item-arrow">→</span></div></a>
+          <a class="srv-item" data-cat="pack" href="#contact" data-overlay="contact"><div class="srv-item-row"><span class="srv-item-name">Дизайн упаковки</span><span class="srv-item-arrow">→</span></div></a>
+          <a class="srv-item" data-cat="pack" href="#contact" data-overlay="contact"><div class="srv-item-row"><span class="srv-item-name">Этикетки и стикеры</span><span class="srv-item-arrow">→</span></div></a>
+        </div>
+
       </div>
     </div>
-    <div class="ov-contact"><div class="ov-contact-inner">
-      <h2 class="ov-contact-h" data-i18n-html="ct.heading">Начнём что-то<br>создавать?</h2>
-      <div class="ov-contact-btns">
-        <a href="mailto:hello@faa4k.com" class="btn-fill-inv" data-i18n="ct.email">Написать на почту</a>
-        <a href="https://t.me/faa4k" class="btn-ring-inv" data-i18n="ct.tg">Telegram</a>
-      </div>
-    </div></div>
+    <div class="ov-contact"></div>
   </div>
 
   <!-- PACKAGES -->
@@ -644,14 +663,17 @@
     </div>
     <div class="sec-pad">
       <div class="sec-inner">
-        <div class="sec-head"><h2 class="sec-title" data-i18n="bl.heading">Статьи</h2></div>
-        <div class="blog-grid">
-          <div class="blog-card"><div class="blog-orb blog-orb-1"></div><div class="blog-body"><span class="blog-date">15 мая 2025</span><h3 class="blog-title">Как создать сильный бренд: 5 ключевых принципов</h3><p class="blog-desc">Брендинг — это не просто логотип. Это целая система, которая делает ваш бизнес узнаваемым...</p><button class="blog-link" data-article="0">Читать →</button></div></div>
-          <div class="blog-card"><div class="blog-orb blog-orb-2"></div><div class="blog-body"><span class="blog-date">3 апреля 2025</span><h3 class="blog-title">Типографика в брендинге: почему шрифт важнее, чем кажется</h3><p class="blog-desc">Правильный выбор шрифта способен передать характер бренда лучше любого изображения...</p><button class="blog-link" data-article="1">Читать →</button></div></div>
-          <div class="blog-card"><div class="blog-orb blog-orb-3"></div><div class="blog-body"><span class="blog-date">18 февраля 2025</span><h3 class="blog-title">Психология цвета: как выбрать палитру для бренда</h3><p class="blog-desc">Цвет — один из самых мощных инструментов в дизайне. Он влияет на восприятие и решения...</p><button class="blog-link" data-article="2">Читать →</button></div></div>
-          <div class="blog-card"><div class="blog-orb blog-orb-4"></div><div class="blog-body"><span class="blog-date">10 января 2025</span><h3 class="blog-title">Минимализм в дизайне: когда меньше — это больше</h3><p class="blog-desc">Пустое пространство — это не пустота. Это воздух, который позволяет смыслу дышать...</p><button class="blog-link" data-article="3">Читать →</button></div></div>
-          <div class="blog-card"><div class="blog-orb blog-orb-5"></div><div class="blog-body"><span class="blog-date">5 декабря 2024</span><h3 class="blog-title">Сила логотипа: как символ становится историей бренда</h3><p class="blog-desc">Великие логотипы — это не просто картинки. Это сжатая философия компании в одной форме...</p><button class="blog-link" data-article="4">Читать →</button></div></div>
-          <div class="blog-card"><div class="blog-orb blog-orb-6"></div><div class="blog-body"><span class="blog-date">20 ноября 2024</span><h3 class="blog-title">Тренды графического дизайна 2025</h3><p class="blog-desc">Что будет определять визуальный язык брендов в 2025 году — разбираем ключевые направления...</p><button class="blog-link" data-article="5">Читать →</button></div></div>
+        <div class="blog-head">
+          <div class="eyebrow eyebrow-c"><span class="eyebrow-dot"></span><span class="eyebrow-txt" data-i18n="bl.tag">блог</span></div>
+          <h2 class="sec-title blog-title-c" data-i18n="bl.heading">Статьи и советы</h2>
+        </div>
+        <div class="blog-list">
+          <button class="blog-row" data-article="0"><span class="blog-row-num">01</span><span class="blog-row-cat">Брендинг</span><h3 class="blog-row-title">Как создать сильный бренд: 5 ключевых принципов</h3><p class="blog-row-desc">Брендинг — это не просто логотип. Это система, которая делает ваш бизнес узнаваемым.</p><span class="blog-row-time">5 мин</span><span class="blog-row-read" data-i18n="bl.read">Читать →</span></button>
+          <button class="blog-row" data-article="1"><span class="blog-row-num">02</span><span class="blog-row-cat">Типографика</span><h3 class="blog-row-title">Типографика в брендинге: почему шрифт важнее, чем кажется</h3><p class="blog-row-desc">Правильный шрифт передаёт характер бренда лучше любого изображения.</p><span class="blog-row-time">7 мин</span><span class="blog-row-read" data-i18n="bl.read">Читать →</span></button>
+          <button class="blog-row" data-article="2"><span class="blog-row-num">03</span><span class="blog-row-cat">Цвет</span><h3 class="blog-row-title">Психология цвета: как выбрать палитру для бренда</h3><p class="blog-row-desc">Цвет — мощный инструмент. Он влияет на восприятие и решения клиентов.</p><span class="blog-row-time">6 мин</span><span class="blog-row-read" data-i18n="bl.read">Читать →</span></button>
+          <button class="blog-row" data-article="3"><span class="blog-row-num">04</span><span class="blog-row-cat">Минимализм</span><h3 class="blog-row-title">Минимализм в дизайне: когда меньше — это больше</h3><p class="blog-row-desc">Пустое пространство — это воздух, который позволяет смыслу дышать.</p><span class="blog-row-time">5 мин</span><span class="blog-row-read" data-i18n="bl.read">Читать →</span></button>
+          <button class="blog-row" data-article="4"><span class="blog-row-num">05</span><span class="blog-row-cat">Логотип</span><h3 class="blog-row-title">Сила логотипа: как символ становится историей бренда</h3><p class="blog-row-desc">Великие логотипы — это сжатая философия компании в одной форме.</p><span class="blog-row-time">6 мин</span><span class="blog-row-read" data-i18n="bl.read">Читать →</span></button>
+          <button class="blog-row" data-article="5"><span class="blog-row-num">06</span><span class="blog-row-cat">Тренды</span><h3 class="blog-row-title">Тренды графического дизайна 2025</h3><p class="blog-row-desc">Что определит визуальный язык брендов в 2025 — ключевые направления.</p><span class="blog-row-time">8 мин</span><span class="blog-row-read" data-i18n="bl.read">Читать →</span></button>
         </div>
       </div>
     </div>
@@ -713,8 +735,6 @@
           </div>
         </div>
 
-        <blockquote class="about-new-quote">Хороший дизайн — это <mark>ясность мысли</mark>, воплощённая в форме, которая меняет то, как мир видит себя.</blockquote>
-
       </div>
     </div>
     <div class="ov-contact"><div class="ov-contact-inner">
@@ -764,6 +784,6 @@
     </button>
   </div>
 
-  <script src="script.js?v=8"></script>
+  <script src="script.js?v=9"></script>
 </body>
 </html>

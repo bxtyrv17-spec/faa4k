@@ -616,11 +616,11 @@ document.getElementById('fabChat').addEventListener('click', () => openOverlay('
 /* ═══════════════════════════════════════════
    SERVICES FILTER
 ═══════════════════════════════════════════ */
-(function () {
-  const chips = Array.from(document.querySelectorAll('.srv-chip'));
-  const list  = document.querySelector('.srv-list');
-  if (!chips.length || !list) return;
+document.querySelectorAll('.srv-list').forEach(list => {
+  const scope = list.closest('.sec-inner') || document;
+  const chips = Array.from(scope.querySelectorAll('.srv-chip'));
   const items = Array.from(list.querySelectorAll('.srv-item'));
+  if (!chips.length) return;
 
   function apply(cat) {
     list.classList.add('is-switching');
@@ -637,7 +637,7 @@ document.getElementById('fabChat').addEventListener('click', () => openOverlay('
     chips.forEach(c => c.classList.toggle('is-active', c === chip));
     apply(chip.dataset.cat);
   }));
-})();
+});
 
 /* ═══════════════════════════════════════════
    FAQ ACCORDION
