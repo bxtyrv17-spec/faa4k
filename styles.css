@@ -1458,6 +1458,10 @@ body.ov-active { overflow: hidden; }
 
 .footer-ov { margin-top: 8px; }
 
+/* Contact overlay = only the footer, pinned to fill the screen */
+#ov-contact { display: flex; flex-direction: column; min-height: 100vh; }
+#ov-contact .footer-ov { margin-top: auto; width: 100%; }
+
 @media (prefers-reduced-motion: reduce) {
   .page-ov > :not(.ov-topbar) { opacity: 1 !important; transform: none !important; transition: none !important; }
 }

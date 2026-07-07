@@ -680,7 +680,7 @@ document.querySelectorAll('.srv-list').forEach(list => {
     dots.forEach((d, i) => d.classList.toggle('is-active', i === idx));
     heads.forEach((h, i) => h.classList.toggle('is-active', i === idx));
   }
-  function start() { stop(); timer = setInterval(() => go(idx + 1), 3000); }
+  function start() { stop(); timer = setInterval(() => go(idx + 1), 5000); }
   function stop()  { if (timer) { clearInterval(timer); timer = null; } }
 
   dots.forEach(d => d.addEventListener('click', () => { go(+d.dataset.slide); start(); }));
