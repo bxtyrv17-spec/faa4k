@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=27" />
+  <link rel="stylesheet" href="styles.css?v=28" />
   <script>
     (function(){ const t = localStorage.getItem('theme')||'light'; document.documentElement.setAttribute('data-theme',t); })();
   </script>
@@ -48,17 +48,9 @@
             <svg class="lang-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="lang-menu" id="langMenu">
-            <button class="lang-item active" data-lang="ru">Русский       <span class="lang-code">RU</span></button>
-            <button class="lang-item"        data-lang="en">English        <span class="lang-code">EN</span></button>
-            <button class="lang-item"        data-lang="uz">O'zbek         <span class="lang-code">UZ</span></button>
-            <button class="lang-item"        data-lang="kz">Қазақша        <span class="lang-code">KZ</span></button>
-            <button class="lang-item"        data-lang="ge">ქართული        <span class="lang-code">GE</span></button>
-            <button class="lang-item"        data-lang="tr">Türkçe         <span class="lang-code">TR</span></button>
-            <button class="lang-item"        data-lang="az">Azərbaycan     <span class="lang-code">AZ</span></button>
-            <button class="lang-item"        data-lang="ua">Українська     <span class="lang-code">UA</span></button>
-            <button class="lang-item"        data-lang="zh">中文           <span class="lang-code">ZH</span></button>
-            <button class="lang-item"        data-lang="es">Español        <span class="lang-code">ES</span></button>
-            <button class="lang-item"        data-lang="tj">Тоҷикӣ         <span class="lang-code">TJ</span></button>
+            <button class="lang-item active" data-lang="ru">Русский  <span class="lang-code">RU</span></button>
+            <button class="lang-item"        data-lang="en">English   <span class="lang-code">EN</span></button>
+            <button class="lang-item"        data-lang="uz">O'zbek    <span class="lang-code">UZ</span></button>
           </div>
         </div>
 
@@ -93,12 +85,12 @@
       <div class="hero-scrim"></div>
 
       <div class="hero-content">
-        <span class="hero-role-text hero-anim hero-a1">Graphic Designer</span>
+        <span class="hero-role-text hero-anim hero-a1" data-i18n="hero.role">Graphic Designer</span>
 
         <div class="hero-headings hero-anim hero-a2">
-          <h1 class="hero-heading is-active" data-slide="0">Дизайн — это<br>язык без слов</h1>
-          <h1 class="hero-heading" data-slide="1">Создаю бренды,<br>которые запоминают</h1>
-          <h1 class="hero-heading" data-slide="2">Идея, обретающая<br>форму</h1>
+          <h1 class="hero-heading is-active" data-slide="0" data-i18n-html="hero.s0">Дизайн — это<br>язык без слов</h1>
+          <h1 class="hero-heading" data-slide="1" data-i18n-html="hero.s1">Создаю бренды,<br>которые запоминают</h1>
+          <h1 class="hero-heading" data-slide="2" data-i18n-html="hero.s2">Идея, обретающая<br>форму</h1>
         </div>
 
         <p class="hero-desc hero-anim hero-a3" data-i18n="hero.desc">Создаю визуальные образы, которые вдохновляют и навсегда остаются в памяти.</p>
@@ -150,40 +142,40 @@
       <div class="srv-list anim d2">
 
         <div class="srv-item" data-cat="brand">
-          <div class="srv-item-row"><span class="srv-item-name">Логотип и фирменный стиль</span><a href="#" class="srv-item-arrow" data-panel="book" data-service="Логотип и фирменный стиль">→</a></div>
-          <div class="srv-item-detail"><div class="srv-item-detail-inner"><p class="srv-item-desc">Разработка логотипа с фирменными цветами, типографикой и правилами использования.</p><span class="srv-item-price">от 1 200 000 сум</span></div></div>
+          <div class="srv-item-row"><span class="srv-item-name" data-i18n="srv.n1">Логотип и фирменный стиль</span><a href="#" class="srv-item-arrow" data-panel="book" data-service="Логотип и фирменный стиль">→</a></div>
+          <div class="srv-item-detail"><div class="srv-item-detail-inner"><p class="srv-item-desc" data-i18n="srv.d1">Разработка логотипа с фирменными цветами, типографикой и правилами использования.</p><span class="srv-item-price">от 1 200 000 сум</span></div></div>
         </div>
         <div class="srv-item" data-cat="ident">
-          <div class="srv-item-row"><span class="srv-item-name">Визитки и полиграфия</span><a href="#" class="srv-item-arrow" data-panel="book" data-service="Визитки и полиграфия">→</a></div>
-          <div class="srv-item-detail"><div class="srv-item-detail-inner"><p class="srv-item-desc">Дизайн визиток, флаеров, брошюр и другой печатной продукции под ваш бренд.</p><span class="srv-item-price">от 300 000 сум</span></div></div>
+          <div class="srv-item-row"><span class="srv-item-name" data-i18n="srv.n2">Визитки и полиграфия</span><a href="#" class="srv-item-arrow" data-panel="book" data-service="Визитки и полиграфия">→</a></div>
+          <div class="srv-item-detail"><div class="srv-item-detail-inner"><p class="srv-item-desc" data-i18n="srv.d2">Дизайн визиток, флаеров, брошюр и другой печатной продукции под ваш бренд.</p><span class="srv-item-price">от 300 000 сум</span></div></div>
         </div>
         <div class="srv-item" data-cat="ux">
-          <div class="srv-item-row"><span class="srv-item-name">UI/UX мобильных приложений</span><a href="#" class="srv-item-arrow" data-panel="book" data-service="UI/UX мобильных приложений">→</a></div>
-          <div class="srv-item-detail"><div class="srv-item-detail-inner"><p class="srv-item-desc">Проектирование удобного и красивого интерфейса мобильного приложения.</p><span class="srv-item-price">от 3 500 000 сум</span></div></div>
+          <div class="srv-item-row"><span class="srv-item-name" data-i18n="srv.n3">UI/UX мобильных приложений</span><a href="#" class="srv-item-arrow" data-panel="book" data-service="UI/UX мобильных приложений">→</a></div>
+          <div class="srv-item-detail"><div class="srv-item-detail-inner"><p class="srv-item-desc" data-i18n="srv.d3">Проектирование удобного и красивого интерфейса мобильного приложения.</p><span class="srv-item-price">от 3 500 000 сум</span></div></div>
         </div>
         <div class="srv-item" data-cat="brand">
-          <div class="srv-item-row"><span class="srv-item-name">Ребрендинг</span><a href="#" class="srv-item-arrow" data-panel="book" data-service="Ребрендинг">→</a></div>
-          <div class="srv-item-detail"><div class="srv-item-detail-inner"><p class="srv-item-desc">Обновление визуального стиля бренда с сохранением его сути и узнаваемости.</p><span class="srv-item-price">от 2 000 000 сум</span></div></div>
+          <div class="srv-item-row"><span class="srv-item-name" data-i18n="srv.n4">Ребрендинг</span><a href="#" class="srv-item-arrow" data-panel="book" data-service="Ребрендинг">→</a></div>
+          <div class="srv-item-detail"><div class="srv-item-detail-inner"><p class="srv-item-desc" data-i18n="srv.d4">Обновление визуального стиля бренда с сохранением его сути и узнаваемости.</p><span class="srv-item-price">от 2 000 000 сум</span></div></div>
         </div>
         <div class="srv-item" data-cat="ident">
-          <div class="srv-item-row"><span class="srv-item-name">Оформление соцсетей</span><a href="#" class="srv-item-arrow" data-panel="book" data-service="Оформление соцсетей">→</a></div>
-          <div class="srv-item-detail"><div class="srv-item-detail-inner"><p class="srv-item-desc">Единый визуальный стиль для Instagram, Telegram и других платформ.</p><span class="srv-item-price">от 700 000 сум</span></div></div>
+          <div class="srv-item-row"><span class="srv-item-name" data-i18n="srv.n5">Оформление соцсетей</span><a href="#" class="srv-item-arrow" data-panel="book" data-service="Оформление соцсетей">→</a></div>
+          <div class="srv-item-detail"><div class="srv-item-detail-inner"><p class="srv-item-desc" data-i18n="srv.d5">Единый визуальный стиль для Instagram, Telegram и других платформ.</p><span class="srv-item-price">от 700 000 сум</span></div></div>
         </div>
         <div class="srv-item" data-cat="ux">
-          <div class="srv-item-row"><span class="srv-item-name">Веб-дизайн сайтов</span><a href="#" class="srv-item-arrow" data-panel="book" data-service="Веб-дизайн сайтов">→</a></div>
-          <div class="srv-item-detail"><div class="srv-item-detail-inner"><p class="srv-item-desc">Дизайн современного сайта: лендинг, портфолио или корпоративный сайт.</p><span class="srv-item-price">от 2 500 000 сум</span></div></div>
+          <div class="srv-item-row"><span class="srv-item-name" data-i18n="srv.n6">Веб-дизайн сайтов</span><a href="#" class="srv-item-arrow" data-panel="book" data-service="Веб-дизайн сайтов">→</a></div>
+          <div class="srv-item-detail"><div class="srv-item-detail-inner"><p class="srv-item-desc" data-i18n="srv.d6">Дизайн современного сайта: лендинг, портфолио или корпоративный сайт.</p><span class="srv-item-price">от 2 500 000 сум</span></div></div>
         </div>
         <div class="srv-item" data-cat="brand">
-          <div class="srv-item-row"><span class="srv-item-name">Гайдлайн бренда</span><a href="#" class="srv-item-arrow" data-panel="book" data-service="Гайдлайн бренда">→</a></div>
-          <div class="srv-item-detail"><div class="srv-item-detail-inner"><p class="srv-item-desc">Документ с правилами использования логотипа, шрифтов и цветов бренда.</p><span class="srv-item-price">от 1 500 000 сум</span></div></div>
+          <div class="srv-item-row"><span class="srv-item-name" data-i18n="srv.n7">Гайдлайн бренда</span><a href="#" class="srv-item-arrow" data-panel="book" data-service="Гайдлайн бренда">→</a></div>
+          <div class="srv-item-detail"><div class="srv-item-detail-inner"><p class="srv-item-desc" data-i18n="srv.d7">Документ с правилами использования логотипа, шрифтов и цветов бренда.</p><span class="srv-item-price">от 1 500 000 сум</span></div></div>
         </div>
         <div class="srv-item" data-cat="pack">
-          <div class="srv-item-row"><span class="srv-item-name">Дизайн упаковки</span><a href="#" class="srv-item-arrow" data-panel="book" data-service="Дизайн упаковки">→</a></div>
-          <div class="srv-item-detail"><div class="srv-item-detail-inner"><p class="srv-item-desc">Привлекательная упаковка, которая выделяет продукт на полке и продаёт сама.</p><span class="srv-item-price">от 900 000 сум</span></div></div>
+          <div class="srv-item-row"><span class="srv-item-name" data-i18n="srv.n8">Дизайн упаковки</span><a href="#" class="srv-item-arrow" data-panel="book" data-service="Дизайн упаковки">→</a></div>
+          <div class="srv-item-detail"><div class="srv-item-detail-inner"><p class="srv-item-desc" data-i18n="srv.d8">Привлекательная упаковка, которая выделяет продукт на полке и продаёт сама.</p><span class="srv-item-price">от 900 000 сум</span></div></div>
         </div>
         <div class="srv-item" data-cat="pack">
-          <div class="srv-item-row"><span class="srv-item-name">Этикетки и стикеры</span><a href="#" class="srv-item-arrow" data-panel="book" data-service="Этикетки и стикеры">→</a></div>
-          <div class="srv-item-detail"><div class="srv-item-detail-inner"><p class="srv-item-desc">Дизайн этикеток для бутылок, банок, коробок и брендированных стикеров.</p><span class="srv-item-price">от 400 000 сум</span></div></div>
+          <div class="srv-item-row"><span class="srv-item-name" data-i18n="srv.n9">Этикетки и стикеры</span><a href="#" class="srv-item-arrow" data-panel="book" data-service="Этикетки и стикеры">→</a></div>
+          <div class="srv-item-detail"><div class="srv-item-detail-inner"><p class="srv-item-desc" data-i18n="srv.d9">Дизайн этикеток для бутылок, банок, коробок и брендированных стикеров.</p><span class="srv-item-price">от 400 000 сум</span></div></div>
         </div>
 
       </div>
@@ -208,24 +200,24 @@
         <div class="bento-card bento-feat anim">
           <div class="bento-visual bv-1"></div>
           <div class="bento-cap">
-            <h3>Идея превращается в форму</h3>
-            <div class="bento-meta"><span>◷ 5–14 дней</span><span>★ Премиум дизайн</span></div>
+            <h3 data-i18n="bn.h1">Идея превращается в форму</h3>
+            <div class="bento-meta"><span data-i18n="bn.meta1">◷ 5–14 дней</span><span data-i18n="bn.meta2">★ Премиум дизайн</span></div>
           </div>
         </div>
 
         <div class="bento-card bento-atmo anim d1">
           <div class="bento-visual bv-2"></div>
-          <h3 class="bento-cap-sm">Внимание к каждой детали</h3>
+          <h3 class="bento-cap-sm" data-i18n="bn.h2">Внимание к каждой детали</h3>
         </div>
 
         <div class="bento-card bento-stat anim d2">
           <span class="bento-stat-num">50+</span>
-          <span class="bento-stat-lbl">проектов и брендов</span>
+          <span class="bento-stat-lbl" data-i18n="bn.stat">проектов и брендов</span>
           <div class="bento-stat-chips">
-            <span class="bento-chip">200+ макетов</span>
-            <span class="bento-chip">20+ брендов</span>
+            <span class="bento-chip" data-i18n="bn.chip1">200+ макетов</span>
+            <span class="bento-chip" data-i18n="bn.chip2">20+ брендов</span>
           </div>
-          <span class="bento-since">с 2020</span>
+          <span class="bento-since" data-i18n="bn.since">с 2020</span>
         </div>
 
         <div class="bento-card bento-prog anim d1">
@@ -238,15 +230,15 @@
             <span data-i18n="sv.c5">Типографика</span>
           </div>
           <div class="bento-cap">
-            <h3>Подберём стиль под вас</h3>
-            <p>Найдём визуальный язык под ваш бренд и задачу</p>
+            <h3 data-i18n="bn.h3">Подберём стиль под вас</h3>
+            <p data-i18n="bn.p3">Найдём визуальный язык под ваш бренд и задачу</p>
           </div>
         </div>
 
         <div class="bento-card bento-sat anim d2">
           <div class="bento-stars">★★★★★</div>
           <span class="bento-sat-num">99%</span>
-          <span class="bento-sat-lbl">довольных клиентов</span>
+          <span class="bento-sat-lbl" data-i18n="bn.sat.lbl">довольных клиентов</span>
           <div class="bento-ticker-wrap">
             <div class="bento-ticker" id="bentoTicker"></div>
           </div>
@@ -254,8 +246,8 @@
 
         <div class="bento-card bento-free anim">
           <div class="bento-free-badge">FREE</div>
-          <h3>Бесплатная консультация</h3>
-          <p>Первая встреча — обсуждение проекта бесплатно</p>
+          <h3 data-i18n="bn.free.h">Бесплатная консультация</h3>
+          <p data-i18n="bn.free.p">Первая встреча — обсуждение проекта бесплатно</p>
           <a href="#" class="bento-free-btn" data-panel="book" data-i18n="nav.book">Записаться</a>
         </div>
 
@@ -278,65 +270,65 @@
       <div class="pkg-grid">
 
         <div class="pkg-card anim">
-          <span class="pkg-zone">Стартовый пакет</span>
+          <span class="pkg-zone" data-i18n="pk.zone1">Стартовый пакет</span>
           <h3 class="pkg-name" data-i18n="pk.n1">Старт</h3>
           <p class="pkg-desc" data-i18n="pk.d1">Для малого бизнеса</p>
           <ul class="pkg-features">
-            <li>Логотип + фирменный стиль</li>
-            <li>1 концепция</li>
-            <li>3 правки</li>
-            <li>Исходные файлы</li>
+            <li data-i18n="pk.f1.1">Логотип + фирменный стиль</li>
+            <li data-i18n="pk.f1.2">1 концепция</li>
+            <li data-i18n="pk.f1.3">3 правки</li>
+            <li data-i18n="pk.f1.4">Исходные файлы</li>
           </ul>
           <div class="pkg-price-block">
             <div class="pkg-price">
               <span class="pkg-price-val">1 200 000</span>
-              <span class="pkg-price-cur">сум</span>
+              <span class="pkg-price-cur" data-i18n="pk.cur">сум</span>
             </div>
-            <p class="pkg-price-note">Уточняется на консультации</p>
+            <p class="pkg-price-note" data-i18n="pk.note1">Уточняется на консультации</p>
           </div>
           <a href="#" class="pkg-btn" data-panel="book" data-i18n="pk.btn">Выбрать пакет</a>
         </div>
 
         <div class="pkg-card pkg-featured anim d1">
           <div class="pkg-badge" data-i18n="pk.popular">Популярный</div>
-          <span class="pkg-zone pkg-zone-inv">Стандартный пакет</span>
+          <span class="pkg-zone pkg-zone-inv" data-i18n="pk.zone2">Стандартный пакет</span>
           <h3 class="pkg-name" data-i18n="pk.n2">Стандарт</h3>
           <p class="pkg-desc" data-i18n="pk.d2">Для растущих брендов</p>
           <ul class="pkg-features">
-            <li>Полный фирменный стиль</li>
-            <li>2 концепции</li>
-            <li>5 правок</li>
-            <li>Гайдлайн бренда</li>
-            <li>Соцсети + шаблоны</li>
+            <li data-i18n="pk.f2.1">Полный фирменный стиль</li>
+            <li data-i18n="pk.f2.2">2 концепции</li>
+            <li data-i18n="pk.f2.3">5 правок</li>
+            <li data-i18n="pk.f2.4">Гайдлайн бренда</li>
+            <li data-i18n="pk.f2.5">Соцсети + шаблоны</li>
           </ul>
           <div class="pkg-price-block">
             <div class="pkg-price">
               <span class="pkg-price-val">3 000 000</span>
-              <span class="pkg-price-cur">сум</span>
+              <span class="pkg-price-cur" data-i18n="pk.cur">сум</span>
             </div>
-            <p class="pkg-price-note">Уточняется на консультации</p>
+            <p class="pkg-price-note" data-i18n="pk.note1">Уточняется на консультации</p>
           </div>
           <a href="#" class="pkg-btn" data-panel="book" data-i18n="pk.btn">Выбрать пакет</a>
         </div>
 
         <div class="pkg-card anim d2">
-          <span class="pkg-zone">Премиум пакет</span>
+          <span class="pkg-zone" data-i18n="pk.zone3">Премиум пакет</span>
           <h3 class="pkg-name" data-i18n="pk.n3">Премиум</h3>
           <p class="pkg-desc" data-i18n="pk.d3">Для крупных проектов</p>
           <ul class="pkg-features">
-            <li>Полная айдентика</li>
-            <li>3 концепции</li>
-            <li>Безлимит правок</li>
-            <li>Брендбук</li>
-            <li>Упаковка + иллюстрации</li>
-            <li>Приоритетная поддержка</li>
+            <li data-i18n="pk.f3.1">Полная айдентика</li>
+            <li data-i18n="pk.f3.2">3 концепции</li>
+            <li data-i18n="pk.f3.3">Безлимит правок</li>
+            <li data-i18n="pk.f3.4">Брендбук</li>
+            <li data-i18n="pk.f3.5">Упаковка + иллюстрации</li>
+            <li data-i18n="pk.f3.6">Приоритетная поддержка</li>
           </ul>
           <div class="pkg-price-block">
             <div class="pkg-price">
               <span class="pkg-price-val">5 000 000</span>
-              <span class="pkg-price-cur">сум+</span>
+              <span class="pkg-price-cur" data-i18n="pk.cur">сум</span>+
             </div>
-            <p class="pkg-price-note">Зависит от проекта</p>
+            <p class="pkg-price-note" data-i18n="pk.note2">Зависит от проекта</p>
           </div>
           <a href="#" class="pkg-btn" data-panel="book" data-i18n="pk.btn">Выбрать пакет</a>
         </div>
@@ -360,55 +352,55 @@
 
         <button class="blog-row anim" data-article="0">
           <span class="blog-row-num">01</span>
-          <span class="blog-row-cat">Брендинг</span>
-          <h3 class="blog-row-title">Как создать сильный бренд: 5 ключевых принципов</h3>
-          <p class="blog-row-desc">Брендинг — это не просто логотип. Это система, которая делает ваш бизнес узнаваемым.</p>
-          <span class="blog-row-time">5 мин</span>
+          <span class="blog-row-cat" data-i18n="bl.cat1">Брендинг</span>
+          <h3 class="blog-row-title" data-i18n="bl.t1">Как создать сильный бренд: 5 ключевых принципов</h3>
+          <p class="blog-row-desc" data-i18n="bl.d1">Брендинг — это не просто логотип. Это система, которая делает ваш бизнес узнаваемым.</p>
+          <span class="blog-row-time">5 <span data-i18n="bl.min">мин</span></span>
           <span class="blog-row-read" data-i18n="bl.read">Читать →</span>
         </button>
 
         <button class="blog-row anim" data-article="1">
           <span class="blog-row-num">02</span>
-          <span class="blog-row-cat">Типографика</span>
-          <h3 class="blog-row-title">Типографика в брендинге: почему шрифт важнее, чем кажется</h3>
-          <p class="blog-row-desc">Правильный шрифт передаёт характер бренда лучше любого изображения.</p>
-          <span class="blog-row-time">7 мин</span>
+          <span class="blog-row-cat" data-i18n="bl.cat2">Типографика</span>
+          <h3 class="blog-row-title" data-i18n="bl.t2">Типографика в брендинге: почему шрифт важнее, чем кажется</h3>
+          <p class="blog-row-desc" data-i18n="bl.d2">Правильный шрифт передаёт характер бренда лучше любого изображения.</p>
+          <span class="blog-row-time">7 <span data-i18n="bl.min">мин</span></span>
           <span class="blog-row-read" data-i18n="bl.read">Читать →</span>
         </button>
 
         <button class="blog-row anim" data-article="2">
           <span class="blog-row-num">03</span>
-          <span class="blog-row-cat">Цвет</span>
-          <h3 class="blog-row-title">Психология цвета: как выбрать палитру для бренда</h3>
-          <p class="blog-row-desc">Цвет — мощный инструмент. Он влияет на восприятие и решения клиентов.</p>
-          <span class="blog-row-time">6 мин</span>
+          <span class="blog-row-cat" data-i18n="bl.cat3">Цвет</span>
+          <h3 class="blog-row-title" data-i18n="bl.t3">Психология цвета: как выбрать палитру для бренда</h3>
+          <p class="blog-row-desc" data-i18n="bl.d3">Цвет — мощный инструмент. Он влияет на восприятие и решения клиентов.</p>
+          <span class="blog-row-time">6 <span data-i18n="bl.min">мин</span></span>
           <span class="blog-row-read" data-i18n="bl.read">Читать →</span>
         </button>
 
         <button class="blog-row anim" data-article="3">
           <span class="blog-row-num">04</span>
-          <span class="blog-row-cat">Минимализм</span>
-          <h3 class="blog-row-title">Минимализм в дизайне: когда меньше — это больше</h3>
-          <p class="blog-row-desc">Пустое пространство — это воздух, который позволяет смыслу дышать.</p>
-          <span class="blog-row-time">5 мин</span>
+          <span class="blog-row-cat" data-i18n="bl.cat4">Минимализм</span>
+          <h3 class="blog-row-title" data-i18n="bl.t4">Минимализм в дизайне: когда меньше — это больше</h3>
+          <p class="blog-row-desc" data-i18n="bl.d4">Пустое пространство — это воздух, который позволяет смыслу дышать.</p>
+          <span class="blog-row-time">5 <span data-i18n="bl.min">мин</span></span>
           <span class="blog-row-read" data-i18n="bl.read">Читать →</span>
         </button>
 
         <button class="blog-row anim" data-article="4">
           <span class="blog-row-num">05</span>
-          <span class="blog-row-cat">Логотип</span>
-          <h3 class="blog-row-title">Сила логотипа: как символ становится историей бренда</h3>
-          <p class="blog-row-desc">Великие логотипы — это сжатая философия компании в одной форме.</p>
-          <span class="blog-row-time">6 мин</span>
+          <span class="blog-row-cat" data-i18n="bl.cat5">Логотип</span>
+          <h3 class="blog-row-title" data-i18n="bl.t5">Сила логотипа: как символ становится историей бренда</h3>
+          <p class="blog-row-desc" data-i18n="bl.d5">Великие логотипы — это сжатая философия компании в одной форме.</p>
+          <span class="blog-row-time">6 <span data-i18n="bl.min">мин</span></span>
           <span class="blog-row-read" data-i18n="bl.read">Читать →</span>
         </button>
 
         <button class="blog-row anim" data-article="5">
           <span class="blog-row-num">06</span>
-          <span class="blog-row-cat">Тренды</span>
-          <h3 class="blog-row-title">Тренды графического дизайна 2025</h3>
-          <p class="blog-row-desc">Что определит визуальный язык брендов в 2025 — ключевые направления.</p>
-          <span class="blog-row-time">8 мин</span>
+          <span class="blog-row-cat" data-i18n="bl.cat6">Тренды</span>
+          <h3 class="blog-row-title" data-i18n="bl.t6">Тренды графического дизайна 2025</h3>
+          <p class="blog-row-desc" data-i18n="bl.d6">Что определит визуальный язык брендов в 2025 — ключевые направления.</p>
+          <span class="blog-row-time">8 <span data-i18n="bl.min">мин</span></span>
           <span class="blog-row-read" data-i18n="bl.read">Читать →</span>
         </button>
 
@@ -423,39 +415,39 @@
       <div class="about-new-head anim">
         <div class="eyebrow">
           <span class="eyebrow-dot"></span>
-          <span class="eyebrow-txt">обо мне</span>
+          <span class="eyebrow-txt" data-i18n="about.eyebrow">обо мне</span>
         </div>
-        <h2 class="about-new-title">Привет! Я — faa4k,<br>графический дизайнер</h2>
-        <p class="about-new-lead">Более 3 лет помогаю брендам находить свой визуальный язык — от логотипа до цельной айдентики. Верю, что хороший дизайн решает задачи бизнеса и остаётся в памяти.</p>
+        <h2 class="about-new-title" data-i18n-html="about.title">Привет! Я — faa4k,<br>графический дизайнер</h2>
+        <p class="about-new-lead" data-i18n="about.lead">Более 3 лет помогаю брендам находить свой визуальный язык — от логотипа до цельной айдентики. Верю, что хороший дизайн решает задачи бизнеса и остаётся в памяти.</p>
       </div>
 
       <div class="about-new-stats anim d1">
-        <div class="about-new-stat"><span class="about-new-num">3+</span><span class="about-new-lbl">года опыта</span></div>
-        <div class="about-new-stat"><span class="about-new-num">50+</span><span class="about-new-lbl">проектов</span></div>
-        <div class="about-new-stat"><span class="about-new-num">20+</span><span class="about-new-lbl">брендов</span></div>
-        <div class="about-new-stat about-new-stat-accent"><span class="about-new-num">99%</span><span class="about-new-lbl">довольных клиентов</span></div>
+        <div class="about-new-stat"><span class="about-new-num">3+</span><span class="about-new-lbl" data-i18n="about.stat1">года опыта</span></div>
+        <div class="about-new-stat"><span class="about-new-num">50+</span><span class="about-new-lbl" data-i18n="about.stat2">проектов</span></div>
+        <div class="about-new-stat"><span class="about-new-num">20+</span><span class="about-new-lbl" data-i18n="about.stat3">брендов</span></div>
+        <div class="about-new-stat about-new-stat-accent"><span class="about-new-num">99%</span><span class="about-new-lbl" data-i18n="about.stat4">довольных клиентов</span></div>
       </div>
 
       <div class="about-new-body anim d2">
         <div class="about-new-col">
-          <h3 class="about-new-h3">Чем занимаюсь</h3>
+          <h3 class="about-new-h3" data-i18n="about.h1">Чем занимаюсь</h3>
           <div class="about-new-chips">
-            <span>Брендинг</span>
-            <span>Логотипы</span>
-            <span>Айдентика</span>
-            <span>UI/UX</span>
-            <span>Упаковка</span>
-            <span>Типографика</span>
-            <span>Иллюстрация</span>
+            <span data-i18n="about.chip1">Брендинг</span>
+            <span data-i18n="about.chip2">Логотипы</span>
+            <span data-i18n="about.chip3">Айдентика</span>
+            <span data-i18n="about.chip4">UI/UX</span>
+            <span data-i18n="about.chip5">Упаковка</span>
+            <span data-i18n="about.chip6">Типографика</span>
+            <span data-i18n="about.chip7">Иллюстрация</span>
           </div>
         </div>
         <div class="about-new-col">
-          <h3 class="about-new-h3">Как работаю</h3>
+          <h3 class="about-new-h3" data-i18n="about.h2">Как работаю</h3>
           <ul class="about-new-steps">
-            <li><span>01</span> Погружаюсь в задачу и бренд</li>
-            <li><span>02</span> Показываю концепции на выбор</li>
-            <li><span>03</span> Дорабатываю по вашим правкам</li>
-            <li><span>04</span> Отдаю исходники и гайд</li>
+            <li><span>01</span> <span data-i18n="about.step1">Погружаюсь в задачу и бренд</span></li>
+            <li><span>02</span> <span data-i18n="about.step2">Показываю концепции на выбор</span></li>
+            <li><span>03</span> <span data-i18n="about.step3">Дорабатываю по вашим правкам</span></li>
+            <li><span>04</span> <span data-i18n="about.step4">Отдаю исходники и гайд</span></li>
           </ul>
         </div>
       </div>
@@ -466,11 +458,11 @@
   <!-- ═══ CONSULT CTA BAND ═══ -->
   <section class="cta-band" id="consult">
     <div class="cta-band-inner anim">
-      <span class="cta-band-tag">Специальное предложение</span>
-      <h2 class="cta-band-h">Первая консультация<br>бесплатно</h2>
-      <p class="cta-band-sub">Обсудим ваш проект, задачи и стиль — бесплатно и без обязательств.</p>
+      <span class="cta-band-tag" data-i18n="cta.tag">Специальное предложение</span>
+      <h2 class="cta-band-h" data-i18n-html="cta.h">Первая консультация<br>бесплатно</h2>
+      <p class="cta-band-sub" data-i18n="cta.sub">Обсудим ваш проект, задачи и стиль — бесплатно и без обязательств.</p>
       <a href="#" class="cta-band-btn" data-panel="book">
-        <span>Записаться бесплатно</span>
+        <span data-i18n="cta.btn">Записаться бесплатно</span>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
     </div>
@@ -484,52 +476,52 @@
         <div class="faq-left anim">
           <div class="eyebrow">
             <span class="eyebrow-dot"></span>
-            <span class="eyebrow-txt">вопросы и ответы</span>
+            <span class="eyebrow-txt" data-i18n="faq.eyebrow">вопросы и ответы</span>
           </div>
-          <h2 class="sec-title">Частые вопросы</h2>
+          <h2 class="sec-title" data-i18n="faq.title">Частые вопросы</h2>
           <div class="faq-card">
             <div class="faq-card-visual"></div>
             <div class="faq-card-body">
-              <h3>Остались вопросы?</h3>
-              <p>Напишите мне — отвечу лично.</p>
+              <h3 data-i18n="faq.card.h">Остались вопросы?</h3>
+              <p data-i18n="faq.card.p">Напишите мне — отвечу лично.</p>
             </div>
-            <a href="#" class="faq-card-btn" data-panel="book">Написать мне</a>
+            <a href="#" class="faq-card-btn" data-panel="book" data-i18n="faq.card.btn">Написать мне</a>
           </div>
         </div>
 
         <div class="faq-list anim d1">
           <div class="faq-item">
-            <button class="faq-q"><span>Сколько стоит логотип и фирменный стиль?</span><span class="faq-ic"></span></button>
-            <div class="faq-a"><p>Стоимость зависит от объёма задачи и количества концепций. Точную цену назову после короткого брифа на бесплатной консультации.</p></div>
+            <button class="faq-q"><span data-i18n="faq.q1">Сколько стоит логотип и фирменный стиль?</span><span class="faq-ic"></span></button>
+            <div class="faq-a"><p data-i18n="faq.a1">Стоимость зависит от объёма задачи и количества концепций. Точную цену назову после короткого брифа на бесплатной консультации.</p></div>
           </div>
           <div class="faq-item">
-            <button class="faq-q"><span>Сколько времени занимает проект?</span><span class="faq-ic"></span></button>
-            <div class="faq-a"><p>Логотип — от 5 дней, полный фирменный стиль — от 2 недель. Точные сроки согласуем перед стартом.</p></div>
+            <button class="faq-q"><span data-i18n="faq.q2">Сколько времени занимает проект?</span><span class="faq-ic"></span></button>
+            <div class="faq-a"><p data-i18n="faq.a2">Логотип — от 5 дней, полный фирменный стиль — от 2 недель. Точные сроки согласуем перед стартом.</p></div>
           </div>
           <div class="faq-item">
-            <button class="faq-q"><span>Сколько правок входит в работу?</span><span class="faq-ic"></span></button>
-            <div class="faq-a"><p>В зависимости от пакета — от 3 правок до безлимита. Правки в рамках выбранной концепции всегда включены.</p></div>
+            <button class="faq-q"><span data-i18n="faq.q3">Сколько правок входит в работу?</span><span class="faq-ic"></span></button>
+            <div class="faq-a"><p data-i18n="faq.a3">В зависимости от пакета — от 3 правок до безлимита. Правки в рамках выбранной концепции всегда включены.</p></div>
           </div>
           <div class="faq-item">
-            <button class="faq-q"><span>Вы передаёте исходные файлы?</span><span class="faq-ic"></span></button>
-            <div class="faq-a"><p>Да. После оплаты вы получаете все исходники в нужных форматах и гайд по использованию.</p></div>
+            <button class="faq-q"><span data-i18n="faq.q4">Вы передаёте исходные файлы?</span><span class="faq-ic"></span></button>
+            <div class="faq-a"><p data-i18n="faq.a4">Да. После оплаты вы получаете все исходники в нужных форматах и гайд по использованию.</p></div>
           </div>
           <div class="faq-item">
-            <button class="faq-q"><span>Как проходит работа над проектом?</span><span class="faq-ic"></span></button>
-            <div class="faq-a"><p>Бриф → концепции → выбор направления → доработка → финальные файлы. На каждом этапе вы участвуете и утверждаете результат.</p></div>
+            <button class="faq-q"><span data-i18n="faq.q5">Как проходит работа над проектом?</span><span class="faq-ic"></span></button>
+            <div class="faq-a"><p data-i18n="faq.a5">Бриф → концепции → выбор направления → доработка → финальные файлы. На каждом этапе вы участвуете и утверждаете результат.</p></div>
           </div>
         </div>
 
       </div>
 
       <div class="faq-regions anim">
-        <p class="faq-regions-label">Работаю с клиентами из</p>
+        <p class="faq-regions-label" data-i18n="faq.regions">Работаю с клиентами из</p>
         <div class="faq-region-chips">
-          <span>Узбекистана</span>
-          <span>Казахстана</span>
-          <span>России</span>
-          <span>Кыргызстана</span>
-          <span>Европы</span>
+          <span data-i18n="faq.r1">Узбекистана</span>
+          <span data-i18n="faq.r2">Казахстана</span>
+          <span data-i18n="faq.r3">России</span>
+          <span data-i18n="faq.r4">Кыргызстана</span>
+          <span data-i18n="faq.r5">Европы</span>
         </div>
       </div>
     </div>
@@ -541,13 +533,13 @@
     <div class="footer-cta anim">
       <div class="footer-cta-inner">
         <div class="footer-cta-text">
-          <span class="footer-cta-brand">faa4k · графический дизайнер</span>
-          <h2 class="footer-cta-h">−10% на первый<br>проект</h2>
-          <p class="footer-cta-sub">Скидка для новых клиентов на первый заказ.</p>
+          <span class="footer-cta-brand" data-i18n="ft.brand">faa4k · графический дизайнер</span>
+          <h2 class="footer-cta-h" data-i18n-html="ft.cta.h">−10% на первый<br>проект</h2>
+          <p class="footer-cta-sub" data-i18n="ft.cta.sub">Скидка для новых клиентов на первый заказ.</p>
         </div>
         <div class="footer-cta-btns">
-          <a href="#" class="footer-cta-fill" data-panel="book">Записаться</a>
-          <a href="#services" class="footer-cta-ghost">Мои услуги →</a>
+          <a href="#" class="footer-cta-fill" data-panel="book" data-i18n="ft.cta.fill">Записаться</a>
+          <a href="#services" class="footer-cta-ghost" data-i18n="ft.cta.svc">Мои услуги →</a>
         </div>
       </div>
     </div>
@@ -555,7 +547,7 @@
     <div class="footer-main">
       <div class="footer-col footer-brand">
         <span class="footer-logo">faa4k</span>
-        <p class="footer-about">Графический дизайнер. Брендинг, айдентика и визуальные системы для брендов.</p>
+        <p class="footer-about" data-i18n="ft.about">Графический дизайнер. Брендинг, айдентика и визуальные системы для брендов.</p>
         <div class="footer-socials">
           <a href="https://t.me/baxtdesign" target="_blank" rel="noopener" aria-label="Telegram">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
@@ -567,35 +559,35 @@
       </div>
 
       <div class="footer-col">
-        <h4>Услуги</h4>
-        <a href="#services">Брендинг</a>
-        <a href="#services">Логотипы</a>
-        <a href="#services">UI/UX</a>
-        <a href="#services">Упаковка</a>
-        <a href="#services">Типографика</a>
+        <h4 data-i18n="ft.h1">Услуги</h4>
+        <a href="#services" data-i18n="ft.s1.1">Брендинг</a>
+        <a href="#services" data-i18n="ft.s1.2">Логотипы</a>
+        <a href="#services" data-i18n="ft.s1.3">UI/UX</a>
+        <a href="#services" data-i18n="ft.s1.4">Упаковка</a>
+        <a href="#services" data-i18n="ft.s1.5">Типографика</a>
       </div>
 
       <div class="footer-col">
-        <h4>Разделы</h4>
-        <a href="#services">Услуги</a>
-        <a href="#packages">Пакеты</a>
-        <a href="#blog">Блог</a>
-        <a href="#about">Обо мне</a>
-        <a href="#contact">Контакты</a>
+        <h4 data-i18n="ft.h2">Разделы</h4>
+        <a href="#services" data-i18n="ft.s2.1">Услуги</a>
+        <a href="#packages" data-i18n="ft.s2.2">Пакеты</a>
+        <a href="#blog" data-i18n="ft.s2.3">Блог</a>
+        <a href="#about" data-i18n="ft.s2.4">Обо мне</a>
+        <a href="#contact" data-i18n="ft.s2.5">Контакты</a>
       </div>
 
       <div class="footer-col">
-        <h4>Связаться</h4>
-        <a href="https://t.me/baxtdesign" target="_blank" rel="noopener">Telegram канал</a>
-        <a href="https://www.instagram.com/faa.4k?igsh=amZubmdqMWtobmFx" target="_blank" rel="noopener">Instagram</a>
-        <a href="#" data-panel="book">Записаться на консультацию</a>
+        <h4 data-i18n="ft.h3">Связаться</h4>
+        <a href="https://t.me/baxtdesign" target="_blank" rel="noopener" data-i18n="ft.s3.1">Telegram канал</a>
+        <a href="https://www.instagram.com/faa.4k?igsh=amZubmdqMWtobmFx" target="_blank" rel="noopener" data-i18n="ft.s3.2">Instagram</a>
+        <a href="#" data-panel="book" data-i18n="ft.s3.3">Записаться на консультацию</a>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <span>© 2026 faa4k. Все права защищены.</span>
+      <span data-i18n="ft.copy">© 2026 faa4k. Все права защищены.</span>
       <div class="footer-bottom-links">
-        <a href="#hero">Наверх ↑</a>
+        <a href="#hero" data-i18n="ft.top">Наверх ↑</a>
       </div>
     </div>
   </footer>
@@ -632,7 +624,7 @@
             <div class="eyebrow"><span class="eyebrow-dot"></span><span class="eyebrow-txt" data-i18n="sv.tag">услуги</span></div>
             <h2 class="sec-title" data-i18n="sv.heading">Что я делаю</h2>
           </div>
-          <p class="srv-panel-sub">Выберите направление, которое вам нужно</p>
+          <p class="srv-panel-sub" data-i18n="srv.panel.sub">Выберите направление, которое вам нужно</p>
         </div>
         <div class="srv-filters">
           <button class="srv-chip is-active" data-cat="all" data-i18n="sv.all">Все услуги</button>
@@ -643,40 +635,40 @@
         </div>
         <div class="srv-list">
           <div class="srv-item" data-cat="brand">
-            <div class="srv-item-row"><span class="srv-item-name">Логотип и фирменный стиль</span><a href="#" class="srv-item-arrow" data-panel="book" data-service="Логотип и фирменный стиль">→</a></div>
-            <div class="srv-item-detail"><div class="srv-item-detail-inner"><p class="srv-item-desc">Разработка логотипа с фирменными цветами, типографикой и правилами использования.</p><span class="srv-item-price">от 1 200 000 сум</span></div></div>
+            <div class="srv-item-row"><span class="srv-item-name" data-i18n="srv.n1">Логотип и фирменный стиль</span><a href="#" class="srv-item-arrow" data-panel="book" data-service="Логотип и фирменный стиль">→</a></div>
+            <div class="srv-item-detail"><div class="srv-item-detail-inner"><p class="srv-item-desc" data-i18n="srv.d1">Разработка логотипа с фирменными цветами, типографикой и правилами использования.</p><span class="srv-item-price">от 1 200 000 сум</span></div></div>
           </div>
           <div class="srv-item" data-cat="ident">
-            <div class="srv-item-row"><span class="srv-item-name">Визитки и полиграфия</span><a href="#" class="srv-item-arrow" data-panel="book" data-service="Визитки и полиграфия">→</a></div>
-            <div class="srv-item-detail"><div class="srv-item-detail-inner"><p class="srv-item-desc">Дизайн визиток, флаеров, брошюр и другой печатной продукции под ваш бренд.</p><span class="srv-item-price">от 300 000 сум</span></div></div>
+            <div class="srv-item-row"><span class="srv-item-name" data-i18n="srv.n2">Визитки и полиграфия</span><a href="#" class="srv-item-arrow" data-panel="book" data-service="Визитки и полиграфия">→</a></div>
+            <div class="srv-item-detail"><div class="srv-item-detail-inner"><p class="srv-item-desc" data-i18n="srv.d2">Дизайн визиток, флаеров, брошюр и другой печатной продукции под ваш бренд.</p><span class="srv-item-price">от 300 000 сум</span></div></div>
           </div>
           <div class="srv-item" data-cat="ux">
-            <div class="srv-item-row"><span class="srv-item-name">UI/UX мобильных приложений</span><a href="#" class="srv-item-arrow" data-panel="book" data-service="UI/UX мобильных приложений">→</a></div>
-            <div class="srv-item-detail"><div class="srv-item-detail-inner"><p class="srv-item-desc">Проектирование удобного и красивого интерфейса мобильного приложения.</p><span class="srv-item-price">от 3 500 000 сум</span></div></div>
+            <div class="srv-item-row"><span class="srv-item-name" data-i18n="srv.n3">UI/UX мобильных приложений</span><a href="#" class="srv-item-arrow" data-panel="book" data-service="UI/UX мобильных приложений">→</a></div>
+            <div class="srv-item-detail"><div class="srv-item-detail-inner"><p class="srv-item-desc" data-i18n="srv.d3">Проектирование удобного и красивого интерфейса мобильного приложения.</p><span class="srv-item-price">от 3 500 000 сум</span></div></div>
           </div>
           <div class="srv-item" data-cat="brand">
-            <div class="srv-item-row"><span class="srv-item-name">Ребрендинг</span><a href="#" class="srv-item-arrow" data-panel="book" data-service="Ребрендинг">→</a></div>
-            <div class="srv-item-detail"><div class="srv-item-detail-inner"><p class="srv-item-desc">Обновление визуального стиля бренда с сохранением его сути и узнаваемости.</p><span class="srv-item-price">от 2 000 000 сум</span></div></div>
+            <div class="srv-item-row"><span class="srv-item-name" data-i18n="srv.n4">Ребрендинг</span><a href="#" class="srv-item-arrow" data-panel="book" data-service="Ребрендинг">→</a></div>
+            <div class="srv-item-detail"><div class="srv-item-detail-inner"><p class="srv-item-desc" data-i18n="srv.d4">Обновление визуального стиля бренда с сохранением его сути и узнаваемости.</p><span class="srv-item-price">от 2 000 000 сум</span></div></div>
           </div>
           <div class="srv-item" data-cat="ident">
-            <div class="srv-item-row"><span class="srv-item-name">Оформление соцсетей</span><a href="#" class="srv-item-arrow" data-panel="book" data-service="Оформление соцсетей">→</a></div>
-            <div class="srv-item-detail"><div class="srv-item-detail-inner"><p class="srv-item-desc">Единый визуальный стиль для Instagram, Telegram и других платформ.</p><span class="srv-item-price">от 700 000 сум</span></div></div>
+            <div class="srv-item-row"><span class="srv-item-name" data-i18n="srv.n5">Оформление соцсетей</span><a href="#" class="srv-item-arrow" data-panel="book" data-service="Оформление соцсетей">→</a></div>
+            <div class="srv-item-detail"><div class="srv-item-detail-inner"><p class="srv-item-desc" data-i18n="srv.d5">Единый визуальный стиль для Instagram, Telegram и других платформ.</p><span class="srv-item-price">от 700 000 сум</span></div></div>
           </div>
           <div class="srv-item" data-cat="ux">
-            <div class="srv-item-row"><span class="srv-item-name">Веб-дизайн сайтов</span><a href="#" class="srv-item-arrow" data-panel="book" data-service="Веб-дизайн сайтов">→</a></div>
-            <div class="srv-item-detail"><div class="srv-item-detail-inner"><p class="srv-item-desc">Дизайн современного сайта: лендинг, портфолио или корпоративный сайт.</p><span class="srv-item-price">от 2 500 000 сум</span></div></div>
+            <div class="srv-item-row"><span class="srv-item-name" data-i18n="srv.n6">Веб-дизайн сайтов</span><a href="#" class="srv-item-arrow" data-panel="book" data-service="Веб-дизайн сайтов">→</a></div>
+            <div class="srv-item-detail"><div class="srv-item-detail-inner"><p class="srv-item-desc" data-i18n="srv.d6">Дизайн современного сайта: лендинг, портфолио или корпоративный сайт.</p><span class="srv-item-price">от 2 500 000 сум</span></div></div>
           </div>
           <div class="srv-item" data-cat="brand">
-            <div class="srv-item-row"><span class="srv-item-name">Гайдлайн бренда</span><a href="#" class="srv-item-arrow" data-panel="book" data-service="Гайдлайн бренда">→</a></div>
-            <div class="srv-item-detail"><div class="srv-item-detail-inner"><p class="srv-item-desc">Документ с правилами использования логотипа, шрифтов и цветов бренда.</p><span class="srv-item-price">от 1 500 000 сум</span></div></div>
+            <div class="srv-item-row"><span class="srv-item-name" data-i18n="srv.n7">Гайдлайн бренда</span><a href="#" class="srv-item-arrow" data-panel="book" data-service="Гайдлайн бренда">→</a></div>
+            <div class="srv-item-detail"><div class="srv-item-detail-inner"><p class="srv-item-desc" data-i18n="srv.d7">Документ с правилами использования логотипа, шрифтов и цветов бренда.</p><span class="srv-item-price">от 1 500 000 сум</span></div></div>
           </div>
           <div class="srv-item" data-cat="pack">
-            <div class="srv-item-row"><span class="srv-item-name">Дизайн упаковки</span><a href="#" class="srv-item-arrow" data-panel="book" data-service="Дизайн упаковки">→</a></div>
-            <div class="srv-item-detail"><div class="srv-item-detail-inner"><p class="srv-item-desc">Привлекательная упаковка, которая выделяет продукт на полке и продаёт сама.</p><span class="srv-item-price">от 900 000 сум</span></div></div>
+            <div class="srv-item-row"><span class="srv-item-name" data-i18n="srv.n8">Дизайн упаковки</span><a href="#" class="srv-item-arrow" data-panel="book" data-service="Дизайн упаковки">→</a></div>
+            <div class="srv-item-detail"><div class="srv-item-detail-inner"><p class="srv-item-desc" data-i18n="srv.d8">Привлекательная упаковка, которая выделяет продукт на полке и продаёт сама.</p><span class="srv-item-price">от 900 000 сум</span></div></div>
           </div>
           <div class="srv-item" data-cat="pack">
-            <div class="srv-item-row"><span class="srv-item-name">Этикетки и стикеры</span><a href="#" class="srv-item-arrow" data-panel="book" data-service="Этикетки и стикеры">→</a></div>
-            <div class="srv-item-detail"><div class="srv-item-detail-inner"><p class="srv-item-desc">Дизайн этикеток для бутылок, банок, коробок и брендированных стикеров.</p><span class="srv-item-price">от 400 000 сум</span></div></div>
+            <div class="srv-item-row"><span class="srv-item-name" data-i18n="srv.n9">Этикетки и стикеры</span><a href="#" class="srv-item-arrow" data-panel="book" data-service="Этикетки и стикеры">→</a></div>
+            <div class="srv-item-detail"><div class="srv-item-detail-inner"><p class="srv-item-desc" data-i18n="srv.d9">Дизайн этикеток для бутылок, банок, коробок и брендированных стикеров.</p><span class="srv-item-price">от 400 000 сум</span></div></div>
           </div>
         </div>
       </div>
@@ -694,42 +686,42 @@
         </div>
         <div class="pkg-grid">
           <div class="pkg-card">
-            <span class="pkg-zone">Стартовый пакет</span>
+            <span class="pkg-zone" data-i18n="pk.zone1">Стартовый пакет</span>
             <h3 class="pkg-name" data-i18n="pk.n1">Старт</h3>
             <p class="pkg-desc" data-i18n="pk.d1">Для малого бизнеса</p>
             <ul class="pkg-features">
-              <li>Логотип + фирменный стиль</li><li>1 концепция</li><li>3 правки</li><li>Исходные файлы</li>
+              <li data-i18n="pk.f1.1">Логотип + фирменный стиль</li><li data-i18n="pk.f1.2">1 концепция</li><li data-i18n="pk.f1.3">3 правки</li><li data-i18n="pk.f1.4">Исходные файлы</li>
             </ul>
             <div class="pkg-price-block">
-              <div class="pkg-price"><span class="pkg-price-val">1 200 000</span><span class="pkg-price-cur">сум</span></div>
-              <p class="pkg-price-note">Уточняется на консультации</p>
+              <div class="pkg-price"><span class="pkg-price-val">1 200 000</span><span class="pkg-price-cur" data-i18n="pk.cur">сум</span></div>
+              <p class="pkg-price-note" data-i18n="pk.note1">Уточняется на консультации</p>
             </div>
             <a href="#" class="pkg-btn" data-panel="book" data-service="Пакет Старт" data-i18n="pk.btn">Выбрать пакет</a>
           </div>
           <div class="pkg-card pkg-featured">
             <div class="pkg-badge" data-i18n="pk.popular">Популярный</div>
-            <span class="pkg-zone pkg-zone-inv">Стандартный пакет</span>
+            <span class="pkg-zone pkg-zone-inv" data-i18n="pk.zone2">Стандартный пакет</span>
             <h3 class="pkg-name" data-i18n="pk.n2">Стандарт</h3>
             <p class="pkg-desc" data-i18n="pk.d2">Для растущих брендов</p>
             <ul class="pkg-features">
-              <li>Полный фирменный стиль</li><li>2 концепции</li><li>5 правок</li><li>Гайдлайн бренда</li><li>Соцсети + шаблоны</li>
+              <li data-i18n="pk.f2.1">Полный фирменный стиль</li><li data-i18n="pk.f2.2">2 концепции</li><li data-i18n="pk.f2.3">5 правок</li><li data-i18n="pk.f2.4">Гайдлайн бренда</li><li data-i18n="pk.f2.5">Соцсети + шаблоны</li>
             </ul>
             <div class="pkg-price-block">
-              <div class="pkg-price"><span class="pkg-price-val">3 000 000</span><span class="pkg-price-cur">сум</span></div>
-              <p class="pkg-price-note">Уточняется на консультации</p>
+              <div class="pkg-price"><span class="pkg-price-val">3 000 000</span><span class="pkg-price-cur" data-i18n="pk.cur">сум</span></div>
+              <p class="pkg-price-note" data-i18n="pk.note1">Уточняется на консультации</p>
             </div>
             <a href="#" class="pkg-btn" data-panel="book" data-service="Пакет Стандарт" data-i18n="pk.btn">Выбрать пакет</a>
           </div>
           <div class="pkg-card">
-            <span class="pkg-zone">Премиум пакет</span>
+            <span class="pkg-zone" data-i18n="pk.zone3">Премиум пакет</span>
             <h3 class="pkg-name" data-i18n="pk.n3">Премиум</h3>
             <p class="pkg-desc" data-i18n="pk.d3">Для крупных проектов</p>
             <ul class="pkg-features">
-              <li>Полная айдентика</li><li>3 концепции</li><li>Безлимит правок</li><li>Брендбук</li><li>Упаковка + иллюстрации</li><li>Приоритетная поддержка</li>
+              <li data-i18n="pk.f3.1">Полная айдентика</li><li data-i18n="pk.f3.2">3 концепции</li><li data-i18n="pk.f3.3">Безлимит правок</li><li data-i18n="pk.f3.4">Брендбук</li><li data-i18n="pk.f3.5">Упаковка + иллюстрации</li><li data-i18n="pk.f3.6">Приоритетная поддержка</li>
             </ul>
             <div class="pkg-price-block">
-              <div class="pkg-price"><span class="pkg-price-val">5 000 000</span><span class="pkg-price-cur">сум+</span></div>
-              <p class="pkg-price-note">Зависит от проекта</p>
+              <div class="pkg-price"><span class="pkg-price-val">5 000 000</span><span class="pkg-price-cur" data-i18n="pk.cur">сум</span>+</div>
+              <p class="pkg-price-note" data-i18n="pk.note2">Зависит от проекта</p>
             </div>
             <a href="#" class="pkg-btn" data-panel="book" data-service="Пакет Премиум" data-i18n="pk.btn">Выбрать пакет</a>
           </div>
@@ -748,12 +740,12 @@
           <h2 class="sec-title blog-title-c" data-i18n="bl.heading">Статьи и советы</h2>
         </div>
         <div class="blog-list">
-          <button class="blog-row" data-article="0"><span class="blog-row-num">01</span><span class="blog-row-cat">Брендинг</span><h3 class="blog-row-title">Как создать сильный бренд: 5 ключевых принципов</h3><p class="blog-row-desc">Брендинг — это не просто логотип. Это система, которая делает ваш бизнес узнаваемым.</p><span class="blog-row-time">5 мин</span><span class="blog-row-read" data-i18n="bl.read">Читать →</span></button>
-          <button class="blog-row" data-article="1"><span class="blog-row-num">02</span><span class="blog-row-cat">Типографика</span><h3 class="blog-row-title">Типографика в брендинге: почему шрифт важнее, чем кажется</h3><p class="blog-row-desc">Правильный шрифт передаёт характер бренда лучше любого изображения.</p><span class="blog-row-time">7 мин</span><span class="blog-row-read" data-i18n="bl.read">Читать →</span></button>
-          <button class="blog-row" data-article="2"><span class="blog-row-num">03</span><span class="blog-row-cat">Цвет</span><h3 class="blog-row-title">Психология цвета: как выбрать палитру для бренда</h3><p class="blog-row-desc">Цвет — мощный инструмент. Он влияет на восприятие и решения клиентов.</p><span class="blog-row-time">6 мин</span><span class="blog-row-read" data-i18n="bl.read">Читать →</span></button>
-          <button class="blog-row" data-article="3"><span class="blog-row-num">04</span><span class="blog-row-cat">Минимализм</span><h3 class="blog-row-title">Минимализм в дизайне: когда меньше — это больше</h3><p class="blog-row-desc">Пустое пространство — это воздух, который позволяет смыслу дышать.</p><span class="blog-row-time">5 мин</span><span class="blog-row-read" data-i18n="bl.read">Читать →</span></button>
-          <button class="blog-row" data-article="4"><span class="blog-row-num">05</span><span class="blog-row-cat">Логотип</span><h3 class="blog-row-title">Сила логотипа: как символ становится историей бренда</h3><p class="blog-row-desc">Великие логотипы — это сжатая философия компании в одной форме.</p><span class="blog-row-time">6 мин</span><span class="blog-row-read" data-i18n="bl.read">Читать →</span></button>
-          <button class="blog-row" data-article="5"><span class="blog-row-num">06</span><span class="blog-row-cat">Тренды</span><h3 class="blog-row-title">Тренды графического дизайна 2025</h3><p class="blog-row-desc">Что определит визуальный язык брендов в 2025 — ключевые направления.</p><span class="blog-row-time">8 мин</span><span class="blog-row-read" data-i18n="bl.read">Читать →</span></button>
+          <button class="blog-row" data-article="0"><span class="blog-row-num">01</span><span class="blog-row-cat" data-i18n="bl.cat1">Брендинг</span><h3 class="blog-row-title" data-i18n="bl.t1">Как создать сильный бренд: 5 ключевых принципов</h3><p class="blog-row-desc" data-i18n="bl.d1">Брендинг — это не просто логотип. Это система, которая делает ваш бизнес узнаваемым.</p><span class="blog-row-time">5 <span data-i18n="bl.min">мин</span></span><span class="blog-row-read" data-i18n="bl.read">Читать →</span></button>
+          <button class="blog-row" data-article="1"><span class="blog-row-num">02</span><span class="blog-row-cat" data-i18n="bl.cat2">Типографика</span><h3 class="blog-row-title" data-i18n="bl.t2">Типографика в брендинге: почему шрифт важнее, чем кажется</h3><p class="blog-row-desc" data-i18n="bl.d2">Правильный шрифт передаёт характер бренда лучше любого изображения.</p><span class="blog-row-time">7 <span data-i18n="bl.min">мин</span></span><span class="blog-row-read" data-i18n="bl.read">Читать →</span></button>
+          <button class="blog-row" data-article="2"><span class="blog-row-num">03</span><span class="blog-row-cat" data-i18n="bl.cat3">Цвет</span><h3 class="blog-row-title" data-i18n="bl.t3">Психология цвета: как выбрать палитру для бренда</h3><p class="blog-row-desc" data-i18n="bl.d3">Цвет — мощный инструмент. Он влияет на восприятие и решения клиентов.</p><span class="blog-row-time">6 <span data-i18n="bl.min">мин</span></span><span class="blog-row-read" data-i18n="bl.read">Читать →</span></button>
+          <button class="blog-row" data-article="3"><span class="blog-row-num">04</span><span class="blog-row-cat" data-i18n="bl.cat4">Минимализм</span><h3 class="blog-row-title" data-i18n="bl.t4">Минимализм в дизайне: когда меньше — это больше</h3><p class="blog-row-desc" data-i18n="bl.d4">Пустое пространство — это воздух, который позволяет смыслу дышать.</p><span class="blog-row-time">5 <span data-i18n="bl.min">мин</span></span><span class="blog-row-read" data-i18n="bl.read">Читать →</span></button>
+          <button class="blog-row" data-article="4"><span class="blog-row-num">05</span><span class="blog-row-cat" data-i18n="bl.cat5">Логотип</span><h3 class="blog-row-title" data-i18n="bl.t5">Сила логотипа: как символ становится историей бренда</h3><p class="blog-row-desc" data-i18n="bl.d5">Великие логотипы — это сжатая философия компании в одной форме.</p><span class="blog-row-time">6 <span data-i18n="bl.min">мин</span></span><span class="blog-row-read" data-i18n="bl.read">Читать →</span></button>
+          <button class="blog-row" data-article="5"><span class="blog-row-num">06</span><span class="blog-row-cat" data-i18n="bl.cat6">Тренды</span><h3 class="blog-row-title" data-i18n="bl.t6">Тренды графического дизайна 2025</h3><p class="blog-row-desc" data-i18n="bl.d6">Что определит визуальный язык брендов в 2025 — ключевые направления.</p><span class="blog-row-time">8 <span data-i18n="bl.min">мин</span></span><span class="blog-row-read" data-i18n="bl.read">Читать →</span></button>
         </div>
       </div>
     </section>
@@ -765,28 +757,28 @@
     <section class="sec-pad sec-alt about-sec">
       <div class="about-new-inner">
         <div class="about-new-head">
-          <div class="eyebrow"><span class="eyebrow-dot"></span><span class="eyebrow-txt">обо мне</span></div>
-          <h2 class="about-new-title">Привет! Я — faa4k,<br>графический дизайнер</h2>
-          <p class="about-new-lead">Более 3 лет помогаю брендам находить свой визуальный язык — от логотипа до цельной айдентики. Верю, что хороший дизайн решает задачи бизнеса и остаётся в памяти.</p>
+          <div class="eyebrow"><span class="eyebrow-dot"></span><span class="eyebrow-txt" data-i18n="about.eyebrow">обо мне</span></div>
+          <h2 class="about-new-title" data-i18n-html="about.title">Привет! Я — faa4k,<br>графический дизайнер</h2>
+          <p class="about-new-lead" data-i18n="about.lead">Более 3 лет помогаю брендам находить свой визуальный язык — от логотипа до цельной айдентики. Верю, что хороший дизайн решает задачи бизнеса и остаётся в памяти.</p>
         </div>
         <div class="about-new-stats">
-          <div class="about-new-stat"><span class="about-new-num">3+</span><span class="about-new-lbl">года опыта</span></div>
-          <div class="about-new-stat"><span class="about-new-num">50+</span><span class="about-new-lbl">проектов</span></div>
-          <div class="about-new-stat"><span class="about-new-num">20+</span><span class="about-new-lbl">брендов</span></div>
-          <div class="about-new-stat about-new-stat-accent"><span class="about-new-num">99%</span><span class="about-new-lbl">довольных клиентов</span></div>
+          <div class="about-new-stat"><span class="about-new-num">3+</span><span class="about-new-lbl" data-i18n="about.stat1">года опыта</span></div>
+          <div class="about-new-stat"><span class="about-new-num">50+</span><span class="about-new-lbl" data-i18n="about.stat2">проектов</span></div>
+          <div class="about-new-stat"><span class="about-new-num">20+</span><span class="about-new-lbl" data-i18n="about.stat3">брендов</span></div>
+          <div class="about-new-stat about-new-stat-accent"><span class="about-new-num">99%</span><span class="about-new-lbl" data-i18n="about.stat4">довольных клиентов</span></div>
         </div>
         <div class="about-new-body">
           <div class="about-new-col">
-            <h3 class="about-new-h3">Чем занимаюсь</h3>
-            <div class="about-new-chips"><span>Брендинг</span><span>Логотипы</span><span>Айдентика</span><span>UI/UX</span><span>Упаковка</span><span>Типографика</span><span>Иллюстрация</span></div>
+            <h3 class="about-new-h3" data-i18n="about.h1">Чем занимаюсь</h3>
+            <div class="about-new-chips"><span data-i18n="about.chip1">Брендинг</span><span data-i18n="about.chip2">Логотипы</span><span data-i18n="about.chip3">Айдентика</span><span data-i18n="about.chip4">UI/UX</span><span data-i18n="about.chip5">Упаковка</span><span data-i18n="about.chip6">Типографика</span><span data-i18n="about.chip7">Иллюстрация</span></div>
           </div>
           <div class="about-new-col">
-            <h3 class="about-new-h3">Как работаю</h3>
+            <h3 class="about-new-h3" data-i18n="about.h2">Как работаю</h3>
             <ul class="about-new-steps">
-              <li><span>01</span> Погружаюсь в задачу и бренд</li>
-              <li><span>02</span> Показываю концепции на выбор</li>
-              <li><span>03</span> Дорабатываю по вашим правкам</li>
-              <li><span>04</span> Отдаю исходники и гайд</li>
+              <li><span>01</span> <span data-i18n="about.step1">Погружаюсь в задачу и бренд</span></li>
+              <li><span>02</span> <span data-i18n="about.step2">Показываю концепции на выбор</span></li>
+              <li><span>03</span> <span data-i18n="about.step3">Дорабатываю по вашим правкам</span></li>
+              <li><span>04</span> <span data-i18n="about.step4">Отдаю исходники и гайд</span></li>
             </ul>
           </div>
         </div>
@@ -805,58 +797,58 @@
     <section class="sec-pad">
       <div class="book-wrap">
         <div class="book-head">
-          <div class="eyebrow"><span class="eyebrow-dot"></span><span class="eyebrow-txt">заявка</span></div>
-          <h2 class="book-title">Оставьте заявку</h2>
-          <p class="book-sub">Опишите задачу — я свяжусь с вами в течение дня</p>
+          <div class="eyebrow"><span class="eyebrow-dot"></span><span class="eyebrow-txt" data-i18n="bk.eyebrow">заявка</span></div>
+          <h2 class="book-title" data-i18n="bk.title">Оставьте заявку</h2>
+          <p class="book-sub" data-i18n="bk.sub">Опишите задачу — я свяжусь с вами в течение дня</p>
         </div>
         <form class="book-form" id="bookForm" novalidate>
           <div class="book-row">
             <div class="book-field">
-              <label class="book-label" for="bookName">Имя</label>
-              <input class="book-input" id="bookName" name="name" type="text" placeholder="Как к вам обращаться?" required>
+              <label class="book-label" for="bookName" data-i18n="bk.name.lbl">Имя</label>
+              <input class="book-input" id="bookName" name="name" type="text" placeholder="Как к вам обращаться?" data-i18n-ph="bk.name.ph" required>
             </div>
             <div class="book-field">
-              <label class="book-label" for="bookPhone">Телефон / Telegram</label>
-              <input class="book-input" id="bookPhone" name="phone" type="tel" placeholder="+998 __ ___ __ __">
+              <label class="book-label" for="bookPhone" data-i18n="bk.phone.lbl">Телефон / Telegram</label>
+              <input class="book-input" id="bookPhone" name="phone" type="tel" placeholder="+998 __ ___ __ __" data-i18n-ph="bk.phone.ph">
             </div>
           </div>
           <div class="book-row">
             <div class="book-field">
-              <label class="book-label" for="bookService">Услуга</label>
+              <label class="book-label" for="bookService" data-i18n="bk.service.lbl">Услуга</label>
               <select class="book-input book-select" id="bookService" name="service">
-                <option value="">— выберите услугу —</option>
-                <option value="Логотип и фирменный стиль">Логотип и фирменный стиль</option>
-                <option value="Визитки и полиграфия">Визитки и полиграфия</option>
-                <option value="UI/UX мобильных приложений">UI/UX мобильных приложений</option>
-                <option value="Ребрендинг">Ребрендинг</option>
-                <option value="Оформление соцсетей">Оформление соцсетей</option>
-                <option value="Веб-дизайн сайтов">Веб-дизайн сайтов</option>
-                <option value="Гайдлайн бренда">Гайдлайн бренда</option>
-                <option value="Дизайн упаковки">Дизайн упаковки</option>
-                <option value="Этикетки и стикеры">Этикетки и стикеры</option>
-                <option value="Пакет Старт">Пакет Старт</option>
-                <option value="Пакет Стандарт">Пакет Стандарт</option>
-                <option value="Пакет Премиум">Пакет Премиум</option>
-                <option value="Другое">Другое</option>
+                <option value="" data-i18n="bk.o.ph">— выберите услугу —</option>
+                <option value="Логотип и фирменный стиль" data-i18n="bk.o.s1">Логотип и фирменный стиль</option>
+                <option value="Визитки и полиграфия" data-i18n="bk.o.s2">Визитки и полиграфия</option>
+                <option value="UI/UX мобильных приложений" data-i18n="bk.o.s3">UI/UX мобильных приложений</option>
+                <option value="Ребрендинг" data-i18n="bk.o.s4">Ребрендинг</option>
+                <option value="Оформление соцсетей" data-i18n="bk.o.s5">Оформление соцсетей</option>
+                <option value="Веб-дизайн сайтов" data-i18n="bk.o.s6">Веб-дизайн сайтов</option>
+                <option value="Гайдлайн бренда" data-i18n="bk.o.s7">Гайдлайн бренда</option>
+                <option value="Дизайн упаковки" data-i18n="bk.o.s8">Дизайн упаковки</option>
+                <option value="Этикетки и стикеры" data-i18n="bk.o.s9">Этикетки и стикеры</option>
+                <option value="Пакет Старт" data-i18n="bk.o.p1">Пакет Старт</option>
+                <option value="Пакет Стандарт" data-i18n="bk.o.p2">Пакет Стандарт</option>
+                <option value="Пакет Премиум" data-i18n="bk.o.p3">Пакет Премиум</option>
+                <option value="Другое" data-i18n="bk.o.other">Другое</option>
               </select>
             </div>
             <div class="book-field">
-              <label class="book-label" for="bookBudget">Бюджет</label>
+              <label class="book-label" for="bookBudget" data-i18n="bk.budget.lbl">Бюджет</label>
               <select class="book-input book-select" id="bookBudget" name="budget">
-                <option value="">— приблизительный бюджет —</option>
-                <option value="до 1 000 000 сум">до 1 000 000 сум</option>
-                <option value="1–3 млн сум">1–3 млн сум</option>
-                <option value="3–5 млн сум">3–5 млн сум</option>
-                <option value="5+ млн сум">5+ млн сум</option>
-                <option value="Обсудим">Обсудим на встрече</option>
+                <option value="" data-i18n="bk.b.ph">— приблизительный бюджет —</option>
+                <option value="до 1 000 000 сум" data-i18n="bk.b1">до 1 000 000 сум</option>
+                <option value="1–3 млн сум" data-i18n="bk.b2">1–3 млн сум</option>
+                <option value="3–5 млн сум" data-i18n="bk.b3">3–5 млн сум</option>
+                <option value="5+ млн сум" data-i18n="bk.b4">5+ млн сум</option>
+                <option value="Обсудим" data-i18n="bk.b5">Обсудим на встрече</option>
               </select>
             </div>
           </div>
           <div class="book-field">
-            <label class="book-label" for="bookMsg">Сообщение</label>
-            <textarea class="book-input book-textarea" id="bookMsg" name="message" rows="4" placeholder="Расскажите о вашем проекте..."></textarea>
+            <label class="book-label" for="bookMsg" data-i18n="bk.msg.lbl">Сообщение</label>
+            <textarea class="book-input book-textarea" id="bookMsg" name="message" rows="4" placeholder="Расскажите о вашем проекте..." data-i18n-ph="bk.msg.ph"></textarea>
           </div>
-          <button type="submit" class="book-submit" id="bookSubmit">Отправить заявку</button>
+          <button type="submit" class="book-submit" id="bookSubmit" data-i18n="bk.submit">Отправить заявку</button>
           <p class="book-note" id="bookNote"></p>
         </form>
       </div>
@@ -867,6 +859,6 @@
   <div class="c-cursor" id="cCursor" aria-hidden="true">
     <div class="c-cursor-plus"></div>
   </div>
-  <script src="script.js?v=21"></script>
+  <script src="script.js?v=22"></script>
 </body>
 </html>

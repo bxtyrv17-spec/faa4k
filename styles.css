@@ -1864,7 +1864,7 @@ body.ov-active { overflow: hidden; }
 
   .hero { padding: 10px var(--pad) 40px; }
   .hero-stage { min-height: 82vh; padding: 64px 20px 84px; border-radius: 20px; }
-  .hero-headings { min-height: clamp(4.6rem, 20vw, 8rem); margin-bottom: 22px; }
+  .hero-headings { min-height: clamp(7rem, 22vw, 9rem); margin-bottom: 22px; }
   .hero-heading { font-size: clamp(2.1rem, 8.4vw, 3.4rem); }
   .hero-desc    { font-size: 0.95rem; max-width: 100%; margin-bottom: 32px; }
   .hero-scroll  { margin-top: 40px; }
@@ -1906,6 +1906,7 @@ body.ov-active { overflow: hidden; }
   .navbar-inner { height: 58px; }
   .lang-btn { padding: 4px 8px; font-size: 0.62rem; }
 
+  .hero-headings { min-height: clamp(7.5rem, 24vw, 9rem); }
   .hero-heading { font-size: clamp(2.2rem, 11vw, 2.9rem); }
   .stats-grid   { gap: 8px; }
   .stat-card    { padding: 22px 18px; }
