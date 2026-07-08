@@ -851,3 +851,63 @@ function showNote(msg, type) {
 ═══════════════════════════════════════════ */
 applyLang(currentLang);
 setTheme(localStorage.getItem('theme') || 'light');
+
+/* ═══════════════════════════════════════════
+   CUSTOM CURSOR
+═══════════════════════════════════════════ */
+(function initCursor() {
+  const el = document.getElementById('cCursor');
+  if (!el || window.matchMedia('(pointer: coarse)').matches) {
+    if (el) el.remove();
+    return;
+  }
+
+  let tx = -100, ty = -100, cx = -100, cy = -100;
+  let isHover = false, isMoving = false, isIdle = false;
+  let idleTimer = null;
+
+  function setState() {
+    el.classList.remove('is-moving', 'is-idle', 'is-hover');
+    if (isHover)        el.classList.add('is-hover');
+    else if (isMoving)  el.classList.add('is-moving');
+    else if (isIdle)    el.classList.add('is-idle');
+  }
+
+  const INTERACT = 'a, button, input, select, textarea, label, [data-panel], ' +
+    '.faq-btn, .pkg-card, .service-item-header, .nav-link, .portfolio-card, ' +
+    '.bento-item, .faq-item, .filter-btn, .book-submit, [role="button"]';
+
+  document.addEventListener('mousemove', function(e) {
+    tx = e.clientX;
+    ty = e.clientY;
+    el.classList.add('is-visible');
+    isMoving = true;
+    isIdle = false;
+    setState();
+    clearTimeout(idleTimer);
+    idleTimer = setTimeout(function() {
+      isMoving = false;
+      isIdle = true;
+      setState();
+    }, 1400);
+  });
+
+  document.addEventListener('mouseover', function(e) {
+    if (e.target.closest(INTERACT)) { isHover = true; setState(); }
+  });
+
+  document.addEventListener('mouseout', function(e) {
+    if (e.target.closest(INTERACT)) { isHover = false; setState(); }
+  });
+
+  document.addEventListener('mouseleave', function() { el.classList.remove('is-visible'); });
+  document.addEventListener('mouseenter', function() { el.classList.add('is-visible'); });
+
+  (function tick() {
+    cx += (tx - cx) * 0.13;
+    cy += (ty - cy) * 0.13;
+    el.style.left = cx + 'px';
+    el.style.top  = cy + 'px';
+    requestAnimationFrame(tick);
+  })();
+})();
