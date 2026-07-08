@@ -1004,8 +1004,8 @@ section[id], footer[id] { scroll-margin-top: 72px; }
 .faq-card-visual {
   position: absolute; inset: 0; z-index: -1;
   background:
-    radial-gradient(ellipse 90% 70% at 40% 30%, rgba(196,45,78,.45), transparent 60%),
-    linear-gradient(160deg,#2a0810,#12040a);
+    linear-gradient(to bottom, rgba(0,0,0,.28) 0%, rgba(0,0,0,.08) 40%, rgba(0,0,0,.65) 100%),
+    url('v1.png') center/cover no-repeat;
 }
 .faq-card-body h3 { font-size: 1.2rem; font-weight: 500; margin-bottom: 6px; }
 .faq-card-body p { font-size: 0.88rem; font-weight: 300; color: rgba(255,255,255,.7); margin-bottom: 18px; }
