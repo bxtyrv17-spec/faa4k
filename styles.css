@@ -1906,8 +1906,9 @@ body.ov-active { overflow: hidden; }
   .navbar-inner { height: 58px; }
   .lang-btn { padding: 4px 8px; font-size: 0.62rem; }
 
-  .hero-headings { min-height: 13rem; }
-  .hero-heading { font-size: clamp(2.2rem, 11vw, 2.9rem); }
+  .hero-headings { min-height: 0; }
+  .hero-heading { position: relative; font-size: clamp(2.2rem, 11vw, 2.9rem); }
+  .hero-heading:not(.is-active) { display: none; }
   .stats-grid   { gap: 8px; }
   .stat-card    { padding: 22px 18px; }
   .stat-num     { font-size: 2.4rem; }
