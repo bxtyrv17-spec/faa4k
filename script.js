@@ -862,15 +862,13 @@ setTheme(localStorage.getItem('theme') || 'light');
     return;
   }
 
-  let tx = -100, ty = -100, cx = -100, cy = -100;
-  let isHover = false, isMoving = false, isIdle = false;
+  let tx = -200, ty = -200, cx = -200, cy = -200;
+  let hovering = false;
   let idleTimer = null;
 
-  function setState() {
-    el.classList.remove('is-moving', 'is-idle', 'is-hover');
-    if (isHover)        el.classList.add('is-hover');
-    else if (isMoving)  el.classList.add('is-moving');
-    else if (isIdle)    el.classList.add('is-idle');
+  function setClass(cls) {
+    el.classList.remove('c-moving', 'c-idle', 'c-hover');
+    if (cls) el.classList.add(cls);
   }
 
   const INTERACT = 'a, button, input, select, textarea, label, [data-panel], ' +
@@ -880,28 +878,31 @@ setTheme(localStorage.getItem('theme') || 'light');
   document.addEventListener('mousemove', function(e) {
     tx = e.clientX;
     ty = e.clientY;
-    el.classList.add('is-visible');
-    isMoving = true;
-    isIdle = false;
-    setState();
+    el.classList.add('c-visible');
+    if (!hovering) setClass('c-moving');
     clearTimeout(idleTimer);
     idleTimer = setTimeout(function() {
-      isMoving = false;
-      isIdle = true;
-      setState();
-    }, 1400);
+      if (!hovering) setClass('c-idle');
+    }, 1500);
   });
 
   document.addEventListener('mouseover', function(e) {
-    if (e.target.closest(INTERACT)) { isHover = true; setState(); }
+    if (e.target.closest(INTERACT)) {
+      hovering = true;
+      setClass('c-hover');
+      clearTimeout(idleTimer);
+    }
   });
 
   document.addEventListener('mouseout', function(e) {
-    if (e.target.closest(INTERACT)) { isHover = false; setState(); }
+    if (e.target.closest(INTERACT)) {
+      hovering = false;
+      setClass('c-moving');
+    }
   });
 
-  document.addEventListener('mouseleave', function() { el.classList.remove('is-visible'); });
-  document.addEventListener('mouseenter', function() { el.classList.add('is-visible'); });
+  document.addEventListener('mouseleave', function() { el.classList.remove('c-visible'); });
+  document.addEventListener('mouseenter', function() { el.classList.add('c-visible'); });
 
   (function tick() {
     cx += (tx - cx) * 0.13;

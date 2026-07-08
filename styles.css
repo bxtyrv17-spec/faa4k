@@ -1937,35 +1937,31 @@ body.ov-active { overflow: hidden; }
 
 .c-cursor {
   position: fixed;
-  left: -100px;
-  top: -100px;
-  width: 36px;
-  height: 36px;
+  left: -200px;
+  top: -200px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
-  /* white ring + dark outline = visible on any background */
-  border: 1.5px solid rgba(255,255,255,.92);
-  box-shadow: 0 0 0 1.2px rgba(0,0,0,.40), 0 0 8px rgba(0,0,0,.18);
+  border: 1px solid rgba(140,130,135,.65);
   pointer-events: none;
   z-index: 99999;
   opacity: 0;
   transform: translate(-50%, -50%) scale(1);
-  transition:
-    transform 0.22s cubic-bezier(.25,.46,.45,.94),
-    opacity 0.22s ease;
+  transition: transform 0.25s cubic-bezier(.25,.46,.45,.94), opacity 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  will-change: transform, left, top;
+  will-change: transform;
 }
 
-.c-cursor.is-visible { opacity: 1; }
-.c-cursor.is-moving  { transform: translate(-50%, -50%) scale(1.30); }
-.c-cursor.is-idle    { transform: translate(-50%, -50%) scale(0.58); }
-.c-cursor.is-hover   { transform: translate(-50%, -50%) scale(0.46); }
+.c-cursor.c-visible { opacity: 1; }
+.c-cursor.c-moving  { transform: translate(-50%, -50%) scale(1.22); }
+.c-cursor.c-idle    { transform: translate(-50%, -50%) scale(0.62); }
+.c-cursor.c-hover   { transform: translate(-50%, -50%) scale(0.48); }
 
 .c-cursor-plus {
-  width: 12px;
-  height: 12px;
+  width: 11px;
+  height: 11px;
   position: relative;
   flex-shrink: 0;
   animation: cPlusSpin 3s linear infinite;
@@ -1978,14 +1974,12 @@ body.ov-active { overflow: hidden; }
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(255,255,255,.95);
+  background: rgba(120,110,115,.70);
   border-radius: 1px;
-  /* dark shadow on the + so it's visible on light backgrounds too */
-  box-shadow: 0 0 1.5px rgba(0,0,0,.55);
 }
 
-.c-cursor-plus::before { width: 10px; height: 1.5px; }
-.c-cursor-plus::after  { width: 1.5px; height: 10px; }
+.c-cursor-plus::before { width: 9px; height: 1px; }
+.c-cursor-plus::after  { width: 1px; height: 9px; }
 
 @keyframes cPlusSpin { to { transform: rotate(360deg); } }
 
