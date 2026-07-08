@@ -1942,22 +1942,21 @@ body.ov-active { overflow: hidden; }
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  border: 1.5px solid rgba(220,200,210,.80);
+  /* white ring + dark outline = visible on any background */
+  border: 1.5px solid rgba(255,255,255,.92);
+  box-shadow: 0 0 0 1.2px rgba(0,0,0,.40), 0 0 8px rgba(0,0,0,.18);
   pointer-events: none;
   z-index: 99999;
   opacity: 0;
   transform: translate(-50%, -50%) scale(1);
   transition:
     transform 0.22s cubic-bezier(.25,.46,.45,.94),
-    border-color 0.22s ease,
     opacity 0.22s ease;
   display: flex;
   align-items: center;
   justify-content: center;
   will-change: transform, left, top;
 }
-
-[data-theme="light"] .c-cursor { border-color: rgba(30,8,15,.50); }
 
 .c-cursor.is-visible { opacity: 1; }
 .c-cursor.is-moving  { transform: translate(-50%, -50%) scale(1.30); }
@@ -1979,12 +1978,11 @@ body.ov-active { overflow: hidden; }
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(220,200,210,.88);
+  background: rgba(255,255,255,.95);
   border-radius: 1px;
+  /* dark shadow on the + so it's visible on light backgrounds too */
+  box-shadow: 0 0 1.5px rgba(0,0,0,.55);
 }
-
-[data-theme="light"] .c-cursor-plus::before,
-[data-theme="light"] .c-cursor-plus::after { background: rgba(30,8,15,.55); }
 
 .c-cursor-plus::before { width: 10px; height: 1.5px; }
 .c-cursor-plus::after  { width: 1.5px; height: 10px; }
