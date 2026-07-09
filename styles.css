@@ -1906,9 +1906,13 @@ body.ov-active { overflow: hidden; }
   .navbar-inner { height: 58px; }
   .lang-btn { padding: 4px 8px; font-size: 0.62rem; }
 
-  .hero-headings { min-height: 0; }
-  .hero-heading { position: relative; font-size: clamp(2.2rem, 11vw, 2.9rem); }
+  .hero-headings { min-height: 0; margin-bottom: 16px; }
+  .hero-heading { position: relative; font-size: clamp(1.6rem, 7vw, 1.8rem); line-height: 1.1; }
   .hero-heading:not(.is-active) { display: none; }
+  .hero-desc { font-size: 0.78rem; line-height: 1.55; margin-bottom: 28px; }
+  .hero-actions { flex-direction: column; align-items: stretch; gap: 10px; width: 100%; max-width: 300px; margin-left: auto; margin-right: auto; }
+  .btn-hero-fill { text-align: center; padding: 14px 24px; }
+  .btn-hero-ghost { justify-content: center; padding: 13px 24px; border-color: rgba(255,255,255,.55); }
   .stats-grid   { gap: 8px; }
   .stat-card    { padding: 22px 18px; }
   .stat-num     { font-size: 2.4rem; }
