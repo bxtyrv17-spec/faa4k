@@ -852,7 +852,7 @@ document.querySelectorAll('.srv-list').forEach(list => {
    BOOKING FORM
 ═══════════════════════════════════════════ */
 // ↓ Fill in your bot token and group chat ID after getting them from @BotFather
-const TELEGRAM_TOKEN   = '8866781995:AAE6u4IDLUJ6M-4XJFqWemRUj81Nmtj-93M';
+const TELEGRAM_TOKEN   = '8725597890:AAFYw6-bSqpXgSz6TFIL1F-mzJeUN7rxiMA';
 const TELEGRAM_CHAT_ID = '8810695812';
 
 // Pre-fill service select when panel is opened via data-service
