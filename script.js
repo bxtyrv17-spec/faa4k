@@ -63,7 +63,7 @@ const T = {
     'bl.d5': 'Великие логотипы — это сжатая философия компании в одной форме.',
     'bl.d6': 'Что определит визуальный язык брендов в 2025 — ключевые направления.',
     'about.eyebrow': 'обо мне',
-    'about.title': 'Привет! Я — faa4k,<br>графический дизайнер',
+    'about.title': 'Привет! Я — Farrux Baxtiyorov,<br>графический дизайнер',
     'about.lead': 'Более 3 лет помогаю брендам находить свой визуальный язык — от логотипа до цельной айдентики. Верю, что хороший дизайн решает задачи бизнеса и остаётся в памяти.',
     'about.stat1': 'года опыта', 'about.stat2': 'проектов', 'about.stat3': 'брендов', 'about.stat4': 'довольных клиентов',
     'about.h1': 'Чем занимаюсь', 'about.h2': 'Как работаю',
@@ -87,7 +87,7 @@ const T = {
     'faq.a5': 'Бриф → концепции → выбор направления → доработка → финальные файлы. На каждом этапе вы участвуете и утверждаете результат.',
     'faq.regions': 'Работаю с клиентами из',
     'faq.r1': 'Узбекистана', 'faq.r2': 'Казахстана', 'faq.r3': 'России', 'faq.r4': 'Кыргызстана', 'faq.r5': 'Европы',
-    'ft.brand': 'faa4k · графический дизайнер',
+    'ft.brand': 'Farrux Baxtiyorov · графический дизайнер',
     'ft.cta.h': '−10% на первый<br>проект', 'ft.cta.sub': 'Скидка для новых клиентов на первый заказ.',
     'ft.cta.fill': 'Записаться', 'ft.cta.svc': 'Мои услуги →',
     'ft.about': 'Графический дизайнер. Брендинг, айдентика и визуальные системы для брендов.',
@@ -95,7 +95,7 @@ const T = {
     'ft.s1.1': 'Брендинг', 'ft.s1.2': 'Логотипы', 'ft.s1.3': 'UI/UX', 'ft.s1.4': 'Упаковка', 'ft.s1.5': 'Типографика',
     'ft.s2.1': 'Услуги', 'ft.s2.2': 'Пакеты', 'ft.s2.3': 'Блог', 'ft.s2.4': 'Обо мне', 'ft.s2.5': 'Контакты',
     'ft.s3.1': 'Telegram канал', 'ft.s3.2': 'Instagram', 'ft.s3.3': 'Записаться на консультацию',
-    'ft.copy': '© 2026 faa4k. Все права защищены.', 'ft.top': 'Наверх ↑',
+    'ft.copy': '© 2026 Farrux Baxtiyorov. Все права защищены.', 'ft.top': 'Наверх ↑',
     'bk.eyebrow': 'заявка', 'bk.title': 'Оставьте заявку', 'bk.sub': 'Опишите задачу — я свяжусь с вами в течение дня',
     'bk.name.lbl': 'Имя', 'bk.name.ph': 'Как к вам обращаться?',
     'bk.phone.lbl': 'Телефон / Telegram', 'bk.phone.ph': '+998 __ ___ __ __',
@@ -169,7 +169,7 @@ const T = {
     'bl.d5': 'Great logos are the compressed philosophy of a company in one form.',
     'bl.d6': "What will define brands' visual language in 2025 — key directions.",
     'about.eyebrow': 'about me',
-    'about.title': "Hi! I'm faa4k,<br>graphic designer",
+    'about.title': "Hi! I'm Farrux Baxtiyorov,<br>graphic designer",
     'about.lead': 'For over 3 years I help brands find their visual language — from logo to complete identity. I believe good design solves business problems and stays in memory.',
     'about.stat1': 'years exp.', 'about.stat2': 'projects', 'about.stat3': 'brands', 'about.stat4': 'satisfied clients',
     'about.h1': 'What I do', 'about.h2': 'How I work',
@@ -193,7 +193,7 @@ const T = {
     'faq.a5': 'Brief → concepts → direction choice → refinement → final files. You are involved and approve the result at every stage.',
     'faq.regions': 'I work with clients from',
     'faq.r1': 'Uzbekistan', 'faq.r2': 'Kazakhstan', 'faq.r3': 'Russia', 'faq.r4': 'Kyrgyzstan', 'faq.r5': 'Europe',
-    'ft.brand': 'faa4k · graphic designer',
+    'ft.brand': 'Farrux Baxtiyorov · graphic designer',
     'ft.cta.h': '−10% on your first<br>project', 'ft.cta.sub': 'Discount for new clients on their first order.',
     'ft.cta.fill': 'Book now', 'ft.cta.svc': 'My services →',
     'ft.about': 'Graphic designer. Branding, identity and visual systems for brands.',
@@ -201,7 +201,7 @@ const T = {
     'ft.s1.1': 'Branding', 'ft.s1.2': 'Logos', 'ft.s1.3': 'UI/UX', 'ft.s1.4': 'Packaging', 'ft.s1.5': 'Typography',
     'ft.s2.1': 'Services', 'ft.s2.2': 'Packages', 'ft.s2.3': 'Blog', 'ft.s2.4': 'About', 'ft.s2.5': 'Contact',
     'ft.s3.1': 'Telegram channel', 'ft.s3.2': 'Instagram', 'ft.s3.3': 'Book a consultation',
-    'ft.copy': '© 2026 faa4k. All rights reserved.', 'ft.top': 'Back to top ↑',
+    'ft.copy': '© 2026 Farrux Baxtiyorov. All rights reserved.', 'ft.top': 'Back to top ↑',
     'bk.eyebrow': 'request', 'bk.title': 'Leave a Request', 'bk.sub': 'Describe your task — I will contact you within a day',
     'bk.name.lbl': 'Name', 'bk.name.ph': 'How should I address you?',
     'bk.phone.lbl': 'Phone / Telegram', 'bk.phone.ph': '+998 __ ___ __ __',
@@ -275,7 +275,7 @@ const T = {
     'bl.d5': "Buyuk logotiplar — kompaniya falsafasining bir shaklda siqilgan ifodasi.",
     'bl.d6': "2025 yilda brendlarning vizual tilini nima belgilaydi — asosiy yo'nalishlar.",
     'about.eyebrow': 'men haqimda',
-    'about.title': "Salom! Men — faa4k,<br>grafik dizayner",
+    'about.title': "Salom! Men — Farrux Baxtiyorov,<br>grafik dizayner",
     'about.lead': "3 yildan ortiq brendlarga vizual tillarini topishda yordam beraman — logotipdan to'liq identifikatsiyagacha. Yaxshi dizayn biznes muammolarini hal qiladi va xotirada qoladi deb ishonaman.",
     'about.stat1': 'yil tajriba', 'about.stat2': 'loyiha', 'about.stat3': 'brend', 'about.stat4': "mamnun mijozlar",
     'about.h1': "Nima qilaman", 'about.h2': "Qanday ishlayman",
@@ -299,7 +299,7 @@ const T = {
     'faq.a5': "Brifing → kontseptsiyalar → yo'nalish tanlash → takomillashtirish → yakuniy fayllar. Har bir bosqichda siz ishtirok etasiz va natijani tasdiqlaysiz.",
     'faq.regions': "Quyidagi davlatlardan mijozlar bilan ishlayman",
     'faq.r1': "O'zbekiston", 'faq.r2': "Qozog'iston", 'faq.r3': "Rossiya", 'faq.r4': "Qirg'iziston", 'faq.r5': "Yevropa",
-    'ft.brand': "faa4k · grafik dizayner",
+    'ft.brand': "Farrux Baxtiyorov · grafik dizayner",
     'ft.cta.h': "Birinchi<br>loyihaga −10%", 'ft.cta.sub': "Yangi mijozlarga birinchi buyurtmada chegirma.",
     'ft.cta.fill': "Yozilish", 'ft.cta.svc': "Mening xizmatlarim →",
     'ft.about': "Grafik dizayner. Brendlar uchun brending, identifikatsiya va vizual tizimlar.",
@@ -307,7 +307,7 @@ const T = {
     'ft.s1.1': "Brending", 'ft.s1.2': "Logotiplar", 'ft.s1.3': "UI/UX", 'ft.s1.4': "Qadoqlash", 'ft.s1.5': "Tipografiya",
     'ft.s2.1': "Xizmatlar", 'ft.s2.2': "Paketlar", 'ft.s2.3': "Blog", 'ft.s2.4': "Men haqimda", 'ft.s2.5': "Aloqa",
     'ft.s3.1': "Telegram kanal", 'ft.s3.2': "Instagram", 'ft.s3.3': "Maslahat uchun yozilish",
-    'ft.copy': "© 2026 faa4k. Barcha huquqlar himoyalangan.", 'ft.top': "Yuqoriga ↑",
+    'ft.copy': "© 2026 Farrux Baxtiyorov. Barcha huquqlar himoyalangan.", 'ft.top': "Yuqoriga ↑",
     'bk.eyebrow': "ariza", 'bk.title': "Ariza qoldiring", 'bk.sub': "Vazifangizni tasvirlab bering — bir kun ichida bog'lanaman",
     'bk.name.lbl': "Ism", 'bk.name.ph': "Sizga qanday murojaat qilsam bo'ladi?",
     'bk.phone.lbl': "Telefon / Telegram", 'bk.phone.ph': "+998 __ ___ __ __",
@@ -904,7 +904,7 @@ if (bookForm) {
     bookNote.textContent = '';
 
     const text =
-      `📩 Новая заявка с сайта faa4k\n\n` +
+      `📩 Новая заявка с сайта Farrux Baxtiyorov\n\n` +
       `👤 Имя: ${name}\n` +
       `📞 Контакт: ${phone || 'не указан'}\n` +
       `🎨 Услуга: ${service || 'не выбрана'}\n` +
